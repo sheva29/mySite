@@ -1,0 +1,67 @@
+/*
+Theme Name: mauricioSanchez's Portfolio
+Theme URI: http://www.sanchezmauricio.com
+Description: A Design Portfolio from Interaction Designer Mauricio Sanchez
+Author: Mauricio Sanchez-Duque
+Author URI: http://www.sanchezmauricio.com
+Version: 1.0
+Tags: responsive, white, bootstrap, design portfolio, interaction.
+License: 
+License URI: 
+
+This simple theme was built using the example Bootstrap theme "Basic marketing site" found on the Bootstrap web site http://twitter.github.com/bootstrap/examples/hero.html
+*/
+
+@import url('mauricio_bootstrap/css/bootstrap.css');
+@import url('mauricio_bootstrap/css/bootstrap-responsive.css');
+
+body{
+	padding-top:60px;
+	padding-bottom: 40px;
+}
+
+
+/*My CSS Starts here*/
+
+footer{
+	clear: both;
+	bottom: 20px;
+	margin-bottom: 0;
+}
+
+#mauricio {
+
+	float: left;
+	font-size: 22px;
+	margin: 0;
+	color: #47c917;
+	letter-spacing: 2pt;
+
+}
+
+#sanchez { 
+	
+	float: left;
+	font-size: 22px;
+	margin: 0;
+	margin-left: 3px;
+	font-weight: bold;
+	letter-spacing: 1pt;
+
+
+}
+
+#title { 
+
+	float: left;
+	clear: left;
+	font-size: 10px;
+	margin: 0;
+	margin-top: -5px;
+
+}
+
+.nav {
+
+	font-size: 15px;
+}
