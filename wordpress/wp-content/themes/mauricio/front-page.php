@@ -20,7 +20,7 @@ $category_posts = new WP_Query( $arg );
 		$category_posts->the_post();?>
 		<a href="<?php the_permalink(); ?>"> <?php the_post_thumbnail( ); echo '</a>'?>
 	<h2> <a href="<?php the_permalink(); ?>"> <?php the_title()?> </a> </h2>
-			<p> <?php the_time( '1, F jS, Y' );?> </p>
+			<p> <?php the_time( 'F jS, Y' );?> </p>
 			<?php wp_reset_postdata(); ?>
 	</div>
 
@@ -32,7 +32,7 @@ $category_posts = new WP_Query( $arg );
 
 
 
-	<!-- </div> -->
+	</div>
 	<?php
 get_footer();
 ?>
