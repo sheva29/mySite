@@ -26,9 +26,9 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="<?php echo site_url(); ?>"> <?php bloginfo( $show='name' ); ?> </a>
+          <div class="brand" href="<?php echo site_url(); ?>"> <?php bloginfo( $show='name' ); ?> </div>
           <div class="nav-collapse collapse">
-            <ul class="nav">
+            <ul class="nav navbar-nav">
 
             
              <?php wp_list_pages( array('title_li' => '', 'exclude' => 12) ); ?>

@@ -4,6 +4,7 @@
 
     <!-- Stylesheet -->
     <link rel ="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>" >
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
 
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -22,30 +23,41 @@
 
   <body>
 
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div id="header-wrapper" class="navbar-inner header clear">
-        <div class="container">
-          <a class="btn btn-navbar menu-icon" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          <a class="brand" href=" <?php echo site_url(); ?>" > <p id="mauricio"> mauricio </p> <p id="sanchez"> Sanchez </p> <p id="title"> Interaction Designer & Creative Technologist</p> <!-- <img class="logo2" src="http://localhost/wp-content/uploads/2013/06/logo2.png"> -->  </a>
-          <div class="nav-collapse collapse">
-            <ul class="nav">
-             <?php wp_list_pages( array( 'title_li' => '', 'exclude' => 12 ) ); ?>
-            </ul>            
-          </div>
-        </div>
-      </div>
+    <div class="navbar navbar-inverse navbar-fixed-top header-mauricio">
+
+            <nav class="container navbar-inverse" role="navigation">  
+              
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                  <span class="sr-only">Toogle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href=" <?php echo site_url(); ?>" > 
+                <p id="mauricio"> mauricio </p> 
+                <p id="sanchez"> Sanchez </p> 
+                <p id="title"> Interaction Designer & Creative Technologist</p> 
+                <!-- <img class="logo2" src="http://localhost/wp-content/uploads/2013/06/logo2.png"> --> 
+                </a>
+              </div>
+
+            
+                <!--Here we start our Navbar-->
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                 <!-- Here we include our menu buttons, it includes each menu button on a <li> tag-->
+                  <?php wp_list_pages( array( 'title_li' => '', 'exclude' => 12 ) ); ?>
+                </ul>
+              </div>
+              <!--end of the Navbar-->
+            </nav>  
+
     </div>
+         
 
-    <div class="container">
+    
+    
 
-      <!-- Main hero unit for a primary marketing message or call to action -->
-      <div class="hero-unit">
-        <h1>Mauricio's Portfolio</h1>
-          Interaction Designer & Creative Technologist
-
-        <!-- <a class="btn btn-primary btn-large">Learn more »</a> -->
-
-    </div>
+    
+ 
