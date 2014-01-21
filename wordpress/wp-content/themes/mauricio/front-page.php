@@ -20,7 +20,7 @@ $category_posts = new WP_Query( $arg );
      </div>
 
 <!--This is where the main body starts-->
-<div class="container">
+<div class="projects-thumbs container">
   
   <!--Include this when a nav bar with categories for all different posts is available
     <h1> Projects </h1>
@@ -34,11 +34,11 @@ $category_posts = new WP_Query( $arg );
 			echo '<div class="col-md-3 image-container" >';
 			$category_posts->the_post();?>
 			<a href="<?php the_permalink(); ?>"> <?php the_post_thumbnail( ); echo '</a>'?>
-			<div class="thumb-title">	
-				<h2> <a href="<?php the_permalink(); ?>"> <?php the_title()?> </a> </h2>
+				
+				<p class="thumb-title"> <a href="<?php the_permalink(); ?>"> <?php the_title()?> </p> </h3>
 					<!--<p> <?php the_time( 'Y' );?> </p>-->
 					<?php wp_reset_postdata(); ?>
-			</div>
+			
 				
 	</div>
 
