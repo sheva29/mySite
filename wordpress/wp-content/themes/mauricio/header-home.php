@@ -33,6 +33,7 @@
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href=" <?php echo site_url(); ?>" > 
                 <p id="mauricio"> mauricio </p> 
@@ -54,6 +55,20 @@
             </nav>  
 
     </div>
+
+     <div class="jumbotron intro">
+        
+        <section class="container intro-section">
+          <!--This is where my intro goes-->
+          <h1>Welcome to my portfolio, I am <a href="something">Mauricio!</a></h1>
+          <p>I'm a designer who loves building stuff, I enjoy coding and technology, enjoy my portfolio and feel free to contact me</p>
+        
+        </section>       
+
+    </div>
+
+<!--This is where the main body starts-->
+  <div class="projects-thumbs container">
          
 
     

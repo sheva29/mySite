@@ -368,10 +368,10 @@ img {
 }
 
 hr {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  border: 0;
-  border-top: 1px solid #eeeeee;
+  margin-top: 15px;
+    border: 0;
+  border-top: 1px solid #999999;
+ 
 }
 
 .sr-only {
@@ -4489,7 +4489,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 .navbar-brand {
   float: left;
-  padding: 15px 15px;
+  padding: 10px 10px;
   font-size: 18px;
   line-height: 20px;
 }

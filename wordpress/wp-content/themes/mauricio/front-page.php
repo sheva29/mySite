@@ -7,48 +7,35 @@ $arg = 'category_name=Projects';
 $category_posts = new WP_Query( $arg );
 
 ?>
-
-     <div class="jumbotron intro">
-            
-            <section class="container intro-section">
-              <!--This is where my intro goes-->
-              <h1>Welcome to my portfolio, I am <a href="something">Mauricio!</a></h1>
-              <p>I'm a designer who loves building stuff, I enjoy coding and technology, enjoy my portfolio and feel free to contact me</p>
-            
-            </section>       
-
-     </div>
-
-<!--This is where the main body starts-->
-<div class="projects-thumbs container">
   
   <!--Include this when a nav bar with categories for all different posts is available
     <h1> Projects </h1>
 -->
 	<div class="row">
 
-
 		<?php if ( $category_posts->have_posts() ) : ?>
 
-	  	<?php while ( $category_posts->have_posts() ):
-			echo '<div class="col-md-3 image-container" >';
-			$category_posts->the_post();?>
-			<a href="<?php the_permalink(); ?>"> <?php the_post_thumbnail( ); echo '</a>'?>
-				
-				<p class="thumb-title"> <a href="<?php the_permalink(); ?>"> <?php the_title()?> </p> </h3>
-					<!--<p> <?php the_time( 'Y' );?> </p>-->
-					<?php wp_reset_postdata(); ?>
-			
+		  	<?php while ( $category_posts->have_posts() ):
+				echo '<div class="col-md-3 image-container" >';
+				$category_posts->the_post();?>
+				<a href="<?php the_permalink(); ?>" class="test"> <?php the_post_thumbnail( ); echo '</a>'?>
+					
+					<p class="thumb-title"> <a href="<?php the_permalink(); ?>"> <?php the_title()?> </a> </p> 
+						<!--<p> <?php the_time( 'Y' );?> </p>-->			
 				
 	</div>
 
-		<?php endwhile; ?>
+			<?php endwhile; ?>
 
 		<?php endif; ?>
+
+	<?php wp_reset_postdata(); ?>
+
+
 <!--Closes thumbnails-->
 
 </div>
-<!--Closes Main body-->
+<!-- Closes Main body -->
 
 	<?php
 get_footer();

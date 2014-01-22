@@ -31,7 +31,7 @@ footer{
 
 .projects-thumbs{
 
-	margin-top: 70px;
+	margin-top: 45px;
 	margin-bottom: 100px;
 	overflow: hidden;
 }
@@ -84,7 +84,7 @@ footer{
 	/*position: absolute;*/
 	/*top: 40px;*/
 	/*float:left;*/
-	margin-top: 65px;
+	margin-top: 20px;
 	min-height: 400px;
 	max-height: 500px;
 }
@@ -109,7 +109,8 @@ footer{
 
 .image-container{
 
-	overflow:hidden;
+	margin-top: 10px;
+	overflow: hidden;
 }
 
 .footer-mauricio{
@@ -122,8 +123,20 @@ footer{
 	margin-top: 100px;
 	top: 50px;
 	width: 100%;
-	height: 100px;
+	height: 250px;
+	color: #999999;
 
+}
+
+.footer-contact{
+
+	padding-top: 200px;
+	height: 10px;
+}
+
+#bottom-content{
+
+	margin-bottom: 20px;
 }
 
 
