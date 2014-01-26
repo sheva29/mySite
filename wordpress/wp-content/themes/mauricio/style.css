@@ -124,6 +124,8 @@ footer{
 	top: 50px;
 	width: 100%;
 	height: 250px;
+
+	max-height: 300px;
 	color: #999999;
 
 }
@@ -131,12 +133,14 @@ footer{
 .footer-contact{
 
 	padding-top: 200px;
-	height: 10px;
+	min-height: 10px;
+	
+
 }
 
 #bottom-content{
 
-	margin-bottom: 20px;
+	margin-bottom: 0px;
 }
 
 

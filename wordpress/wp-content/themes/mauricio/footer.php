@@ -6,7 +6,7 @@
       <footer class="navbar-inverse footer-mauricio">
       		<section class="container footer-contact">
 	      		<hr> 
-	        	<p id="bottom-content"> &copy; Mauricio Sanchez <?php echo date('Y'); ?>  </p>
+	        	<center><p id="bottom-content"> &copy; <?php echo date('Y'); ?> Mauricio Sanchez. All rights reserved. </p><center>
 	        </section>
 	         
       </footer>  
