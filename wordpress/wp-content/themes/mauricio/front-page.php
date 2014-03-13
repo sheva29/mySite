@@ -6,8 +6,10 @@ get_header( 'home' );
 $arg = 'category_name=Projects';
 $category_posts = new WP_Query( $arg );
 
+
+
 ?>
-  
+
   <!--Include this when a nav bar with categories for all different posts is available
     <h1> Projects </h1>
 -->
@@ -16,20 +18,23 @@ $category_posts = new WP_Query( $arg );
 		<?php if ( $category_posts->have_posts() ) : ?>
 
 		  	<?php while ( $category_posts->have_posts() ):
-				echo '<div class="col-md-3 image-container" >';
-				$category_posts->the_post();?>
-				<a href="<?php the_permalink(); ?>" class="test"> <?php the_post_thumbnail( ); echo '</a>'?>
-					
-					<p class="thumb-title"> <a href="<?php the_permalink(); ?>"> <?php the_title()?> </a> </p> 
-						<!--<p> <?php the_time( 'Y' );?> </p>-->			
-				
+		echo '<div class="col-md-3 image-container" >';
+	$category_posts->the_post();?>
+
+				<a href="<?php the_permalink(); ?>" id="<?php the_ID(); ?>" class="test"> <?php the_post_thumbnail( ); echo '</a>'?>
+
+					<p class="thumb-title"> <a href="<?php the_permalink(); ?>"> <?php the_title()?>  </p>
+				</a>
+
+				<p> <?php the_time( 'Y' );?> </p>
+
 	</div>
 
 			<?php endwhile; ?>
 
 		<?php endif; ?>
 
-	<?php wp_reset_postdata(); ?>
+	<?php wp_reset_postdata();?>
 
 
 <!--Closes thumbnails-->
