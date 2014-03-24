@@ -3,7 +3,7 @@
 <?php
 
 get_header( 'home' );
-$arg = 'category_name=Projects';
+$arg = array('category_name'=>'Projects', 'posts_perpage'=>'-1');
 $category_posts = new WP_Query( $arg );
 
 
