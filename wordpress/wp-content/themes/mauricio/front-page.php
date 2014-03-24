@@ -21,12 +21,16 @@ $category_posts = new WP_Query( $arg );
 		echo '<div class="col-md-3 image-container" >';
 	$category_posts->the_post();?>
 
-				<a href="<?php the_permalink(); ?>" id="<?php the_ID(); ?>" class="test"> <?php the_post_thumbnail( ); echo '</a>'?>
+				<a href="<?php the_permalink(); ?>" class="test"> <?php the_post_thumbnail( ); echo '</a>'?></a>
+				
+				<div id="<?php the_ID(); ?>">
 
 					<p class="thumb-title"> <a href="<?php the_permalink(); ?>"> <?php the_title()?>  </p>
-				</a>
+					<p> <?php the_time( 'Y' );?> </p>
 
-				<p> <?php the_time( 'Y' );?> </p>
+				</div>
+
+
 
 	</div>
 

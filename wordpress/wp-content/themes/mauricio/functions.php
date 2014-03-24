@@ -57,7 +57,7 @@ function open_sans_font(){
 	echo "<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>";
 }
 
-add_action( 'genesis_meta' );
+add_action( 'genesis_meta', 'open_sans_font', 5 );
 
 //Getting rid of the extra stuff that users don't need to see on the head
 remove_action( 'wp_head', 'rsd_link' );
