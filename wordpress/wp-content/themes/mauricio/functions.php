@@ -33,12 +33,16 @@ function mauricio_bootstrap_scripts() {
 	wp_enqueue_script( 'custom-script' );
 
 	// Add functions for the header transition
-	wp_register_script( 'custom-script2', get_template_directory_uri() . '/mauricio_bootstrap/js/custom.js', array( 'jquery' ) );
-	wp_enqueue_script( 'custom-script2' );
+	// wp_register_script( 'custom-script2', get_template_directory_uri() . '/mauricio_bootstrap/js/custom.js', array( 'jquery' ) );
+	// wp_enqueue_script( 'custom-script2' );
 
 	//Header transitions. Taken from BIG BANG
-	wp_register_script( 'header-script', get_template_directory_uri(). '/mauricio_bootstrap/js/header.js', array( 'jquery') , 'version',  false  );
-	wp_enqueue_script( 'header-script' );
+	// wp_register_script( 'header-script', get_template_directory_uri(). '/mauricio_bootstrap/js/header.js', array( 'jquery') , 'version',  false  );
+	// wp_enqueue_script( 'header-script' );
+
+	//My custom JS to manipulate the DOM
+	wp_register_script('personal-script', get_template_directory_uri(). '/mauricio_bootstrap/js/main.js');
+	wp_enqueue_script('personal-script');
 
 	//Add my own script to fix a glitch
 	wp_register_script( 'to_fix_bugs', get_template_directory_uri(). '/mauricio_bootstrap/js/bootstrap-fixes.js', array( 'jquery' ), 'version', true );

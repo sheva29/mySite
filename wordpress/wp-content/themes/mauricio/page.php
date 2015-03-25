@@ -10,13 +10,15 @@ if ( is_page( 'Home' ) ) {
 } elseif (  is_page( 'Work' ) ) {
 	get_header( 'work' );
 } else {
-	get_header();
+	get_header( 'other');
 }
+
+// get_header( 'home' );
 
 ?>
 
 	<div id="row">
-		<div id="span4">
+		<div id="col-md-3">
 
 		<?php if ( have_posts() ) : while ( have_posts() ): the_post() ?>
 
@@ -29,9 +31,9 @@ if ( is_page( 'Home' ) ) {
 		<?php endif; ?>
 
 		</div>
-		<div id="span4">
+		<!-- <div id="span4">
 			<?php get_sidebar(); ?>
-		</div>
+		</div> -->
 	</div>
 <?php
 get_footer();

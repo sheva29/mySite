@@ -3,7 +3,7 @@
 <?php
 
 get_header( 'home' );
-$arg = array('category_name'=>'Projects', 'posts_perpage'=>'-1');
+$arg = array( 'category_name'=>'Projects', 'posts_perpage'=>'-1' );
 $category_posts = new WP_Query( $arg );
 
 
@@ -22,15 +22,13 @@ $category_posts = new WP_Query( $arg );
 	$category_posts->the_post();?>
 
 				<a href="<?php the_permalink(); ?>" class="test"> <?php the_post_thumbnail( ); echo '</a>'?></a>
-				
-				<div id="<?php the_ID(); ?>">
 
-					<p class="thumb-title"> <a href="<?php the_permalink(); ?>"> <?php the_title()?>  </p>
-					<p> <?php the_time( 'Y' );?> </p>
+				<div class="project" id="<?php the_ID(); ?>">
+
+					<a class="thumb-title" href="<?php the_permalink(); ?>"> <?php the_title()?> / </a>
+					<a class="project-year" href="<?php the_permalink(); ?>"> <?php the_time( 'Y' );?> </a>
 
 				</div>
-
-
 
 	</div>
 
