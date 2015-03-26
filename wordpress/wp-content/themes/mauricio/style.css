@@ -105,6 +105,7 @@ a:active {text-decoration: none;}
 .image-container{
 	margin-top: 10px;
 	overflow: hidden;
+	float: left;
 }
 
 /*---------------------This is for the footer -----------------------*/ 
@@ -114,7 +115,7 @@ a:active {text-decoration: none;}
 	margin-bottom: 0;
 	margin-top: 100px;
 	top: 50px;	
-	max-height: 300px;
+	/*max-height: 300px;*/
 	color: #999999;	
 	width: 100%;
 }

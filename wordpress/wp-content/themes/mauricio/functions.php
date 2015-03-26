@@ -29,7 +29,7 @@ if ( function_exists( 'register_sidebar' ) )
 //Adds JS scripts to the Head
 function mauricio_bootstrap_scripts() {
 	// Adds the new bootstrap function to the wp_enqueue_scripts
-	wp_register_script( 'custom-script', get_template_directory_uri() . '/mauricio_bootstrap/js/bootstrap.js', array( 'jquery' ) );
+	wp_register_script( 'custom-script', get_template_directory_uri() . '/mauricio_bootstrap/js/bootstrap.js', array( 'jquery' ), 'version', false );
 	wp_enqueue_script( 'custom-script' );
 
 	// Add functions for the header transition
@@ -41,17 +41,24 @@ function mauricio_bootstrap_scripts() {
 	// wp_enqueue_script( 'header-script' );
 
 	//My custom JS to manipulate the DOM
-	wp_register_script('personal-script', get_template_directory_uri(). '/mauricio_bootstrap/js/main.js');
-	wp_enqueue_script('personal-script');
+	// wp_register_script('personal-script', get_template_directory_uri(). '/mauricio_bootstrap/js/main.js', array('jquery'), 'version', false);
+	// wp_enqueue_script('personal-script');
 
 	//Add my own script to fix a glitch
-	wp_register_script( 'to_fix_bugs', get_template_directory_uri(). '/mauricio_bootstrap/js/bootstrap-fixes.js', array( 'jquery' ), 'version', true );
-	wp_enqueue_script( 'to_fix_bugs' );
+	// wp_register_script( 'to_fix_bugs', get_template_directory_uri(). '/mauricio_bootstrap/js/bootstrap-fixes.js', array( 'jquery' ), 'version', false );
+	// wp_enqueue_script( 'to_fix_bugs' );
 
+}
+
+function script_on_footer(){
+
+	wp_register_script('personal-script', get_template_directory_uri(). '/mauricio_bootstrap/js/main.js', array('jquery'), 'version', true);
+	wp_enqueue_script('personal-script');
 }
 
 
 add_action( 'wp_enqueue_scripts', 'mauricio_bootstrap_scripts' );
+add_action('wp_footer', 'script_on_footer');
 
 
 //Adds WebFont Link in the Head
@@ -75,7 +82,7 @@ remove_action( 'wp_head', 'adjacent_posts_rel_link' );
 //Enables to post thumbnails in your posts and control size
 if ( function_exists( 'add_theme_support' ) ) {
 	add_theme_support( 'post-thumbnails' );
-	set_post_thumbnail_size( 250, 200, true );
+	set_post_thumbnail_size( 220, 155, true );
 
 }
 

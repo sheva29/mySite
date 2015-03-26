@@ -23,7 +23,7 @@ $category_posts = new WP_Query( $arg );
 
 				<a href="<?php the_permalink(); ?>" class="test"> <?php the_post_thumbnail( ); echo '</a>'?></a>
 
-				<div class="project" id="<?php the_ID(); ?>">
+				<div class="projects" id="<?php the_ID(); ?>">
 
 					<a class="thumb-title" href="<?php the_permalink(); ?>"> <?php the_title()?> / </a>
 					<a class="project-year" href="<?php the_permalink(); ?>"> <?php the_time( 'Y' );?> </a>
