@@ -1,28 +1,36 @@
 <?php
 /*Enable functions such as sidebars */
+add_action( 'widgets_init', 'addSideBars' );
+function addSideBars(){
 
-register_sidebar( array(
-		'name' => __( '1st Right Side Bar' ),
-		'id' => 'first-right-sidebar',
-		'description' => 'This is just a test',
-
-
-	) );
-
-register_sidebar( array(
-		'name' => __( '2nd Right Side Bar' ),
-		'id' => 'second-right-sidebar',
-		'description' => 'This is just a 2nd test',
-	) );
-
-if ( function_exists( 'register_sidebar' ) )
 	register_sidebar( array(
-			'before_widget' => ' ',
-			'after_widget' => ' ',
-			'before_title' => '<h3>',
-			'after_title' => '</h3>',
 
+			'name' => __( 'side_bar_1' ),
+			'id' => 'project-sidebar',
+			'description' => 'This is just a test',
+			'before_title' => '<h3 class="project-sidebar-title">',
+			'after_title' => '</h3>',
+			'before_widget' => '<li id="project-sidebar">'
 		) );
+
+	register_sidebar( array(
+
+			'name' => __( 'side_bar_2' ),
+			'id' => 'second-right-sidebar',
+			'description' => 'This is just a 2nd test',
+		) );
+
+	if ( function_exists( 'register_sidebar' ) )
+		register_sidebar( array(
+
+				'before_widget' => ' ',
+				'after_widget' => ' ',
+				'before_title' => '<h3>',
+				'after_title' => '</h3>',
+
+			) );
+
+}
 
 //Custom Functions
 

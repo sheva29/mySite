@@ -5,36 +5,46 @@
 get_header( 'home' );
 $arg = array( 'category_name'=>'Projects', 'posts_perpage'=>'-1' );
 $category_posts = new WP_Query( $arg );
+$classes = array('col-md-3', 'image-container');
 
 ?>
 
   <!--Include this when a nav bar with categories for all different posts is available
     <h1> Projects </h1>
 -->
-	<div class="row">
+<!--This calls our side bar to find projects based on its categories-->
+<?php get_sidebar('side_bar_1'); ?>
 
-		<?php if ( $category_posts->have_posts() ) : ?>
+<div class="row custom-row">
 
-		  	<?php while ( $category_posts->have_posts() ):
-		echo '<div class="col-md-3 image-container" >';
-	$category_posts->the_post();?>
+	<?php if ( $category_posts->have_posts() ) : ?>
 
-				<a href="<?php the_permalink(); ?>" class="test"> <?php the_post_thumbnail('full', array( 'class' => 'img-responsive' ) ); echo '</a>'?></a>
+	  	<?php while ( $category_posts->have_posts() ):
 
-				<div class="projects" id="<?php the_ID(); ?>">
+	  	// post_class('col-md-3');
+	// echo '<div class="col-md-3 image-container" >';
 
-					<a class="thumb-title" href="<?php the_permalink(); ?>"> <?php the_title()?> / </a>
-					<a class="project-year" href="<?php the_permalink(); ?>"> <?php the_time( 'Y' );?> </a>
+	  	?>
+	  	<div  <?php post_class( $classes); ?> >
 
-				</div>
+<?php $category_posts->the_post();?>
 
-	</div>
+			<a href="<?php the_permalink(); ?>" class="test"> <?php the_post_thumbnail('full', array( 'class' => 'img-responsive' ) ); echo '</a>'?> </a>
 
-			<?php endwhile; ?>
+			<div class="projects" id="<?php the_ID(); ?>">
 
-		<?php endif; ?>
+				<a class="thumb-title" href="<?php the_permalink(); ?>"> <?php the_title()?> / </a>
+				<a class="project-year" href="<?php the_permalink(); ?>"> <?php the_time( 'Y' );?> </a>
 
-	<?php wp_reset_postdata();?>
+			</div>
+
+		</div>
+
+		<?php endwhile;?>
+
+	<?php endif; ?>
+
+<?php wp_reset_postdata();?>
 
 <!--Closes thumbnails-->
 

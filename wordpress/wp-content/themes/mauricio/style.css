@@ -108,6 +108,33 @@ a:active {text-decoration: none;}
 	float: left;
 }
 
+/*---------------------This is for the body -----------------------*/ 
+
+.custom-row{
+	float: left;
+}
+
+#sidebar{
+	display: block;
+	clear: right;
+	text-align: center;
+
+}
+
+#project-sidebar{
+	list-style-type: none;
+
+}
+
+.project-sidebar-title{
+	display: inline-block;
+}
+
+.project-sidebar-elements{
+	 list-style-type: none;
+	 display: inline-block;
+}
+
 /*---------------------This is for the footer -----------------------*/ 
 
 #footer-mauricio{
@@ -202,6 +229,8 @@ a:active {text-decoration: none;}
 #personal-paragraph{
 	
 }
+
+
 
 
 

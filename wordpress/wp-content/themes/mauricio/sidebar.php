@@ -1,9 +1,9 @@
 <div id="sidebar">
 
-<h2>Sidebar</h2>
+<!-- <h2>Project Categories</h2> -->
 
-	<?php dynamic_sidebar( 'first-right-sidebar' ); ?>
-	<?php dynamic_sidebar( 'second-right-sidebar' ); ?>
+	<?php dynamic_sidebar( 'project-sidebar' ); ?>
+	<!-- <?php dynamic_sidebar( 'second-right-sidebar' ); ?> -->
 	<?php if ( !function_exists( 'dynamic_sidebar' ) || !dynamic_sidebar() ): ?>
 <?php endif; ?>
 
