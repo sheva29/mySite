@@ -47,7 +47,7 @@ a:active {text-decoration: none;}
 	float: left;
 	font-size: 22px;
 	margin: 0;
-	color: #47c917;
+	color: #b9d657;
 	letter-spacing: 2pt;
 }
 
@@ -103,7 +103,7 @@ a:active {text-decoration: none;}
 }
 
 .image-container{
-	margin-top: 10px;
+	margin-top: 25px;
 	overflow: hidden;
 	float: left;
 }
@@ -119,6 +119,13 @@ a:active {text-decoration: none;}
 	color: #999999;	
 	width: 100%;
 }
+
+.contact-images{
+
+	text-align: center;
+	margin: 60px auto;
+}
+
 
 .footer-contact{
 	min-height: 10px;
@@ -154,20 +161,34 @@ a:active {text-decoration: none;}
 	font-size: 16px;
 }
 
-#other-content{
+/*#other-content{
 	margin: 60px 0 60px 70px;
-}
+}*/
 
 #github{
 	margin: 0 5px;
+	display: inline-block;
+	
+}
+
+#github:hover, #linkedin:hover, #blog:hover, #twitter:hover{
+
+	-webkit-filter: brightness(0.5);
 }
 
 #linkedin{
 	margin: 0 5px;
+	display: inline-block;
 }
 
 #blog{
 	margin: 0 5px;
+	display: inline-block;
+}
+
+#twitter{
+	margin: 0 5px;
+	display: inline-block;
 }
 
 #personal-description{
