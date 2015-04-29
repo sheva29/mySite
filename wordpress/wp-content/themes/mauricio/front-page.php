@@ -6,8 +6,6 @@ get_header( 'home' );
 $arg = array( 'category_name'=>'Projects', 'posts_perpage'=>'-1' );
 $category_posts = new WP_Query( $arg );
 
-
-
 ?>
 
   <!--Include this when a nav bar with categories for all different posts is available
@@ -21,7 +19,7 @@ $category_posts = new WP_Query( $arg );
 		echo '<div class="col-md-3 image-container" >';
 	$category_posts->the_post();?>
 
-				<a href="<?php the_permalink(); ?>" class="test"> <?php the_post_thumbnail( ); echo '</a>'?></a>
+				<a href="<?php the_permalink(); ?>" class="test"> <?php the_post_thumbnail('full', array( 'class' => 'img-responsive' ) ); echo '</a>'?></a>
 
 				<div class="projects" id="<?php the_ID(); ?>">
 
@@ -37,7 +35,6 @@ $category_posts = new WP_Query( $arg );
 		<?php endif; ?>
 
 	<?php wp_reset_postdata();?>
-
 
 <!--Closes thumbnails-->
 

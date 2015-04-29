@@ -81,8 +81,9 @@ remove_action( 'wp_head', 'adjacent_posts_rel_link' );
 
 //Enables to post thumbnails in your posts and control size
 if ( function_exists( 'add_theme_support' ) ) {
+
 	add_theme_support( 'post-thumbnails' );
-	set_post_thumbnail_size( 220, 155, true );
+	set_post_thumbnail_size( 220, 155 );
 
 }
 

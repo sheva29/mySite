@@ -57,7 +57,7 @@
     </div>
 
 <!--This is where the main body starts-->
-  <div class="projects-thumbs container">
+  <div class="projects-thumbs container-fluid">
          
 
     
