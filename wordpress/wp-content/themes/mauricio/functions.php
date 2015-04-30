@@ -7,7 +7,7 @@ function addSideBars(){
 
 			'name' => __( 'Project Categories' ),
 			'id' => 'project-sidebar',
-			'description' => 'This is just a test',
+			'description' => 'Categories for projects within the Main page',
 			'before_title' => '<h3 class="project-sidebar-title">',
 			'after_title' => '</h3>',
 			'before_widget' => '<li id="project-sidebar">'
