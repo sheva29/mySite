@@ -127,7 +127,7 @@ a:active {text-decoration: none;}
 }
 
 .project-sidebar-title{
-	display: inline-block;
+	display: none;
 }
 
 .project-sidebar-elements{

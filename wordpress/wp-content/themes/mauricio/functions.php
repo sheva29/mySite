@@ -5,7 +5,7 @@ function addSideBars(){
 
 	register_sidebar( array(
 
-			'name' => __( 'side_bar_1' ),
+			'name' => __( 'Project Categories' ),
 			'id' => 'project-sidebar',
 			'description' => 'This is just a test',
 			'before_title' => '<h3 class="project-sidebar-title">',
