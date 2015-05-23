@@ -11,6 +11,7 @@ function addSideBars(){
 			'before_title' => '<h3 class="project-sidebar-title">',
 			'after_title' => '</h3>',
 			'before_widget' => '<li id="project-sidebar">'
+			// 'after_title' => '<li id="all" href="http://localhost" > All </li>'
 		) );
 
 	register_sidebar( array(
@@ -56,17 +57,27 @@ function mauricio_bootstrap_scripts() {
 	// wp_register_script( 'to_fix_bugs', get_template_directory_uri(). '/mauricio_bootstrap/js/bootstrap-fixes.js', array( 'jquery' ), 'version', false );
 	// wp_enqueue_script( 'to_fix_bugs' );
 
+
+
+}
+
+function isotopeJS(){
+
+	wp_register_script('grid-script', 'http://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.0/isotope.pkgd.js', array('jquery'), 'version', false);
+	wp_enqueue_script('grid-script');
 }
 
 function script_on_footer(){
 
 	wp_register_script('personal-script', get_template_directory_uri(). '/mauricio_bootstrap/js/main.js', array('jquery'), 'version', true);
 	wp_enqueue_script('personal-script');
+
 }
 
 
 add_action( 'wp_enqueue_scripts', 'mauricio_bootstrap_scripts' );
 add_action('wp_footer', 'script_on_footer');
+add_action( 'wp_enqueue_scripts', 'isotopeJS');
 
 
 //Adds WebFont Link in the Head
@@ -100,8 +111,42 @@ remove_filter( 'the_content', 'wpautop' );
 remove_filter( 'the_excerpt', 'wpautop' );
 
 
+function assignCatToProjects(){
 
+	// we want to display only thumbs from the projects category.
+	$arg = array( 'category_name'=>'Projects', 'posts_perpage'=>'-1' );
+	// we pass the argument to our query.
+	$category_posts = new WP_Query( $arg );
+	$catID = array('12');
 
+	// while( have_posts() ){
+
+		// $current_post_id
+	 // printf('%s', $post->ID);
+
+		// }
+			// foreach ($category_posts as $post ) {
+				
+					// if ( !has_category( 'Blog')){
+				// var_dump($post->ID);
+	// printf('%s', $post->ID);
+				 // wp_set_post_categories( $post->ID, $catID);
+
+			// }
+		// }
+	
+
+	// var_dump('<h> Hello Mauricio </h>');
+
+}
+
+add_action('the_post', 'assignCatToProjects' );
+
+// add_action( 'shutdown', function(){
+//     foreach( $GLOBALS['wp_actions'] as $action => $count )
+//         printf( '%s (%d) <br/>' . PHP_EOL, $action, $count );
+
+// });
 
 
 ?>
