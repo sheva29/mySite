@@ -53,7 +53,7 @@ $terms = get_terms('category', array('parent' => 9));
 	// var_dump(the_post());
 				$termsArray = get_the_terms( $post->ID, "category" );  //Get the terms for this particular item
 	
-	  			// echo $termsArray2;
+	  			// echo $termsArray;
 				$termsString = ""; //initialize the string that will contain the terms
 				$termsDataFilter = "";
 				$result = count($classes);
@@ -62,7 +62,7 @@ $terms = get_terms('category', array('parent' => 9));
 
 				foreach ( $termsArray as $term ) { // for each term 
 
-					// echo $termsDataFilter;
+					echo $termsDataFilter;
 					$termsString .= $term->slug." "; //create a string that has all the slugs for the class
 					$termsDataFilter .= ".".$term->slug.", ";
 					$index = $result++;
@@ -82,13 +82,13 @@ $terms = get_terms('category', array('parent' => 9));
 				// }
 		?> -->
 
-		  	<div  <?php /*post_class( $classes);*/  ?>  class="<?php echo $termsString; ?>item" data-filter=" <?php echo $termsDataFilter; ?>" >
+		  	<div  <?php /*post_class( $classes);*/  ?>  class="<?php echo $termsString; ?>item" >
 
 				<a href="<?php the_permalink(); ?>" class="test"> <?php the_post_thumbnail('custom_thumb', array( 'class' => 'img-responsive' ) ); echo '</a>'?> </a>
 
 <!-- 				<div class="projects" id="<?php the_ID(); ?>"></div> -->
 
-					<a class="thumb-title" href="<?php the_permalink(); ?>"> <?php the_title()?> / </a>
+					<!-- <a class="thumb-title" href="<?php the_permalink(); ?>"> <?php the_title()?> / </a> -->
 					<!-- <a class="project-year" href="<?php the_permalink(); ?>"> <?php the_time( 'Y' );?> </a>
 
 				</div> -->

@@ -35,6 +35,7 @@ jQuery(document).ready(function($){
 			queue: false,
 		}
 	});
+	
 	//we assign the elements to pass to our filters
 	$('.project-sidebar button').click(function(){
 		var selector = $(this).attr('data-filter');
@@ -46,11 +47,10 @@ jQuery(document).ready(function($){
 			// 	queue: false,
 			// }
 		});
-		console.log("clicking the link");
-		// return false;
 
 		var iso = $grid.data('isotope');
 		console.log('filtered ' + iso.filteredItems.length + ' items');
+
 	});
 
 
