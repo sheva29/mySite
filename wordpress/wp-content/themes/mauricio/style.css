@@ -139,6 +139,7 @@ a:active {text-decoration: none;}
 .item {
 
 	float: left;
+	margin: 10px;
 }
 
 /*---------------------This is for the footer -----------------------*/ 
