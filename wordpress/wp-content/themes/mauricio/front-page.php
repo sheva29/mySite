@@ -30,20 +30,20 @@ $terms = get_terms('category', array('parent' => 9));
 	// }
 
 	?>
-	<div id="sidebar" class="project-sidebar">
-		<ul id="content">
+	<nav id="sidebar" class="project-sidebar">
+		<ul id="content1">
 		<?php foreach($terms as $term){
 				
-				echo "<li class='project-sidebar-elements'><a href='#' data-filter='.".$term->slug."'>" . $term->name . "</a></>\n";
+				echo "<li class='project-sidebar-elements'><a href data-filter='.".$term->slug."'>" . $term->name . "</a></>\n";
 
 			  }
 		?>
 		</ul>
-	</div>
+	</nav>
 
 
 
-<div class="row custom-row">
+<div class="row custom-row" id="content">
 
 	<?php if ( $category_posts->have_posts() ) : ?>
 
@@ -64,7 +64,7 @@ $terms = get_terms('category', array('parent' => 9));
 
 					// echo $termsDataFilter;
 					$termsString .= $term->slug." "; //create a string that has all the slugs for the class
-					$termsDataFilter .= ".".$term->slug." ";
+					$termsDataFilter .= ".".$term->slug.", ";
 					$index = $result++;
 					$classes[$index] = $termsString;
 					$categories[$categoryIndex] = $category;
