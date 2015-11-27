@@ -64,7 +64,7 @@ $terms = get_terms('category', array('parent' => 9));
 
 					// echo $termsDataFilter;
 					$termsString .= $term->slug." "; //create a string that has all the slugs for the class
-					$termsDataFilter .= ".".$term->slug.", ";
+					$termsDataFilter .= ".".$term->slug." ";
 					$index = $result++;
 					$classes[$index] = $termsString;
 					$categories[$categoryIndex] = $category;
