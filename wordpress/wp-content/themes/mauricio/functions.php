@@ -98,14 +98,8 @@ remove_action( 'wp_head', 'start_post_rel_link' );
 remove_action( 'wp_head', 'index_rel_link' );
 remove_action( 'wp_head', 'adjacent_posts_rel_link' );
 
-
-//Enables to post thumbnails in your posts and control size
-if ( function_exists( 'add_theme_support' ) ) {
-
-	add_theme_support( 'post-thumbnails' );
-	set_post_thumbnail_size( 220, 155 );
-
-}
+//Custom size of our thumb
+add_image_size("custom_thumb", 250, 170);// Use custom image when setting the_post_thumbnail()
 
 //Disables wordpress of adding <p> tags at the end of the content - Used for the bootstrap carousel
 remove_filter( 'the_content', 'wpautop' );
@@ -118,24 +112,7 @@ function assignCatToProjects(){
 	$arg = array( 'category_name'=>'Projects', 'posts_perpage'=>'-1' );
 	// we pass the argument to our query.
 	$category_posts = new WP_Query( $arg );
-	$catID = array('12');
-
-	// while( have_posts() ){
-
-		// $current_post_id
-	 // printf('%s', $post->ID);
-
-		// }
-			// foreach ($category_posts as $post ) {
-				
-					// if ( !has_category( 'Blog')){
-				// var_dump($post->ID);
-	// printf('%s', $post->ID);
-				 // wp_set_post_categories( $post->ID, $catID);
-
-			// }
-		// }
-	
+	$catID = array('12');	
 
 	// var_dump('<h> Hello Mauricio </h>');
 

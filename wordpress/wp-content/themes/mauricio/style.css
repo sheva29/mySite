@@ -115,8 +115,6 @@ a:active {text-decoration: none;}
 }
 
 #sidebar{
-	display: block;
-	clear: right;
 	text-align: center;
 
 }
@@ -134,11 +132,13 @@ a:active {text-decoration: none;}
 .project-sidebar-elements{
 	 list-style-type: none;
 	 display: inline-block;
+	 margin: 0px 15px 10px;
 }
 
 .item {
 
 	float: left;
+	margin: 10px;
 }
 
 /*---------------------This is for the footer -----------------------*/ 
