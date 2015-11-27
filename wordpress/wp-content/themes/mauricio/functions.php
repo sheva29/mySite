@@ -98,17 +98,8 @@ remove_action( 'wp_head', 'start_post_rel_link' );
 remove_action( 'wp_head', 'index_rel_link' );
 remove_action( 'wp_head', 'adjacent_posts_rel_link' );
 
-
-//Enables to post thumbnails in your posts and control size
-if ( function_exists( 'add_theme_support' ) ) {
-
-	add_theme_support( 'post-thumbnails' );
-	set_post_thumbnail_size( 220, 155 );
-
-}
-
 //Custom size of our thumb
-add_image_size("custom_thumb", 220, 155);
+add_image_size("custom_thumb", 250, 170);// Use custom image when setting the_post_thumbnail()
 
 //Disables wordpress of adding <p> tags at the end of the content - Used for the bootstrap carousel
 remove_filter( 'the_content', 'wpautop' );
