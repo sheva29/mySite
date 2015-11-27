@@ -21,22 +21,24 @@ jQuery(document).ready(function($){
 	// we add a class to all the elements in the side bar.
 	addIDsToSidebarElements();
 
-
-	var $container = $("#content");
-	$container.isotope({
+	//*** Isotope ***//
+	//we initiate our isotope grid
+	var $grid = $("#content");
+	$grid.isotope({
 		itemSelector: '.projects',
 		// filter: '.all',
 		animationEngine: 'best-available',
+		// layoutMode: 'fitRows',
 		animationOptions: {
 			duration: 750,
 			easing: 'linear',
 			queue: false,
 		}
 	});
-
-	$('.project-sidebar-elements a').click(function(){
+	//we assign the elements to pass to our filters
+	$('.project-sidebar button').click(function(){
 		var selector = $(this).attr('data-filter');
-		$container.isotope({
+		$grid.isotope({
 			filter: selector,
 			// animationOptions: {
 			// 	duration: 750,
@@ -46,7 +48,12 @@ jQuery(document).ready(function($){
 		});
 		console.log("clicking the link");
 		// return false;
+
+		var iso = $grid.data('isotope');
+		console.log('filtered ' + iso.filteredItems.length + ' items');
 	});
+
+
 
 	
 

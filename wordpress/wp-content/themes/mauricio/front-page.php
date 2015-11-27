@@ -31,14 +31,14 @@ $terms = get_terms('category', array('parent' => 9));
 
 	?>
 	<nav id="sidebar" class="project-sidebar">
-		<ul id="content1">
+		<!-- <ul id="content1"> -->
 		<?php foreach($terms as $term){
 				
-				echo "<li class='project-sidebar-elements'><a href data-filter='.".$term->slug."'>" . $term->name . "</a></>\n";
+				echo "<button class='project-sidebar-elements'data-filter='.".$term->slug."'>" . $term->name . "</button>\n";
 
 			  }
 		?>
-		</ul>
+		<!-- </ul> -->
 	</nav>
 
 
@@ -86,12 +86,12 @@ $terms = get_terms('category', array('parent' => 9));
 
 				<a href="<?php the_permalink(); ?>" class="test"> <?php the_post_thumbnail('custom_thumb', array( 'class' => 'img-responsive' ) ); echo '</a>'?> </a>
 
-				<div class="projects" id="<?php the_ID(); ?>">
+<!-- 				<div class="projects" id="<?php the_ID(); ?>"></div> -->
 
 					<a class="thumb-title" href="<?php the_permalink(); ?>"> <?php the_title()?> / </a>
-					<a class="project-year" href="<?php the_permalink(); ?>"> <?php the_time( 'Y' );?> </a>
+					<!-- <a class="project-year" href="<?php the_permalink(); ?>"> <?php the_time( 'Y' );?> </a>
 
-				</div>
+				</div> -->
 
 			</div>
 
