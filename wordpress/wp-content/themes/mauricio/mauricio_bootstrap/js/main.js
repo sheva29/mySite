@@ -26,28 +26,27 @@ jQuery(document).ready(function($){
 	var $grid = $("#content");
 	$grid.isotope({
 		itemSelector: '.projects',
-		// filter: '.all',
 		animationEngine: 'best-available',
-		// layoutMode: 'fitRows',
+		layoutMode: 'fitRows',
 		animationOptions: {
 			duration: 750,
 			easing: 'linear',
 			queue: false,
 		}
 	});
-	
+
 	//we assign the elements to pass to our filters
 	$('.project-sidebar button').click(function(){
 		var selector = $(this).attr('data-filter');
 		$grid.isotope({
 			filter: selector,
-			// animationOptions: {
-			// 	duration: 750,
-			// 	easing: 'linear',
-			// 	queue: false,
-			// }
+			animationOptions: {
+			duration: 750,
+			easing: 'linear',
+			queue: false,
+		}
 		});
-
+		// return false;
 		var iso = $grid.data('isotope');
 		console.log('filtered ' + iso.filteredItems.length + ' items');
 

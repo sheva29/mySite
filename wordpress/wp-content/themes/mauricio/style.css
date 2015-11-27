@@ -141,6 +141,10 @@ a:active {text-decoration: none;}
 	margin: 10px;
 }
 
+#content {
+	width: 1200px;
+}
+
 /*---------------------This is for the footer -----------------------*/ 
 
 #footer-mauricio{

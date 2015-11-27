@@ -62,7 +62,7 @@ $terms = get_terms('category', array('parent' => 9));
 
 				foreach ( $termsArray as $term ) { // for each term 
 
-					echo $termsDataFilter;
+					// echo $termsDataFilter;
 					$termsString .= $term->slug." "; //create a string that has all the slugs for the class
 					$termsDataFilter .= ".".$term->slug.", ";
 					$index = $result++;
@@ -88,7 +88,7 @@ $terms = get_terms('category', array('parent' => 9));
 
 <!-- 				<div class="projects" id="<?php the_ID(); ?>"></div> -->
 
-					<!-- <a class="thumb-title" href="<?php the_permalink(); ?>"> <?php the_title()?> / </a> -->
+					<a class="thumb-title" href="<?php the_permalink(); ?>"> <?php the_title()?> / </a>
 					<!-- <a class="project-year" href="<?php the_permalink(); ?>"> <?php the_time( 'Y' );?> </a>
 
 				</div> -->
