@@ -107,6 +107,9 @@ if ( function_exists( 'add_theme_support' ) ) {
 
 }
 
+//Custom size of our thumb
+add_image_size("custom_thumb", 220, 155);
+
 //Disables wordpress of adding <p> tags at the end of the content - Used for the bootstrap carousel
 remove_filter( 'the_content', 'wpautop' );
 remove_filter( 'the_excerpt', 'wpautop' );
@@ -118,24 +121,7 @@ function assignCatToProjects(){
 	$arg = array( 'category_name'=>'Projects', 'posts_perpage'=>'-1' );
 	// we pass the argument to our query.
 	$category_posts = new WP_Query( $arg );
-	$catID = array('12');
-
-	// while( have_posts() ){
-
-		// $current_post_id
-	 // printf('%s', $post->ID);
-
-		// }
-			// foreach ($category_posts as $post ) {
-				
-					// if ( !has_category( 'Blog')){
-				// var_dump($post->ID);
-	// printf('%s', $post->ID);
-				 // wp_set_post_categories( $post->ID, $catID);
-
-			// }
-		// }
-	
+	$catID = array('12');	
 
 	// var_dump('<h> Hello Mauricio </h>');
 
