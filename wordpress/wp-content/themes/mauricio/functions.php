@@ -69,6 +69,7 @@ function isotopeJS(){
 
 function script_on_footer(){
 
+	//we pass the link from the server. This way we keep it updated.
 	wp_register_script('personal-script', get_template_directory_uri(). '/mauricio_bootstrap/js/main.js', array('jquery'), 'version', true);
 	wp_enqueue_script('personal-script');
 
@@ -82,7 +83,7 @@ add_action( 'wp_enqueue_scripts', 'isotopeJS');
 
 //Adds WebFont Link in the Head
 
-function open_sans_font(){
+function open_sans_font() {
 
 	echo "<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>";
 }

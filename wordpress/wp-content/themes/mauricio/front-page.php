@@ -31,7 +31,7 @@ $terms = get_terms('category', array('parent' => 9));
 
 	?>
 	<div id="sidebar" class="project-sidebar">
-		<ul id="container">
+		<ul id="content">
 		<?php foreach($terms as $term){
 				
 				echo "<li class='project-sidebar-elements'><a href='#' data-filter='.".$term->slug."'>" . $term->name . "</a></>\n";
@@ -62,7 +62,7 @@ $terms = get_terms('category', array('parent' => 9));
 
 				foreach ( $termsArray as $term ) { // for each term 
 
-					echo $termsDataFilter;
+					echo $term;
 					$termsString .= $term->slug." "; //create a string that has all the slugs for the class
 					$termsDataFilter .= ".".$term->slug.", ";
 					$index = $result++;
@@ -73,29 +73,18 @@ $terms = get_terms('category', array('parent' => 9));
 				}
 	  	?>
 
-	  	<?php  
+        <!-- 	\<?php  
 
 				// if ( !has_category( $category_posts->the_post()){
 
 				// 	 wp_set_post_categories( '12');
 
 				// }
-
-
-
-
-		?>
+		?> -->
 
 		  	<div  <?php /*post_class( $classes);*/  ?>  class="<?php echo $termsString; ?>item" data-filter=" <?php echo $termsDataFilter; ?>" >
 
-				<?php
-
-
-
-
-				?>
-
-				<a href="<?php the_permalink(); ?>" class="test"> <?php the_post_thumbnail('full', array( 'class' => 'img-responsive' ) ); echo '</a>'?> </a>
+				<a href="<?php the_permalink(); ?>" class="test"> <?php the_post_thumbnail('thumbnail', array( 'class' => 'img-responsive' ) ); echo '</a>'?> </a>
 
 				<div class="projects" id="<?php the_ID(); ?>">
 

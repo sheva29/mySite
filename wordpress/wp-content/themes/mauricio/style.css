@@ -136,6 +136,11 @@ a:active {text-decoration: none;}
 	 display: inline-block;
 }
 
+.item {
+
+	float: left;
+}
+
 /*---------------------This is for the footer -----------------------*/ 
 
 #footer-mauricio{
