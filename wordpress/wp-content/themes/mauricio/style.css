@@ -242,6 +242,7 @@ a:active {text-decoration: none;}
 
 /**** Isotope filtering ****/
 
+/*
 .isotope-item {
   z-index: 2;
 }
@@ -254,7 +255,7 @@ a:active {text-decoration: none;}
 .isotope,
 .isotope .isotope-item {
   /* change duration value to whatever you like */
-  -webkit-transition-duration: 0.8s;
+  /*-webkit-transition-duration: 0.8s;
      -moz-transition-duration: 0.8s;
           transition-duration: 0.8s;
 }
@@ -273,6 +274,7 @@ a:active {text-decoration: none;}
   -moz-transform, opacity;
   transition-property:         transform, opacity;
 }
+*/
 
 
 
