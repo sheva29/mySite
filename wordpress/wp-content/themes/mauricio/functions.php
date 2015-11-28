@@ -101,6 +101,6 @@ add_image_size("custom_thumb", 250, 173);// Use custom image when setting the_po
 remove_filter( 'the_content', 'wpautop' );
 remove_filter( 'the_excerpt', 'wpautop' );
 
-?>
+
 
 ?>
