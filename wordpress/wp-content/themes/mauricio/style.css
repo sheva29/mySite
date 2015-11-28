@@ -34,37 +34,6 @@ a:active {text-decoration: none;}
 	padding-bottom: 50px;
 
 }*/
-/* ------------------------- Media Queries ------------------------- */
-
-@media (min-width: 320px) {
-  
-  .blog-posts {
-    width: 300px;
-  }
-
-}
-
-@media (min-width: 768px) {
-  
-  .blog-posts {
-    width: 500px;
-  }
-
-}
-
-@media (min-width: 1080px) {
-  
-  .blog-posts {
-    width: 600px;
-  }
-}
-
-@media (min-width: 1200px) {
-  
-  .blog-posts {
-    width: 800px;
-  }
-}
 
 /* ------------------ This is the Header ------------------ */
 
@@ -147,13 +116,10 @@ a:active {text-decoration: none;}
 
 #sidebar{
 	text-align: center;
-
 }
 
 #container{
-
 	list-style-type: none;
-
 }
 
 .project-sidebar-title{
@@ -167,7 +133,6 @@ a:active {text-decoration: none;}
 }
 
 .item {
-
 	float: left;
 	margin: 10px;
 }
@@ -179,9 +144,17 @@ a:active {text-decoration: none;}
 /* -------------------- Blog Posts -------------------- */
 
 .blog-posts {
-
 	margin: 0px auto;
-	/*width: 400px;*/
+	max-width: 800px;
+	padding: 10px 30px;
+
+}
+
+.entry {
+	border-bottom-width: 2px;
+	border-bottom: solid;
+	border-bottom-color: #D3D3D3;
+	padding-bottom: 15px;
 }
 
 /* --------------------This is for the footer ---------------------- */ 
@@ -197,11 +170,9 @@ a:active {text-decoration: none;}
 }
 
 .contact-images{
-
 	text-align: center;
 	margin: 60px auto;
 }
-
 
 .footer-contact{
 	min-height: 10px;
@@ -210,7 +181,6 @@ a:active {text-decoration: none;}
 }
 .footer-note{
 	margin-bottom: 10px;
-
 }
 
 #bottom-content{

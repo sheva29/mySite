@@ -31,10 +31,10 @@ if ( is_page( 'Home' ) ) {
 		$category_posts->the_post() ?>
 
 			<h2><a href="<?php the_permalink(); ?>"> <?php the_title()?> </a></h2>
-			<p class='entry'>
-				<?php the_excerpt('Read the rest of this entry &raquo;'); ?>
-			</p>
-			<p> <?php the_time( 'F jS, Y' );?> </p>
+			<p> <?php the_time('F jS, Y' );?> </p>
+			<p class='entry'> <?php the_excerpt('Read the rest of this entry &raquo;'); ?></p>
+			
+
 		</div>
 		<?php endwhile; 
 			else: ?>
