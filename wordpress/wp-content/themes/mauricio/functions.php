@@ -101,6 +101,26 @@ add_image_size("custom_thumb", 250, 173);// Use custom image when setting the_po
 remove_filter( 'the_content', 'wpautop' );
 remove_filter( 'the_excerpt', 'wpautop' );
 
+/**
+ * Enables the Excerpt meta box in Page edit screen.
+ */
+// function wpcodex_add_excerpt_support_for_pages() {
+// 	add_post_type_support( 'page', 'excerpt' );
+// }
+// add_action( 'init', 'wpcodex_add_excerpt_support_for_pages' );
+
+// add_action( 'init', 'my_add_excerpts_to_pages' );
+
+// function my_add_excerpts_to_pages() {
+
+//      add_post_type_support( 'page', 'excerpt' );
+
+// }
+
+function new_excerpt_more( $more ) {
+	return '[.....]';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
 
 
 ?>

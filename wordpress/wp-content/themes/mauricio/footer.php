@@ -1,5 +1,5 @@
      </div>
-     <!-- end of container -->
+     <!-- This is the end of the main body -->
 
 
 
@@ -36,7 +36,7 @@
       </footer>
 
     
-   <?php wp_footer(); ?> 
+   <!-- <?php wp_footer(); ?>  -->
 
   </body>
 </html>

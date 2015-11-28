@@ -6,7 +6,7 @@
 ?>
 
 <?php
-
+// we only retrieve the post for our blog
 $arg = 'category_name=Blog';
 $category_posts = new WP_Query( $arg );
 
@@ -25,28 +25,22 @@ if ( is_page( 'Home' ) ) {
 ?>
 
 	<div id="row">
-
-
-		<?php if ( $category_posts->have_posts() ) :
-	while ( $category_posts->have_posts() ):
+	<?php if ( $category_posts->have_posts() ) :
+		while ( $category_posts->have_posts() ):
 		echo'<div id="span4">';
-	$category_posts->the_post() ?>
+		$category_posts->the_post() ?>
 
-					<h2><a href="<?php the_permalink(); ?>"> <?php the_title()?> </a></h2>
-					<p> <?php the_time( '1, F jS, Y' );?> </p>
+			<h2><a href="<?php the_permalink(); ?>"> <?php the_title()?> </a></h2>
+			<p class='entry'>
+				<?php the_excerpt('Read the rest of this entry &raquo;'); ?>
+			</p>
+			<p> <?php the_time( '1, F jS, Y' );?> </p>
 
-					<!--<?php the_content();?>-->
-
-
-					<?php endwhile; else: ?>
-					<p><?php _e( 'Sorry this page does not exist.' ); ?></p>
-					</div>
+			<?php endwhile; 
+			else: ?>
+			<p><?php _e( 'Sorry this page does not exist.' ); ?></p>
+			</div>
 		<?php endif; ?>
-
-
-		<div id="span4">
-			<?php get_sidebar(); ?>
-		</div>
 	</div>
 <?php
 get_footer();
