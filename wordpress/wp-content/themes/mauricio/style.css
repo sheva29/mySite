@@ -34,8 +34,39 @@ a:active {text-decoration: none;}
 	padding-bottom: 50px;
 
 }*/
+/* ------------------------- Media Queries ------------------------- */
 
-/*------------------This is the Header------------------------------*/
+@media (min-width: 320px) {
+  
+  .blog-posts {
+    width: 300px;
+  }
+
+}
+
+@media (min-width: 768px) {
+  
+  .blog-posts {
+    width: 500px;
+  }
+
+}
+
+@media (min-width: 1080px) {
+  
+  .blog-posts {
+    width: 600px;
+  }
+}
+
+@media (min-width: 1200px) {
+  
+  .blog-posts {
+    width: 800px;
+  }
+}
+
+/* ------------------ This is the Header ------------------ */
 
 .projects-thumbs{
 	margin-top: 45px;
@@ -145,7 +176,15 @@ a:active {text-decoration: none;}
 	width: 1200px;
 }
 
-/*---------------------This is for the footer -----------------------*/ 
+/* -------------------- Blog Posts -------------------- */
+
+.blog-posts {
+
+	margin: 0px auto;
+	/*width: 400px;*/
+}
+
+/* --------------------This is for the footer ---------------------- */ 
 
 #footer-mauricio{
 	clear: both;
@@ -240,41 +279,7 @@ a:active {text-decoration: none;}
 	
 }
 
-/**** Isotope filtering ****/
 
-/*
-.isotope-item {
-  z-index: 2;
-}
-
-.isotope-hidden.isotope-item {
-  pointer-events: none;
-  z-index: 1;
-}
-
-.isotope,
-.isotope .isotope-item {
-  /* change duration value to whatever you like */
-  /*-webkit-transition-duration: 0.8s;
-     -moz-transition-duration: 0.8s;
-          transition-duration: 0.8s;
-}
-
-.isotope {
-  -webkit-transition-property: height, width;
-     -moz-transition-property: height, width;
-          transition-property: height, width;
-}
-
-.isotope .isotope-item {
-  -webkit-transition-property: 
-  -webkit-transform, opacity;
-  -moz-transition-property:    
-  
-  -moz-transform, opacity;
-  transition-property:         transform, opacity;
-}
-*/
 
 
 
