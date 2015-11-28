@@ -12,114 +12,39 @@ $category_posts = new WP_Query( $arg );
 $classes = array('col-md-3 ', 'image-container ');
 $terms = get_terms('category', array('parent' => 9));
 
-
 ?>
 
-  <!--Include this when a nav bar with categories for all different posts is available
-    <h1> Projects </h1>
--->
-
-<?php 
-// this calls our side bar to find projects based on its categories.
-// get_sidebar('Project Categories'); 
-
-	
-	// $count = count($terms);
-	// foreach($terms as $term){
-	// 	print($term->slug.' ');
-	// }
-
+ <!-- Include this when a nav bar with categories for all different posts is available -->
+<nav id="sidebar" class="project-sidebar">
+	<?php foreach($terms as $term){			
+		echo "<button class='project-sidebar-elements'data-filter='.".$term->slug."'>" . $term->name . "</button>\n";
+	}	  	
 	?>
-	<nav id="sidebar" class="project-sidebar">
-		<!-- <ul id="content1"> -->
-		<?php foreach($terms as $term){
-				
-				echo "<button class='project-sidebar-elements'data-filter='.".$term->slug."'>" . $term->name . "</button>\n";
-
-			  }
-		?>
-		<!-- </ul> -->
-	</nav>
-
-
+</nav>
 
 <div class="row custom-row" id="content">
 
 	<?php if ( $category_posts->have_posts() ) : ?>
 
 	  	<?php while ( $category_posts->have_posts() ):  $category_posts->the_post();
-
-	//   	post_class('col-md-3');
-	// var_dump(the_post());
-				$termsArray = get_the_terms( $post->ID, "category" );  //Get the terms for this particular item
-	
+;
+				$termsArray = get_the_terms( $post->ID, "category" );  //Get the terms for this particular item	
 	  			// echo $termsArray;
 				$termsString = ""; //initialize the string that will contain the terms
-				$termsDataFilter = "";
-				$result = count($classes);
-				$category = get_the_category();
-				$categoryIndex = 0;
-
+				// $category = get_the_category();	
 				foreach ( $termsArray as $term ) { // for each term 
-
 					// echo $termsDataFilter;
 					$termsString .= $term->slug." "; //create a string that has all the slugs for the class
-					$termsDataFilter .= ".".$term->slug.", ";
-					$index = $result++;
-					$classes[$index] = $termsString;
-					$categories[$categoryIndex] = $category;
-					$categoryIndex++;
-
 				}
 	  	?>
-
-        <!-- 	\<?php  
-
-				// if ( !has_category( $category_posts->the_post()){
-
-				// 	 wp_set_post_categories( '12');
-
-				// }
-		?> -->
-
-		  	<div  <?php /*post_class( $classes);*/  ?>  class="<?php echo $termsString; ?>item" >
-
+		  	<div  <?php //post_class( $classes);  ?>  class="<?php echo $termsString; ?>item" > <!-- we pass the terms as a class to our thumbnail -->
 				<a href="<?php the_permalink(); ?>" class="test"> <?php the_post_thumbnail('custom_thumb', array( 'class' => 'img-responsive' ) ); echo '</a>'?> </a>
-
-<!-- 				<div class="projects" id="<?php the_ID(); ?>"></div> -->
-
-					<a class="thumb-title" href="<?php the_permalink(); ?>"> <?php the_title()?> / </a>
-					<!-- <a class="project-year" href="<?php the_permalink(); ?>"> <?php the_time( 'Y' );?> </a>
-
-				</div> -->
-
+					<a class="thumb-title" href="<?php the_permalink(); ?>"> <?php the_title()?> <!-- / --> </a>
+					<!-- <a class="project-year" href="<?php the_permalink(); ?>"> <?php the_time( 'Y' );?> </a> -->
 			</div>
 
 		<?php endwhile;?>
-
 	<?php endif; ?>
-
-	<?php
-
-	// $arraySize = count($classes);
-
-	// for($i = 0; $i < $arraySize; $i++){
-
-		// print($classes[$i]);
-	// }
-
-	// $categorySize = count($categories);
-	// for($i; $i < $categorySize; $i++){
-
-
-
-		// print($categories[$i]);
-
-	// }
-
-	?>
-
-
 <?php wp_reset_postdata();?>
 
 <!--Closes thumbnails-->

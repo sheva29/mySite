@@ -23,7 +23,7 @@ jQuery(document).ready(function($){
 
 	//*** Isotope ***//
 	//we initiate our isotope grid
-	var $grid = $("#content");
+	var $grid = $(".row");
 	$grid.isotope({
 		itemSelector: '.projects',
 		animationEngine: 'best-available',
