@@ -56,9 +56,6 @@ function mauricio_bootstrap_scripts() {
 	//Add my own script to fix a glitch
 	// wp_register_script( 'to_fix_bugs', get_template_directory_uri(). '/mauricio_bootstrap/js/bootstrap-fixes.js', array( 'jquery' ), 'version', false );
 	// wp_enqueue_script( 'to_fix_bugs' );
-
-
-
 }
 
 function isotopeJS(){
@@ -80,7 +77,6 @@ add_action( 'wp_enqueue_scripts', 'mauricio_bootstrap_scripts' );
 add_action('wp_footer', 'script_on_footer');
 add_action( 'wp_enqueue_scripts', 'isotopeJS');
 
-
 //Adds WebFont Link in the Head
 
 function open_sans_font() {
@@ -98,33 +94,13 @@ remove_action( 'wp_head', 'start_post_rel_link' );
 remove_action( 'wp_head', 'index_rel_link' );
 remove_action( 'wp_head', 'adjacent_posts_rel_link' );
 
-//Custom size of our thumb
-add_image_size("custom_thumb", 250, 170);// Use custom image when setting the_post_thumbnail()
+//Custom size of our thumb ** height to determine the max size of the image
+add_image_size("custom_thumb", 250, 173);// Use custom image when setting the_post_thumbnail()
 
 //Disables wordpress of adding <p> tags at the end of the content - Used for the bootstrap carousel
 remove_filter( 'the_content', 'wpautop' );
 remove_filter( 'the_excerpt', 'wpautop' );
 
-
-function assignCatToProjects(){
-
-	// we want to display only thumbs from the projects category.
-	$arg = array( 'category_name'=>'Projects', 'posts_perpage'=>'-1' );
-	// we pass the argument to our query.
-	$category_posts = new WP_Query( $arg );
-	$catID = array('12');	
-
-	// var_dump('<h> Hello Mauricio </h>');
-
-}
-
-add_action('the_post', 'assignCatToProjects' );
-
-// add_action( 'shutdown', function(){
-//     foreach( $GLOBALS['wp_actions'] as $action => $count )
-//         printf( '%s (%d) <br/>' . PHP_EOL, $action, $count );
-
-// });
-
+?>
 
 ?>
