@@ -5,14 +5,6 @@
     <!-- Stylesheet -->
     <link rel ="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>" >
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
-
-
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <!-- Includes BootStrap.js in the head -->
-    <?php //wp_enqueue_script(); ?>
     <?php 
     /*Calls the all the information that goes in the head*/
     wp_head(); 
@@ -56,8 +48,19 @@
 
     </div>
 
+     <div class="jumbotron intro">
+        
+        <section class="container intro-section">
+          <!--This is where my intro goes-->
+          <h2>You have made it to my Blog! This is a random place for me to post about anything, mostly work in progress and tech</h2>
+          <p>I'm a designer who loves building stuff, I enjoy coding and technology, enjoy my portfolio and feel free to contact me</p>
+        
+        </section>       
+
+    </div>
+
 <!-- This is where the main body starts -->
-  <div class="projects-thumbs container-fluid">
+  <div class="projects-thumbs container-fluid container">
          
 
     
