@@ -6,21 +6,12 @@
 ?>
 
 <?php
+
+get_header( 'blog');
+
 // we only retrieve the post for our blog
 $arg = 'category_name=Blog';
 $category_posts = new WP_Query( $arg );
-
-if ( is_page( 'Home' ) ) {
-	get_header( 'home' );
-} elseif ( is_page( 'About' ) ) {
-	get_header( 'about' );
-} elseif ( is_page( 'Contact' ) ) {
-	get_header( 'contact' );
-} elseif (  is_page( 'Work' ) ) {
-	get_header( 'work' );
-} else {
-	get_header();
-}
 
 ?>
 
