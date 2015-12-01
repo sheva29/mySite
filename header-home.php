@@ -36,9 +36,10 @@
                   <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href=" <?php echo site_url(); ?>" > 
-                <p id="mauricio"> mauricio </p> 
+               <!--  <p id="mauricio"> mauricio </p> 
                 <p id="sanchez"> Sanchez </p> 
-                <p id="title"> Interaction Designer & Creative Technologist</p> 
+                <p id="title"> Interaction Designer & Creative Technologist</p>  -->
+                <object id="mauricio-log" type="image/svg+xml" data="http://ec2-54-235-78-67.compute-1.amazonaws.com/wp-content/uploads/2015/12/logo12012015v1.0.svg">Your browser does not support SVG</object>
                 <!-- <img class="logo2" src="http://localhost/wp-content/uploads/2013/06/logo2.png"> --> 
                 </a>
               </div>
