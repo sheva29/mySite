@@ -1,3 +1,4 @@
+//**** for wordpress use JQeury instead of ($) ****
 jQuery(document).ready(function($){
 
 	// console.log("hello world");
