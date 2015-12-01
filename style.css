@@ -43,7 +43,31 @@ a:active {text-decoration: none;}
 	overflow: hidden;
 }
 
-#mauricio {
+
+
+@media (min-width: 320px){
+	.logo-nav {
+		margin-top: 20px;
+	}
+}
+@media (min-width: 768px){
+	.logo-nav {
+
+		margin-top: 8px;
+	}
+}
+#logo {
+  /*display: block;*/
+  /*text-indent: -9999px;*/
+  width: 240px;
+  height: 25px;
+  background: url(http://ec2-54-235-78-67.compute-1.amazonaws.com/wp-content/uploads/2015/12/logo12012015v1.0.svg);
+  background-size: 240px 25px;
+  margin-left: 15px;
+  float: left;
+}
+
+/*#mauricio {
 	float: left;
 	font-size: 22px;
 	margin: 0;
@@ -58,7 +82,7 @@ a:active {text-decoration: none;}
 	margin-left: 3px;
 	font-weight: bold;
 	letter-spacing: 1pt;
-}
+}*/
 
 #title { 
 	float: left;
@@ -70,6 +94,7 @@ a:active {text-decoration: none;}
 
 .nav {
 	font-size: 15px;
+	margin-left: 10px;
 }
 
 .intro{

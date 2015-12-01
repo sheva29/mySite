@@ -24,10 +24,9 @@
   <body>
 
     <div class="navbar navbar-inverse navbar-fixed-top header-mauricio">
-
-            <nav class="container navbar-inverse" role="navigation">  
-              
-              <div class="navbar-header">
+            <!--Logo and Hidden Hambuguer-->
+            <nav class="container navbar-inverse" role="navigation">              
+              <div class="navbar-header logo-nav">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                   <span class="sr-only">Toogle navigation</span>
                   <span class="icon-bar"></span>
@@ -35,15 +34,9 @@
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href=" <?php echo site_url(); ?>" > 
-               <!--  <p id="mauricio"> mauricio </p> 
-                <p id="sanchez"> Sanchez </p> 
-                <p id="title"> Interaction Designer & Creative Technologist</p>  -->
-                <object id="mauricio-log" type="image/svg+xml" data="http://ec2-54-235-78-67.compute-1.amazonaws.com/wp-content/uploads/2015/12/logo12012015v1.0.svg">Your browser does not support SVG</object>
-                <!-- <img class="logo2" src="http://localhost/wp-content/uploads/2013/06/logo2.png"> --> 
+                <a class="" id="logo" href=" <?php echo site_url(); ?>" > 
                 </a>
               </div>
-
             
                 <!--Here we start our Navbar-->
               <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">

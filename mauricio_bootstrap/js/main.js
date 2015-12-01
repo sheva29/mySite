@@ -1,15 +1,6 @@
 //**** for wordpress use JQeury instead of ($) ****
 jQuery(document).ready(function($){
 
-	// console.log("hello world");
-	// $('#footer-mauricio').click(function(){
-
-	// 	alert("jQuery handle works");
-
-	// });
-
-	// alert("jQuery works!");
-
 
 	addIDsToSidebarElements = function(){
 
@@ -19,8 +10,16 @@ jQuery(document).ready(function($){
 		// console.log($test);
 	}
 
+	addClassToLogo = function () {
+		
+		var $svgContainer = $('.mauricio-logo');
+		var $findSvg = $svgContainer.find('svg');
+		$findSvg.addClass("logo");
+	}
+
 	// we add a class to all the elements in the side bar.
 	addIDsToSidebarElements();
+	addClassToLogo();
 
 	//*** Isotope ***//
 	//we initiate our isotope grid
@@ -52,6 +51,10 @@ jQuery(document).ready(function($){
 		console.log('filtered ' + iso.filteredItems.length + ' items');
 
 	});
+
+	
+
+
 
 
 
