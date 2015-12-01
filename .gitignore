@@ -1,1 +1,11 @@
 .DS_Store
+
+#Current folders in my themes to ignore
+bigbangwp
+Bootstrap
+twentyeleven
+twentyfifteen
+twentyfourteen
+twentythirteen
+twentytwelve
+index.php
