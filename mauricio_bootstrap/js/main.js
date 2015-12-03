@@ -10,23 +10,23 @@ jQuery(document).ready(function($){
 		// console.log($test);
 	}
 
-	addClassToLogo = function () {
+	// addClassToLogo = function () {
 		
-		var $svgContainer = $('.mauricio-logo');
-		var $findSvg = $svgContainer.find('svg');
-		$findSvg.addClass("logo");
-	}
+	// 	var $svgContainer = $('.mauricio-logo');
+	// 	var $findSvg = $svgContainer.find('svg');
+	// 	$findSvg.addClass("logo");
+	// }
 
 	// we add a class to all the elements in the side bar.
 	addIDsToSidebarElements();
-	addClassToLogo();
+	// addClassToLogo();
 
 	//*** Isotope ***//
 	//we initiate our isotope grid
 	var $grid = $(".row");
 	$grid.isotope({
 		itemSelector: '.projects',
-		animationEngine: 'best-available',
+		// animationEngine: 'best-available',
 		layoutMode: 'fitRows',
 		animationOptions: {
 			duration: 750,
