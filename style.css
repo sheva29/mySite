@@ -47,14 +47,19 @@ a:active {text-decoration: none;}
 
 @media (min-width: 320px){
 	.logo-nav {
-		margin-top: 20px;
+		/*margin-top: 20px;*/
 	}
 }
 @media (min-width: 768px){
 	.logo-nav {
 
-		margin-top: 8px;
+		/*margin-top: 8px;*/
 	}
+}
+
+#burguer-menu {
+
+	margin: 4px 10px;
 }
 #logo {
   /*display: block;*/
@@ -63,26 +68,10 @@ a:active {text-decoration: none;}
   height: 25px;
   background: url(http://ec2-54-235-78-67.compute-1.amazonaws.com/wp-content/uploads/2015/12/logo12012015v1.0.svg);
   background-size: 240px 25px;
+  margin-top: 8px;
   margin-left: 15px;
   float: left;
 }
-
-/*#mauricio {
-	float: left;
-	font-size: 22px;
-	margin: 0;
-	color: #b9d657;
-	letter-spacing: 2pt;
-}
-
-#sanchez { 	
-	float: left;
-	font-size: 22px;
-	margin: 0;
-	margin-left: 3px;
-	font-weight: bold;
-	letter-spacing: 1pt;
-}*/
 
 #title { 
 	float: left;
@@ -123,13 +112,13 @@ a:active {text-decoration: none;}
 	margin-top: 40px;
 }
 
-.image-container{
+/*.image-container{
 	margin-top: 25px;
 	overflow: hidden;
 	float: left;
-}
+}*/
 
-/*---------------------This is for the body -----------------------*/ 
+/*---------------------This is for the body Landing page -----------------------*/ 
 
 .custom-row{
 	float: left;
@@ -155,12 +144,23 @@ a:active {text-decoration: none;}
 
 .item {
 	float: left;
-	margin: 10px;
+	margin: 15px;
+	width: 231px;
+}
+
+.img-thumb {
+
+	width:;
 }
 
 #content {
-	width: 1200px;
+	width: 100%;
 }
+
+
+/**** Isotope filtering ****/
+
+
 
 /* -------------------- Blog Posts -------------------- */
 

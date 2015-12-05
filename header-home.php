@@ -27,7 +27,7 @@
             <!--Logo and Hidden Hambuguer-->
             <nav class="container navbar-inverse" role="navigation">              
               <div class="navbar-header logo-nav">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <button id="burguer-menu" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu-collapse-hook">
                   <span class="sr-only">Toogle navigation</span>
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
@@ -39,7 +39,7 @@
               </div>
             
                 <!--Here we start our Navbar-->
-              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <div class="collapse navbar-collapse" id="menu-collapse-hook">
                 <ul class="nav navbar-nav">
                  <!-- Here we include our menu buttons, it includes each menu button on a <li> tag-->
                   <?php wp_list_pages( array( 'title_li' => '', 'exclude' => 12 ) ); ?>

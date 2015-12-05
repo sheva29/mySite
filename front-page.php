@@ -22,7 +22,7 @@ $terms = get_terms('category', array('parent' => 9));
 	?>
 </nav>
 
-<div class="row custom-row" id="content">
+<div class="row custom-row" id="content" class="isotope">
 
 	<?php if ( $category_posts->have_posts() ) : ?>
 
@@ -37,8 +37,8 @@ $terms = get_terms('category', array('parent' => 9));
 					$termsString .= $term->slug." "; //create a string that has all the slugs for the class
 				}
 	  	?>
-		  	<div  <?php //post_class( $classes);  ?>  class="<?php echo $termsString; ?>item" > <!-- we pass the terms as a class to our thumbnail -->
-				<a href="<?php the_permalink(); ?>" class="test"> <?php the_post_thumbnail('custom_thumb', array( 'class' => 'img-responsive' ) ); echo '</a>'?> </a>
+		  	<div  <?php //post_class( $classes);  ?>  class="<?php echo $termsString; ?>item isotope-item" > <!-- we pass the terms as a class to our thumbnail -->
+				<a href="<?php the_permalink(); ?>" class="test"> <?php the_post_thumbnail('custom_thumb', array( 'class' => 'img-thumb' ) ); echo '</a>'?> </a>
 					<a class="thumb-title" href="<?php the_permalink(); ?>"> <?php the_title()?> <!-- / --> </a>
 					<!-- <a class="project-year" href="<?php the_permalink(); ?>"> <?php the_time( 'Y' );?> </a> -->
 			</div>
