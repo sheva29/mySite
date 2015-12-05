@@ -32,7 +32,7 @@ jQuery(document).ready(function($){
 			duration: 750,
 			easing: 'linear',
 			queue: false,
-		}
+		},
 	});
 
 	//we assign the elements to pass to our filters
