@@ -15,7 +15,7 @@ $category_posts = new WP_Query( $arg );
 
 ?>
 
-<div class="row">
+<div>
 	<?php if ( $category_posts->have_posts() ) :
 		while ( $category_posts->have_posts() ):
 		echo'<div class="blog-posts">';
