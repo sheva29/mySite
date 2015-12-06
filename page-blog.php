@@ -28,13 +28,15 @@ $category_posts = new WP_Query( $arg );
 			
 
 		</div>
-		<?php endwhile; 
-			else: ?>
+		<?php
+		endwhile; 
+		else: ?>
 			<p><?php _e( 'Sorry this page does not exist.' ); ?></p>
 			
 	<?php endif; ?>
 </div>
 
 <?php
+// comments_template();
 get_footer();
 ?>

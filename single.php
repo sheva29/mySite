@@ -1,4 +1,5 @@
 <!-- This is a single page. It serves as a template for all other pages that come from a post -->
+<!--blog post -->
 <?php
 
 get_header( 'other' );
@@ -14,16 +15,19 @@ get_header( 'other' );
 		<!-- <p><?php the_time( '1, F jS, Y' ); ?> </p> -->
 
 
-		<?php the_content();?>
+		<?php the_content();
+			if (in_category('Blog')):
+				comment_form();
+			else:
+
+			endif;
+		?>
 
 		<?php endwhile; else: ?>
 			<p><?php _e( 'Sorry this page does not exist.' ); ?></p>
 		<?php endif; ?>
 
 		</div>
-		<!-- <div id="span4">
-			<?php get_sidebar(); ?>
-		</div> -->
 	</div>
 <?php
 get_footer();
