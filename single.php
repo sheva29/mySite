@@ -17,7 +17,7 @@ get_header( 'other' );
 
 		<?php the_content();
 			if (in_category('Blog')):
-				comment_form();
+				comments_template();
 			else:
 
 			endif;
