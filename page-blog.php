@@ -1,4 +1,5 @@
 <!-- Always use the prefix page_'pagename'.php when adding a custom page to your wordpress -->
+<!-- Blog Page -->
 <?php
 //Use this to add a custom page
 /* Template name: Blog */
@@ -15,7 +16,7 @@ $category_posts = new WP_Query( $arg );
 
 ?>
 
-<div>
+<div class="blog-container">
 	<?php if ( $category_posts->have_posts() ) :
 		while ( $category_posts->have_posts() ):
 		echo'<div class="blog-posts">';
