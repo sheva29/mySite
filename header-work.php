@@ -53,8 +53,7 @@
         
         <section class="container intro-section">
           <!--This is where my intro goes-->
-          <h1>The breadth of my work encompasses <span id="expertise-areas"></span></h1>          
-          <p>The breadth of my work encompasses Digital Fabrication to Experiential coding and Product Development</p>         
+          <h1>The breadth of my work encompasses <span id="expertise-areas"></span></h1>                 
         </section>
 
 

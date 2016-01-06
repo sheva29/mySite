@@ -61,10 +61,11 @@ jQuery(document).ready(function($){
 
 		if (cnt>= fieldsOfExpertise.length) cnt=0;// we reset our counter
 		var $expertiseTextField = $("#expertise-areas");// we pass the id of the element we want to change
+		$expertiseTextField.css("color", fieldColor[cnt]);
 		$expertiseTextField.html(fieldsOfExpertise[cnt++]);//we switch the text
 		$expertiseTextField.fadeIn('slow').animate({opacity: 1.0}, 1000).fadeOut('slow', function () {
 			return slideExpertiseText();// we call the function repeteadly
-		}).css("color", fieldColor[cnt]);
+		});
 		console.log("cnt value: ", cnt);
 		console.log("textArray length: ", fieldsOfExpertise.length);
 	}
