@@ -54,19 +54,22 @@ jQuery(document).ready(function($){
 
 	//Let's switch the text in the work header
 	var cnt = 0;
-	var fieldsOfExpertise = ['Experiential', 'Digital Fabrication', 'Product Development', 'User Experience', 'Computation', 'Creative Coding'];
+	var fieldsOfExpertise = [' Experiential ', ' Digital Fabrication ', ' Product Development ', ' User Experience ', ' Computation ', ' Creative Coding '];
+	var fieldColor = ['aquamarine', 'brown', 'chartreuse', 'crimson', 'darkorange', 'darkslateblue'];
 
 	function slideExpertiseText () {
 
-		cnt >= fieldsOfExpertise.length ? 0 : cnt++;// we reset our counter
+		if (cnt>= fieldsOfExpertise.length) cnt=0;// we reset our counter
 		var $expertiseTextField = $("#expertise-areas");// we pass the id of the element we want to change
-		$expertiseTextField.html(fieldsOfExpertise[cnt]);//we switch the text
-		$expertiseTextField.fadeIn('slow').animate({opacity: 1.0}, 1500).fadeOut('slow', function () {
-			return slideExpertiseText();
-		});
+		$expertiseTextField.html(fieldsOfExpertise[cnt++]);//we switch the text
+		$expertiseTextField.fadeIn('slow').animate({opacity: 1.0}, 1000).fadeOut('slow', function () {
+			return slideExpertiseText();// we call the function repeteadly
+		}).css("color", fieldColor[cnt]);
+		console.log("cnt value: ", cnt);
+		console.log("textArray length: ", fieldsOfExpertise.length);
 	}
 
-	slideExpertiseText();
+	slideExpertiseText();// we evoke our function
 
 	
 
