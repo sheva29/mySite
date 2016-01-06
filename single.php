@@ -16,6 +16,7 @@ get_header( 'other' );
 
 
 		<?php the_content();
+			wp_list_comments();
 			if (in_category('Blog')):
 				comments_template();
 			else:
