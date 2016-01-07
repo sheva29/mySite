@@ -1,4 +1,4 @@
-//**** for wordpress use JQeury instead of ($) ****
+//**** for wordpress use jQuery instead of ($) ****
 jQuery(document).ready(function($){
 
 
@@ -9,10 +9,6 @@ jQuery(document).ready(function($){
 		var $test = $findProjectCategories.length;
 		// console.log($test);
 	}
-
-	// var buttonArr = []
-	// $('.project-sidebar-elements').each( function() {buttonArr.push($(this));});
-	// console.log(buttonArr);
 
 	// we add a class to all the elements in the side bar.
 	addIDsToSidebarElements();
@@ -51,15 +47,12 @@ jQuery(document).ready(function($){
 
 	//adding a toggle class for the buttons in the project thumbs
 	$(".project-sidebar-elements").on('click', function () {
-		// $(this).removeClass("is-checked");
-		$('.project-sidebar-elements').each( function (i) {
+		
+		$('.project-sidebar-elements').each( function (i) {// we check other elements with smae class to remove the class previously
 			var that = $(this);
 			if (that.hasClass('is-checked')) that.removeClass('is-checked');
-			// if (console.log($(this));
-			// console.log(i);
 		});
 		$(this).toggleClass("is-checked");
-
 	});
 
 	//Let's switch the text in the work header
@@ -81,14 +74,5 @@ jQuery(document).ready(function($){
 	}
 
 	slideExpertiseText();// we evoke our function
-
-	
-
-
-
-
-
-	
-
 
 });
