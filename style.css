@@ -38,7 +38,7 @@ a:active {text-decoration: none;}
 /* ------------------ This is the Header ------------------ */
 
 .projects-thumbs{
-	margin-top: 45px;
+	/*margin-top: 45px;*/
 	margin-bottom: 100px;
 	overflow: hidden;
 }
@@ -116,7 +116,7 @@ a:active {text-decoration: none;}
 
 #expertise-areas {
 
-	
+
 }
 
 /*.image-container{
@@ -147,6 +147,10 @@ a:active {text-decoration: none;}
 	 list-style-type: none;
 	 display: inline-block;
 	 margin: 0px 15px 10px;
+	 font-size: 16px;
+     background: none;
+     color: #428bca;
+     border: none;
 }
 
 .item {

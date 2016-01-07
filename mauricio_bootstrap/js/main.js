@@ -10,12 +10,9 @@ jQuery(document).ready(function($){
 		// console.log($test);
 	}
 
-	// addClassToLogo = function () {
-		
-	// 	var $svgContainer = $('.mauricio-logo');
-	// 	var $findSvg = $svgContainer.find('svg');
-	// 	$findSvg.addClass("logo");
-	// }
+	// var buttonArr = []
+	// $('.project-sidebar-elements').each( function() {buttonArr.push($(this));});
+	// console.log(buttonArr);
 
 	// we add a class to all the elements in the side bar.
 	addIDsToSidebarElements();
@@ -49,6 +46,19 @@ jQuery(document).ready(function($){
 		// return false;
 		var iso = $grid.data('isotope');
 		console.log('filtered ' + iso.filteredItems.length + ' items');
+
+	});
+
+	//adding a toggle class for the buttons in the project thumbs
+	$(".project-sidebar-elements").on('click', function () {
+		// $(this).removeClass("is-checked");
+		$('.project-sidebar-elements').each( function (i) {
+			var that = $(this);
+			if (that.hasClass('is-checked')) that.removeClass('is-checked');
+			// if (console.log($(this));
+			// console.log(i);
+		});
+		$(this).toggleClass("is-checked");
 
 	});
 
