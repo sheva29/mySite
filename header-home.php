@@ -1,3 +1,5 @@
+  <?php $terms = get_terms('category', array('parent' => 9)); ?>
+
   <head>
     <meta charset="utf-8">
     <title> <?php bloginfo( 'name' ); ?><?php wp_title( '|', 1, 'left' ); ?> </title>
@@ -57,9 +59,21 @@
           <h1>Welcome to my portfolio, I am <a href="something">Mauricio!</a></h1>
           <p>I'm a designer who loves building stuff, I enjoy coding and technology, enjoy my portfolio and feel free to contact me</p>
         
-        </section>       
+        </section> 
+
+             <!-- Include this when a nav bar with categories for all different posts is available -->
+        
 
     </div>
+
+    <nav id="sidebar" class="project-sidebar">
+      <?php foreach($terms as $term){     
+        echo "<button class='project-sidebar-elements'data-filter='.".$term->slug."'>" . $term->name . "</button>\n";
+      }     
+      ?>
+    </nav>  
+
+
 
 <!-- This is where the main body starts -->
   <div class="projects-thumbs container-fluid container">

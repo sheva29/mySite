@@ -12,7 +12,15 @@ jQuery(document).ready(function($){
 
 	// we add a class to all the elements in the side bar.
 	addIDsToSidebarElements();
-	// addClassToLogo();
+	
+	//we set all as default for the filter
+	var all = $('.project-sidebar-elements');
+	all.each( function () {
+
+		if ($(this).text() == "All") $(this).toggleClass("is-checked");
+		console.log($(this).text());
+	});
+
 
 	//*** Isotope ***//
 	//we initiate our isotope grid
