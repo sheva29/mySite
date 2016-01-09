@@ -15,17 +15,10 @@ $arg = array( 'category_name'=>'Projects', 'posts_perpage'=>'-1' );
 $category_posts = new WP_Query( $arg );
 // we want to pass some classes to our image containers.
 $classes = array('col-md-3 ', 'image-container ');
-$terms = get_terms('category', array('parent' => 9));
 
 ?>
 
- <!-- Include this when a nav bar with categories for all different posts is available -->
-<nav id="sidebar" class="project-sidebar">
-	<?php foreach($terms as $term){			
-		echo "<button class='project-sidebar-elements'data-filter='.".$term->slug."'>" . $term->name . "</button>\n";
-	}	  	
-	?>
-</nav>
+
 
 <div class="row custom-row" id="content" class="isotope">
 
