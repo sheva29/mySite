@@ -52,20 +52,15 @@
 
     </div>
 
-     <div class="jumbotron intro">
-        
+     <div class="jumbotron intro">        
         <section class="container intro-section">
           <!--This is where my intro goes-->
-          <h1>Welcome to my portfolio, I am <a href="something">Mauricio!</a></h1>
-          <p>I'm a designer who loves building stuff, I enjoy coding and technology, enjoy my portfolio and feel free to contact me</p>
-        
-        </section> 
-
-             <!-- Include this when a nav bar with categories for all different posts is available -->
-        
-
+          <h1>Welcome to my portfolio, I am <a href="http://ec2-54-235-78-67.compute-1.amazonaws.com/about/">Mauricio!</a></h1>
+          <p>I'm a designer who loves building stuff, I enjoy coding and technology, enjoy my portfolio and feel free to contact me</p>        
+        </section>
     </div>
 
+    <!-- Include this when a nav bar with categories for all different posts is available -->
     <nav id="sidebar" class="project-sidebar">
       <?php foreach($terms as $term){     
         echo "<button class='project-sidebar-elements'data-filter='.".$term->slug."'>" . $term->name . "</button>\n";

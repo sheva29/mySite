@@ -2,7 +2,7 @@
 <!--blog post -->
 <?php
 
-get_header( 'other' );
+get_header( 'single' );
 
 ?>
 
@@ -11,25 +11,32 @@ get_header( 'other' );
 
 		<?php if ( have_posts() ) : while ( have_posts() ): the_post() ?>
 
-		<h1><?php the_title()?> </h1>
+		<h1 class="single-title"><?php the_title()?> </h1>
 		<!-- <p><?php the_time( '1, F jS, Y' ); ?> </p> -->
 
+		<p class="single-content">
+			<?php the_content();
+				
+				// we look for comments only in the Blog Category
+				if (in_category('Blog')):
+					// we display comments
+					wp_list_comments();
+					//we display the comments template
+					comments_template();
+				else:
 
-		<?php the_content();
-			wp_list_comments();
-			if (in_category('Blog')):
-				comments_template();
-			else:
-
-			endif;
-		?>
-
+				endif;
+			?>
+		</p>
+		<div class="divider"></div>
 		<?php endwhile; else: ?>
 			<p><?php _e( 'Sorry this page does not exist.' ); ?></p>
 		<?php endif; ?>
 
 		</div>
 	</div>
+<!-- Closes container from header -->
+</div>
 <?php
 get_footer();
 ?>
