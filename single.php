@@ -15,20 +15,22 @@ get_header( 'single' );
 		<!-- <p><?php the_time( '1, F jS, Y' ); ?> </p> -->
 
 		<p class="single-content">
-			<?php the_content();
-				
+			<?php the_content(); ?>
+		</p>
+		<p class="divider">DISCUSSION: </p>
+			<?php	
 				// we look for comments only in the Blog Category
 				if (in_category('Blog')):
 					// we display comments
-					wp_list_comments();
+					wp_list_comments(array( 'format' => 'html5'));
 					//we display the comments template
 					comments_template();
 				else:
 
 				endif;
 			?>
-		</p>
-		<div class="divider"></div>
+		
+		
 		<?php endwhile; else: ?>
 			<p><?php _e( 'Sorry this page does not exist.' ); ?></p>
 		<?php endif; ?>

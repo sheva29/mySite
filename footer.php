@@ -14,7 +14,7 @@
                     <a href="https://www.linkedin.com/profile/view?id=51325490&trk=nav_responsive_tab_profile" target="_blank">
                       <img id="linkedin" src="http://ec2-54-235-78-67.compute-1.amazonaws.com/wp-content/uploads/2015/03/linkedin_logo.png" height="50" width="50">
                     <a/>
-                    <a href="http://localhost/?page_id=60" target="_blank">
+                    <a href="http://ec2-54-235-78-67.compute-1.amazonaws.com/blog/" target="_blank">
                       <img id="blog" src="http://ec2-54-235-78-67.compute-1.amazonaws.com/wp-content/uploads/2015/03/wordpress_logo.png" height="50" width="50">
                     <a/>
                     <a href="https://twitter.com/maurifique" target="_blank">

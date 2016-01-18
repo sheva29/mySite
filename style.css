@@ -313,6 +313,21 @@ a:active {text-decoration: none;}
 	margin-top: 80px;
 }
 
+.divider{
+
+	/*border-style: solid;*/
+	/*border-bottom: black;*/
+	margin: 50px 0px 30px ;
+}
+
+
+.comment{
+	list-style-type: none;
+}
+.comment-meta{
+	font-size: 9px
+}
+
 
 
 
