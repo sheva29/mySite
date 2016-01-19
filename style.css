@@ -341,6 +341,15 @@ a:active {text-decoration: none;}
 
 
 /* -------------------- Contact Form Elements ---------------------- */ 
+#email{
+    font-style: normal;
+    color: #B5D745;
+    font-size: 24px;
+}
+
+.contact{
+	font-size: 12px;
+}
 
 .contact-container{
 	margin: 50px 0px;
