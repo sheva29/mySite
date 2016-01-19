@@ -55,7 +55,7 @@
         <section class="container intro-section">
           <!--This is where my intro goes-->
           <h1>Always open to collaborate or hear new opportunities</h1>
-          <p>Shoot me a message at</p><img href=""></img> <p> or send me a message below!</p>
+          <p>Shoot me a message at <span id="email">design[at]sanchezmauricio[dot]com</span> or feel free to leave a message below, I will get back to you as soon as possible!</p>
         
         </section>       
 
