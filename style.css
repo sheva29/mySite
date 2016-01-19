@@ -307,7 +307,11 @@ a:active {text-decoration: none;}
 	
 }
 
+<<<<<<< HEAD
 /* blog post */
+=======
+/* --------------------Blog Posts ---------------------- */ 
+>>>>>>> normalizing
 
 .single-container{
 	margin-top: 80px;
@@ -320,17 +324,63 @@ a:active {text-decoration: none;}
 	margin: 50px 0px 30px ;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> normalizing
 .comment{
 	list-style-type: none;
 }
 .comment-meta{
 	font-size: 9px
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> normalizing
 
 
+/* -------------------- Contact Form Elements ---------------------- */ 
 
+.contact-container{
+	margin: 50px 0px;
+}
 
+.contact-text-field-input{
+    resize: none;
+    background-color: #eeeeee;
+    border-style: none;
+    border-radius: 5px;
+    width: 300px;
+}
+
+.contact-subject-input{
+	background-color: #eeeeee;
+    border-style: none;
+    border-radius: 5px;
+    width: 300px;
+}
+
+.contact-email-input{
+	background-color: #eeeeee;
+    border-style: none;
+    border-radius: 5px;
+    width: 300px;
+}
+
+.contact-name-input{
+	background-color: #eeeeee;
+    border-style: none;
+    border-radius: 5px;
+    width: 300px;
+}
+
+.contact-submit-button{
+	background-color: #eeeeee;
+    border-style: none;
+    border-radius: 5px;
+    /*width: 300px;*/
+}
 
 
 

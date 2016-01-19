@@ -22,7 +22,7 @@
       </head>
 
   <body>
-
+    <!-- Header Blog -->
     <div class="navbar navbar-inverse navbar-fixed-top header-mauricio">
             <!--Logo and Hidden Hambuguer-->
             <nav class="container navbar-inverse" role="navigation">              
@@ -54,8 +54,8 @@
         
         <section class="container intro-section">
           <!--This is where my intro goes-->
-          <h1>Welcome to my portfolio, I am <a href="something">Mauricio!</a></h1>
-          <p>I'm a designer who loves building stuff, I enjoy coding and technology, enjoy my portfolio and feel free to contact me</p>
+          <h1>Welcome to my Blog!</h1>
+          <p>A space for me to post about work in progress, tech or some interesting process.</p>
         
         </section>       
 
