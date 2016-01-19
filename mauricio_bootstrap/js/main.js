@@ -1,7 +1,7 @@
 //**** for wordpress use jQuery instead of ($) ****
 jQuery(document).ready(function($){
 
-
+	//*** We add class to our project button filters ***//
 	addIDsToSidebarElements = function(){
 
 		var $findProjectCategories = $("#project-sidebar").find("li");
@@ -18,11 +18,12 @@ jQuery(document).ready(function($){
 	all.each( function () {
 
 		if ($(this).text() == "All") $(this).toggleClass("is-checked");
-		console.log($(this).text());
+		// console.log($(this).text());
 	});
 
 
 	//*** Isotope ***//
+
 	//we initiate our isotope grid
 	var $grid = $(".row");
 	$grid.isotope({
@@ -49,18 +50,20 @@ jQuery(document).ready(function($){
 		});
 		// return false;
 		var iso = $grid.data('isotope');
-		console.log('filtered ' + iso.filteredItems.length + ' items');
+		// console.log('filtered ' + iso.filteredItems.length + ' items');
 
 	});
+
+	//*** Project Thumbs ***//
 
 	//adding a toggle class for the buttons in the project thumbs
 	$(".project-sidebar-elements").on('click', function () {
 		
 		$('.project-sidebar-elements').each( function (i) {// we check other elements with smae class to remove the class previously
-			var that = $(this);
-			if (that.hasClass('is-checked')) that.removeClass('is-checked');
+			var that = $(this);// we pass this to a variable
+			if (that.hasClass('is-checked')) that.removeClass('is-checked');// we check it if the element has already being selected
 		});
-		$(this).toggleClass("is-checked");
+		$(this).toggleClass("is-checked");// we toggle our class
 	});
 
 	//Let's switch the text in the work header
@@ -77,10 +80,31 @@ jQuery(document).ready(function($){
 		$expertiseTextField.fadeIn('slow').animate({opacity: 1.0}, 1000).fadeOut('slow', function () {
 			return slideExpertiseText();// we call the function repeteadly
 		});
-		console.log("cnt value: ", cnt);
-		console.log("textArray length: ", fieldsOfExpertise.length);
+		// console.log("cnt value: ", cnt);
+		// console.log("textArray length: ", fieldsOfExpertise.length);
 	}
 
 	slideExpertiseText();// we evoke our function
+
+	//*** Contact Form - Adding Classes ***//
+
+	var $nameField = $("#contact-name").find('span').find('input');// we look for input fields
+	$nameField.addClass("contact-name-input");// pass a class we are familiar with
+
+	var $emailField = $("#contact-email").find('span').find('input');
+	$emailField.addClass("contact-email-input");	
+
+	var $subjectField = $("#contact-subject").find('span').find('input');
+	$subjectField.addClass("contact-subject-input");	
+
+	var $messageField = $("#contact-text-field").find('span').find('textarea');
+	$messageField.addClass("contact-text-field-input");
+
+	var $buttonField = $("#contact-submit").find('input');
+	$buttonField.addClass("contact-submit-button");
+	console.log($buttonField);
+
+
+
 
 });
