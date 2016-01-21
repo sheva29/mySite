@@ -317,7 +317,7 @@ a:active {text-decoration: none;}
 
 	/*border-style: solid;*/
 	/*border-bottom: black;*/
-	margin: 50px 0px 30px ;
+	margin: 50px 0px 0px ;
 }
 
 .comment{
@@ -349,12 +349,35 @@ a:active {text-decoration: none;}
 .comment-form-class{
 	margin: 0 0 10px;
 	clear: both;
-	/*font-size: 12px;*/
 	font-size: 12px;
+	overflow: hidden;
 }
 
 .comment-body{
     margin: 25px 0px;
+}
+
+.reply{
+	background-color: #eeeeee;
+    border-style: none;
+    border-radius: 5px;
+    height: 20px;
+    width: 50px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.reply > a {
+	 color: #333333;
+}
+
+#submit{
+	background-color: #eeeeee;
+    border-style: none;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 12px;
+    margin-top: 10px;
 }
 
 /* -------------------- Contact Form Elements ---------------------- */ 
