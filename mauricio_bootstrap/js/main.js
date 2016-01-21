@@ -102,8 +102,35 @@ jQuery(document).ready(function($){
 
 	var $buttonField = $("#contact-submit").find('input');
 	$buttonField.addClass("contact-submit-button");
-	// console.log($buttonField);
 
+	//*** Comment Form - Adding Classes ***//
+
+	var $commentLabel = $(".comment-form-comment").find("label");
+	var $commentTextField = $("#comment");
+	$commentTextField.addClass("comment");
+	$commentLabel.addClass("comment");
+
+	var $commentAuthor = $(".comment-form-author").find("label");
+	var $commentAuthorField = $("#author");
+	$commentAuthorField.addClass("comment");
+	$commentAuthor.addClass("comment");
+	
+	var $commentEmail = $(".comment-form-email").find("label");
+	var $commentEmailField = $("input#email");// we specify an input
+	$commentEmailField.addClass("comment");
+	$commentEmail.addClass("comment");
+
+	var $commentUrl = $(".comment-form-url").find("label");
+	var $commentUrlField = $("#url");
+	$commentUrlField.addClass("comment");
+	$commentUrl.addClass("comment");
+
+	var $formElements = $("form#commentform").find("p");
+	$formElements.each(function () {
+		var that = $(this);
+		that.addClass("comment-form-class");// we add a general class to our <p> elements
+
+	});
 
 
 

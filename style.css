@@ -307,11 +307,7 @@ a:active {text-decoration: none;}
 	
 }
 
-<<<<<<< HEAD
-/* blog post */
-=======
 /* --------------------Blog Posts ---------------------- */ 
->>>>>>> normalizing
 
 .single-container{
 	margin-top: 80px;
@@ -324,26 +320,48 @@ a:active {text-decoration: none;}
 	margin: 50px 0px 30px ;
 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> normalizing
 .comment{
 	list-style-type: none;
 }
 .comment-meta{
 	font-size: 9px
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> normalizing
+.comment-label, #comment,{
+	float: left;
+	clear: both;
+}
 
+#comment, .comment, #reply-title, #email-notes, .comment-notes, .form-submit{
+	float: left;
+	clear: both;
+	resize: none;
+	
+}
+
+#comment, #author, #email, #url{
+	width: 300px;
+	background-color: #eeeeee;
+    border-style: none;
+    border-radius: 5px;
+}
+
+.comment-form-class{
+	margin: 0 0 10px;
+	clear: both;
+	/*font-size: 12px;*/
+	font-size: 12px;
+}
+
+.comment-body{
+    margin: 25px 0px;
+}
 
 /* -------------------- Contact Form Elements ---------------------- */ 
-#email{
-    font-style: normal;
-    color: #B5D745;
+#mauricio-email{
+    font-weight: bold;
+    font-style: italic;
+    color: #333333;
     font-size: 24px;
 }
 
@@ -363,33 +381,23 @@ a:active {text-decoration: none;}
     width: 300px;
 }
 
-.contact-subject-input{
+.contact-subject-input, .contact-email-input, .contact-name-input{
 	background-color: #eeeeee;
     border-style: none;
     border-radius: 5px;
     width: 300px;
+    height: 20px;
 }
 
-.contact-email-input{
-	background-color: #eeeeee;
+ .contact-submit-button{
+ 	background-color: #eeeeee;
     border-style: none;
     border-radius: 5px;
-    width: 300px;
+    height: 20px;
 }
 
-.contact-name-input{
-	background-color: #eeeeee;
-    border-style: none;
-    border-radius: 5px;
-    width: 300px;
-}
 
-.contact-submit-button{
-	background-color: #eeeeee;
-    border-style: none;
-    border-radius: 5px;
-    /*width: 300px;*/
-}
+
 
 
 
