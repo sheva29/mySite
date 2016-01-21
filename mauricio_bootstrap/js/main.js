@@ -69,7 +69,7 @@ jQuery(document).ready(function($){
 	//Let's switch the text in the work header
 	var cnt = 0;
 	var fieldsOfExpertise = [' Experiential ', ' Digital Fabrication ', ' Product Development ', ' User Experience ', ' Computation ', ' Creative Coding '];
-	var fieldColor = ['aquamarine', 'brown', 'chartreuse', 'crimson', 'darkorange', 'darkslateblue'];
+	var fieldColor = ['#5ce2cd', '#a92f65', '#b5d746', '#f77fa3', '#f4b55e', '#7b55f3'];
 
 	function slideExpertiseText () {
 
@@ -102,7 +102,7 @@ jQuery(document).ready(function($){
 
 	var $buttonField = $("#contact-submit").find('input');
 	$buttonField.addClass("contact-submit-button");
-	console.log($buttonField);
+	// console.log($buttonField);
 
 
 
