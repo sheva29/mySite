@@ -1,6 +1,49 @@
 //**** for wordpress use jQuery instead of ($) ****
 jQuery(document).ready(function($){
 
+	//Some general functions
+	//we use this function to move elements with
+	Array.prototype.move = function (old_index, new_index) {
+	    while (old_index < 0) {
+	        old_index += this.length;
+	    }
+	    while (new_index < 0) {
+	        new_index += this.length;
+	    }
+	    if (new_index >= this.length) {
+	        var k = new_index - this.length;
+	        while ((k--) + 1) {
+	            this.push(undefined);
+	        }
+	    }
+	    this.splice(new_index, 0, this.splice(old_index, 1)[0]);
+	    return this; // for testing purposes
+	};
+
+	// get elements from container and pass them to a temporary one
+	var tempObject = [];
+	var $menuContainer = $('#sidebar');
+	var length = $menuContainer[0].childElementCount;
+	console.log( $menuContainer[0]);	
+	// pass elements from container to an object
+	for (var i= 0; i < length ; i++){
+		tempObject.push($menuContainer[0].children[i]);
+	}
+	// change order to the one needed in new object
+	tempObject.forEach( function (element, i) {
+
+		if(element.innerHTML === 'Systems') tempObject.move(i, 1);		
+
+	});
+
+	console.log("new order", tempObject);
+
+	// erase children from old object
+	$menuContainer.children().remove();
+	tempObject.forEach( function (element, i){
+		$menuContainer.append(element);
+	});
+
 	//*** We add class to our project button filters ***//
 	addIDsToSidebarElements = function(){
 
@@ -57,16 +100,33 @@ jQuery(document).ready(function($){
 	//*** Project Thumbs ***//
 
 	//adding a toggle class for the buttons in the project thumbs
-	$(".project-sidebar-elements").on('click', function () {
+	var $sidebarElements = $('.project-sidebar-elements');
+	$sidebarElements.on('click', function () {
 		
-		$('.project-sidebar-elements').each( function (i) {// we check other elements with smae class to remove the class previously
+		$sidebarElements.each( function (i) {// we check other elements with smae class to remove the class previously
 			var that = $(this);// we pass this to a variable
 			if (that.hasClass('is-checked')) that.removeClass('is-checked');// we check it if the element has already being selected
 		});
 		$(this).toggleClass("is-checked");// we toggle our class
 	});
 
-	//Let's switch the text in the work header
+	//changing the order by which they are displayed
+	
+	
+	
+	// pass new object as children to the old object
+
+
+
+	console.log($menuContainer);
+	// console.log("new order", tempObject);
+	// console.log();
+	$sidebarElements.on('click', function() {
+		// console.log($(this).data('filter'));
+	})
+
+
+	//Let's switch the text in the Work header
 	var cnt = 0;
 	var fieldsOfExpertise = [' Experiential ', ' Digital Fabrication ', ' Product Development ', ' User Experience ', ' Computation ', ' Creative Coding '];
 	var fieldColor = ['#5ce2cd', '#a92f65', '#b5d746', '#f77fa3', '#f4b55e', '#7b55f3'];

@@ -53,8 +53,8 @@
         
         <section class="container intro-section">
           <!--This is where my intro goes-->
-          <h1>I'm a Designer</h1>                 
-          <p>I was trained in the ways of the Industrial Designer, but later got lured in the means of the code</p>
+          <h1>I'm a Product Designer</h1>                 
+          <p>I was trained in the ways of the Industrial Designer, and the means of the Creative Technologist</p>
         </section>
 
 
