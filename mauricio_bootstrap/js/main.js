@@ -20,11 +20,12 @@ jQuery(document).ready(function($){
 	    return this; // for testing purposes
 	};
 
+	//*** We Chance The Order of Our FILTERS ***//
+
 	// get elements from container and pass them to a temporary one
 	var tempObject = [];
 	var $menuContainer = $('#sidebar');
-	var length = $menuContainer[0].childElementCount;
-	console.log( $menuContainer[0]);	
+	var length = $menuContainer[0].childElementCount;	
 	// pass elements from container to an object
 	for (var i= 0; i < length ; i++){
 		tempObject.push($menuContainer[0].children[i]);
@@ -35,11 +36,9 @@ jQuery(document).ready(function($){
 		if(element.innerHTML === 'Systems') tempObject.move(i, 1);		
 
 	});
-
-	console.log("new order", tempObject);
-
 	// erase children from old object
 	$menuContainer.children().remove();
+	// add new elements
 	tempObject.forEach( function (element, i){
 		$menuContainer.append(element);
 	});
@@ -110,23 +109,8 @@ jQuery(document).ready(function($){
 		$(this).toggleClass("is-checked");// we toggle our class
 	});
 
-	//changing the order by which they are displayed
-	
-	
-	
-	// pass new object as children to the old object
 
-
-
-	console.log($menuContainer);
-	// console.log("new order", tempObject);
-	// console.log();
-	$sidebarElements.on('click', function() {
-		// console.log($(this).data('filter'));
-	})
-
-
-	//Let's switch the text in the Work header
+	//*** Let's animate the text in the Work header ***///
 	var cnt = 0;
 	var fieldsOfExpertise = [' Experiential ', ' Digital Fabrication ', ' Product Development ', ' User Experience ', ' Computation ', ' Creative Coding '];
 	var fieldColor = ['#5ce2cd', '#a92f65', '#b5d746', '#f77fa3', '#f4b55e', '#7b55f3'];
