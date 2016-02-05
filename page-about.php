@@ -23,7 +23,7 @@ $terms = get_terms('category', array('parent' => 9));
 
 <p class="about-paragraph">I moved to New York City in 2008 to work at Glide-Inc, an engineering firm, where I consulted on design and the development of products and furniture. After two years at Glide, I went to work at Martel Design focusing on digital fabrication and customized furniture. My current work focuses on exploring the junction of physical and digital through creative coding and digital experiences to deliver human centric products that always meet client expectations. </p>
 
-<p class="about-paragraph">Mauricio is a movie aficionado, a passionate cook and a frustrated soccer player who can be found in Chinatown playing in the amateur league.</p>
+<p class="about-paragraph">I am a movie aficionado, a passionate cook and a frustrated soccer player who can be found in Chinatown playing in the amateur league.</p>
 
 <?php
 get_footer();

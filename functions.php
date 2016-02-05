@@ -2,6 +2,7 @@
 /* Add this when the domain is set and redirecting*/
 update_option( 'siteurl', 'http://www.sanchezmauricio.com' );
 update_option( 'home', 'http://www.sanchezmauricio.com' );
+add_theme_support('post-thumbnails');// to enable editing the featured image in posts
 
 /*Enable functions such as sidebars */
 add_action( 'widgets_init', 'addSideBars' );
