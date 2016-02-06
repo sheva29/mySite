@@ -37,30 +37,66 @@ a:active {text-decoration: none;}
 
 /* ------------------ This is the Header ------------------ */
 
-.projects-thumbs{
-	/*margin-top: 45px;*/
-	/*margin-bottom: 100px;*/
-	overflow: hidden;
+
+@media (max-width: 1440px){
+	.projects-thumbs{
+
+		width: 1120px;
+		padding: 0;
+	}
+	.item {
+		float: left;
+		margin: 15px;
+		width: 250px;
+	}
+}
+
+@media (max-width: 1280px){
+	.projects-thumbs{
+		width: 990px;
+		/*overflow: hidden;*/
+	}	
+	.item {
+		float: left;
+		margin: 15px;
+		width: 300px;
+
+	}
+	.img-thumb{
+		width:300px;
+		height: 192px;
+	}
+}
+
+@media (max-width: 800px){
+	.projects-thumbs{
+		/*margin-top: 45px;*/
+		/*margin-bottom: 100px;*/
+		width: 768px;
+		/*overflow: hidden;*/
+	}	
 }
 
 
 
+/*
 @media (min-width: 320px){
 	.logo-nav {
 		/*margin-top: 20px;*/
-	}
-}
-@media (min-width: 768px){
+	/*}*/
+/*}*/
+
+/*@media (min-width: 768px){
 	.logo-nav {
 
 		/*margin-top: 8px;*/
-	}
-}
+	/*}*/
+/*}*/
 
 #burguer-menu {
-
 	margin: 4px 10px;
 }
+
 #logo {
   /*display: block;*/
   /*text-indent: -9999px;*/
@@ -157,6 +193,7 @@ a:active {text-decoration: none;}
     padding: 5px 18px;
 }	
 
+/* filter menu for small screens */
 @media (max-width: 480px){
 	.project-sidebar-elements{
 		list-style-type: none;
@@ -179,16 +216,8 @@ a:active {text-decoration: none;}
 	color: #101010;
 }
 
-.item {
-	float: left;
-	margin: 15px;
-	width: 231px;
-}
-
-.img-thumb {
-
-	width:;
-}
+/* Will eventually add a media query*/
+/* this is hte container for our thumbs */
 
 #content {
 	width: 100%;

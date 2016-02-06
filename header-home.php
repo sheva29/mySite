@@ -29,9 +29,7 @@ $terms = get_terms('category', $args);
 /*Calls the all the information that goes in the head*/
 wp_head(); 
 ?>
-
-
-  </head>
+</head>
 
 <body>
 
