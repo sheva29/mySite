@@ -106,22 +106,6 @@ a:active {text-decoration: none;}
 	}
 }
 
-/*@media (max-width: 780px){
-	.projects-thumbs{
-		width: 430px;
-	}	
-	.item {
-		float: left;
-		margin: 15px;
-		width: 400px;
-
-	}
-	.img-thumb{
-		width: 400px;
-		height: 256px;
-	}
-}*/
-
 /*Iphone 6*/
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) { 
 	.projects-thumbs{
@@ -293,13 +277,9 @@ a:active {text-decoration: none;}
 /* --------------------This is for the footer ---------------------- */ 
 
 #footer-mauricio{
-	clear: both;
 	margin-bottom: 0;
 	margin-top: 50px;
-	top: 50px;	
-	/*max-height: 300px;*/
-	color: #999999;	
-	width: 100%;
+	position: relative;
 }
 
 .contact-images{
