@@ -38,6 +38,23 @@ a:active {text-decoration: none;}
 /* ------------------ This is the Header ------------------ */
 
 
+@media (min-width: 1440px){
+	.projects-thumbs{
+
+		width: 1120px;
+		padding: 0;
+	}
+	.item {
+		float: left;
+		margin: 15px;
+		width: 250px;
+	}
+	.img-thumb{
+		width: 250px;
+		height: 160px;
+	}
+}
+
 @media (max-width: 1440px){
 	.projects-thumbs{
 
@@ -48,6 +65,10 @@ a:active {text-decoration: none;}
 		float: left;
 		margin: 15px;
 		width: 250px;
+	}
+	.img-thumb{
+		width: 250px;
+		height: 160px;
 	}
 }
 
@@ -68,30 +89,55 @@ a:active {text-decoration: none;}
 	}
 }
 
-@media (max-width: 800px){
+@media (max-width: 1024px){
 	.projects-thumbs{
-		/*margin-top: 45px;*/
-		/*margin-bottom: 100px;*/
-		width: 768px;
+		width: 760px;
 		/*overflow: hidden;*/
 	}	
+	.item {
+		float: left;
+		margin: 15px;
+		width: 350px;
+
+	}
+	.img-thumb{
+		width: 350px;
+		height: 224px;
+	}
 }
 
+/*@media (max-width: 780px){
+	.projects-thumbs{
+		width: 430px;
+	}	
+	.item {
+		float: left;
+		margin: 15px;
+		width: 400px;
 
+	}
+	.img-thumb{
+		width: 400px;
+		height: 256px;
+	}
+}*/
 
-/*
-@media (min-width: 320px){
-	.logo-nav {
-		/*margin-top: 20px;*/
-	/*}*/
-/*}*/
+/*Iphone 6*/
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) { 
+	.projects-thumbs{
+		width: 530px;
+	}	
+	.item {
+		float: left;
+		margin: 15px;
+		width: 500px;
 
-/*@media (min-width: 768px){
-	.logo-nav {
-
-		/*margin-top: 8px;*/
-	/*}*/
-/*}*/
+	}
+	.img-thumb{
+		width: 500px;
+		height: 320px;
+	}
+}
 
 #burguer-menu {
 	margin: 4px 10px;
