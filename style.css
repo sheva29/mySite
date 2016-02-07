@@ -38,12 +38,7 @@ a:active {text-decoration: none;}
 /* ------------------ This is the Header ------------------ */
 
 
-@media (min-width: 1440px){
-/*	.projects-thumbs{
-
-		width: 1120px;
-		padding: 0;
-	}*/
+/*@media (min-width: 1440px){
 	.item {
 		float: left;
 		margin: 15px;
@@ -56,11 +51,6 @@ a:active {text-decoration: none;}
 }
 
 @media (max-width: 1440px){
-/*	.projects-thumbs{
-
-		width: 1120px;
-		padding: 0;
-	}*/
 	.item {
 		float: left;
 		margin: 15px;
@@ -73,10 +63,6 @@ a:active {text-decoration: none;}
 }
 
 @media (max-width: 1280px){
-/*	.projects-thumbs{
-		width: 990px;
-		
-	}*/	
 	.item {
 		float: left;
 		margin: 15px;
@@ -90,10 +76,6 @@ a:active {text-decoration: none;}
 }
 
 @media (max-width: 1024px){
-/*	.projects-thumbs{
-		width: 760px;
-		
-	}*/	
 	.item {
 		float: left;
 		margin: 15px;
@@ -104,11 +86,11 @@ a:active {text-decoration: none;}
 		width: 350px;
 		height: 224px;
 	}
-}
+}*/
 
 
 /*Iphone 6*/
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) { 
+/*@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) { 
 	.projects-thumbs{
 		width: 530px;
 	}	
@@ -125,10 +107,10 @@ a:active {text-decoration: none;}
 }
 #burguer-menu {
 	margin: 4px 10px;
-}
+}*/
 
 /* Portrait and Landscape */
-@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) {
+/*@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) {
 	.projects-thumbs{
 		width: 530px;
 	}	
@@ -142,7 +124,7 @@ a:active {text-decoration: none;}
 		width: 500px;
 		height: 320px;
 	}
-}
+}*/
 
 
 #logo {
