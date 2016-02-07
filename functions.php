@@ -91,6 +91,14 @@ function open_sans_font() {
 
 add_action( 'genesis_meta', 'open_sans_font', 5 );
 
+// Adding mobile metag
+function mobileMetaTag () {
+	
+	echo '<meta name="viewport" content="width=device-width, initial-scale=1">';
+}
+
+add_action ( 'wp_head', 'mobileMetaTag');
+
 //Getting rid of the extra stuff that users don't need to see on the head
 remove_action( 'wp_head', 'rsd_link' );
 remove_action( 'wp_head', 'wlwmanifest_link' );
