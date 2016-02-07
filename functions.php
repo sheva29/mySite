@@ -94,7 +94,9 @@ add_action( 'genesis_meta', 'open_sans_font', 5 );
 // Adding mobile metag
 function mobileMetaTag () {
 	
-	echo '<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">';
+	echo '<meta name="viewport" content="width=device-width, initial-scale=1">';
+	// Use this if you want to turn off zooming - it will look more like a native app, could be dangerous
+	// echo '<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">';
 }
 
 add_action ( 'wp_head', 'mobileMetaTag');
