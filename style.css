@@ -40,15 +40,17 @@ a:active {text-decoration: none;}
 @media (min-width: 320px){
 	.item {
 		float: left;
-		margin: 15px;
+		/*margin: 15px;*/
+		margin: 15px auto;
 		width: 290px;
+		/*padding-left: 15px;*/
 /*		max-width: 100%;
 		height: auto;*/
 
 	}
 	.img-thumb{
 		width: 290px;
-		height: 185px;
+		height: 173px;
 /*		max-width: 100%;
 		height: auto;
 		display: inline-block;
@@ -59,8 +61,30 @@ a:active {text-decoration: none;}
 @media (min-width: 640px){
 	.item {
 		float: left;
-		margin: 15px;
+		/*margin: 15px;*/
 		width: 500px;
+/*		max-width: 100%;
+		height: auto;*/
+		margin-left: auto;
+		margin-right: auto;
+
+	}
+	.img-thumb{
+		width: 500px;
+		height: 320px;
+/*		max-width: 100%;
+		height: auto;
+		display: inline-block;
+		clear: all;*/
+	}
+}
+
+@media (min-width: 768px){
+	.item {
+		float: left;
+		margin: 15px auto;
+		width: 500px;
+		/*padding-left: 15px;*/
 /*		max-width: 100%;
 		height: auto;*/
 
@@ -80,6 +104,7 @@ a:active {text-decoration: none;}
 		float: left;
 		margin: 15px;
 		width: 350px;
+		/*padding-left: 15px;*/
 
 	}
 	.img-thumb{
@@ -90,9 +115,11 @@ a:active {text-decoration: none;}
 
 @media (min-width: 1200px){
 	.item {
+		position: relative;
 		float: left;
 		margin: 15px;
 		width: 250px;
+		/*padding-left: 15px;*/
 
 	}
 	.img-thumb{
@@ -170,6 +197,9 @@ a:active {text-decoration: none;}
 
 .custom-row{
 	float: left;
+	/*we need this for mobile*/
+	margin-left: auto;
+	margin-right: auto;
 }
 
 #sidebar{
