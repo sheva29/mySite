@@ -1588,19 +1588,31 @@ pre code {
   margin-right: auto;
   margin-left: auto;
 }
+@media (min-width: 320px){
+  .container{
+    width: 290px;
+  }
+}
+
+@media (min-width: 640px){
+  .container{
+    width: 500px;
+  }
+}
+
 @media (min-width: 768px) {
   .container {
-    width: 750px;
+    width: 550px;
   }
 }
 @media (min-width: 992px) {
   .container {
-    width: 970px;
+    width: 790px;
   }
 }
 @media (min-width: 1200px) {
   .container {
-    width: 1170px;
+    width: 1150px;
   }
 }
 .container-fluid {

@@ -35,47 +35,47 @@ a:active {text-decoration: none;}
 
 }*/
 
-/* ------------------ This is the Header ------------------ */
+/* ------------------ media query for our containers based on boostrap ------------------ */
 
-
-/*@media (min-width: 1440px){
+@media (min-width: 320px){
 	.item {
 		float: left;
 		margin: 15px;
-		width: 250px;
+		width: 290px;
+/*		max-width: 100%;
+		height: auto;*/
+
 	}
 	.img-thumb{
-		width: 250px;
-		height: 160px;
+		width: 290px;
+		height: 185px;
+/*		max-width: 100%;
+		height: auto;
+		display: inline-block;
+		clear: all;*/
 	}
 }
 
-@media (max-width: 1440px){
+@media (min-width: 640px){
 	.item {
 		float: left;
 		margin: 15px;
-		width: 250px;
-	}
-	.img-thumb{
-		width: 250px;
-		height: 160px;
-	}
-}
-
-@media (max-width: 1280px){
-	.item {
-		float: left;
-		margin: 15px;
-		width: 300px;
+		width: 500px;
+/*		max-width: 100%;
+		height: auto;*/
 
 	}
 	.img-thumb{
-		width:300px;
-		height: 192px;
+		width: 500px;
+		height: 320px;
+/*		max-width: 100%;
+		height: auto;
+		display: inline-block;
+		clear: all;*/
 	}
 }
 
-@media (max-width: 1024px){
+@media (min-width: 992px){	
 	.item {
 		float: left;
 		margin: 15px;
@@ -86,46 +86,20 @@ a:active {text-decoration: none;}
 		width: 350px;
 		height: 224px;
 	}
-}*/
+}
 
-
-/*Iphone 6*/
-/*@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) { 
-	.projects-thumbs{
-		width: 530px;
-	}	
+@media (min-width: 1200px){
 	.item {
 		float: left;
 		margin: 15px;
-		width: 500px;
+		width: 250px;
 
 	}
 	.img-thumb{
-		width: 500px;
-		height: 320px;
+		width: 250px;
+		height: 160px;
 	}
 }
-#burguer-menu {
-	margin: 4px 10px;
-}*/
-
-/* Portrait and Landscape */
-/*@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) {
-	.projects-thumbs{
-		width: 530px;
-	}	
-	.item {
-		float: left;
-		margin: 15px;
-		width: 500px;
-
-	}
-	.img-thumb{
-		width: 500px;
-		height: 320px;
-	}
-}*/
-
 
 #logo {
   /*display: block;*/
