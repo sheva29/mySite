@@ -25,23 +25,27 @@ jQuery(document).ready(function($){
 	// get elements from container and pass them to a temporary one
 	var tempObject = [];
 	var $menuContainer = $('#sidebar');
-	var length = $menuContainer[0].childElementCount;	
-	// pass elements from container to an object
-	for (var i= 0; i < length ; i++){
-		tempObject.push($menuContainer[0].children[i]);
+
+		if ($menuContainer.lenght){
+		var length = $menuContainer[0].childElementCount;	
+		// pass elements from container to an object
+		for (var i= 0; i < length ; i++){
+			tempObject.push($menuContainer[0].children[i]);
+		}
+		// change order to the one needed in new object
+		tempObject.forEach( function (element, i) {
+
+			if(element.innerHTML === 'Systems') tempObject.move(i, 1);		
+
+		});
+		// erase children from old object
+		$menuContainer.children().remove();
+		// add new elements
+		tempObject.forEach( function (element, i){
+			$menuContainer.append(element);
+		});
+
 	}
-	// change order to the one needed in new object
-	tempObject.forEach( function (element, i) {
-
-		if(element.innerHTML === 'Systems') tempObject.move(i, 1);		
-
-	});
-	// erase children from old object
-	$menuContainer.children().remove();
-	// add new elements
-	tempObject.forEach( function (element, i){
-		$menuContainer.append(element);
-	});
 
 	//*** We add class to our project button filters ***//
 	addIDsToSidebarElements = function(){
