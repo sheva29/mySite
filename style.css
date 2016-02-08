@@ -400,7 +400,7 @@ a:active {text-decoration: none;}
 }
 
 #comment, #author, #email, #url{
-	width: 300px;
+	width: 250px;
 	background-color: #eeeeee;
     border-style: none;
     border-radius: 5px;
@@ -461,14 +461,14 @@ a:active {text-decoration: none;}
     background-color: #eeeeee;
     border-style: none;
     border-radius: 5px;
-    width: 300px;
+    width: 250px;
 }
 
 .contact-subject-input, .contact-email-input, .contact-name-input{
 	background-color: #eeeeee;
     border-style: none;
     border-radius: 5px;
-    width: 300px;
+    width: 250px;
     height: 20px;
 }
 
@@ -477,6 +477,13 @@ a:active {text-decoration: none;}
     border-style: none;
     border-radius: 5px;
     height: 20px;
+}
+
+.wpcf7-response-output{
+	background-color: #398f14;
+    border-style: none !important;
+    border-radius: 5px;
+    color: white;
 }
 
 
