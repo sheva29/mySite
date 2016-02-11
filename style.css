@@ -56,6 +56,9 @@ a:active {text-decoration: none;}
 		display: inline-block;
 		clear: all;*/
 	}
+	#logo {
+	  margin-top: 16px;
+	}
 }
 
 @media (min-width: 640px){
@@ -97,6 +100,17 @@ a:active {text-decoration: none;}
 		display: inline-block;
 		clear: all;*/
 	}
+	#logo {
+	  margin-top: 8px;
+	}
+	.nav {
+		font-size: 15px;
+		margin-left: 5px;
+		
+	}
+	.nav > li > a{
+		padding: 15px 10px;
+	}
 }
 
 @media (min-width: 992px){	
@@ -111,6 +125,8 @@ a:active {text-decoration: none;}
 		width: 350px;
 		height: 224px;
 	}
+
+
 }
 
 @media (min-width: 1200px){
@@ -126,6 +142,10 @@ a:active {text-decoration: none;}
 		width: 250px;
 		height: 160px;
 	}
+	.nav {
+		font-size: 15px;
+		margin-left: 10px;
+	}
 }
 
 #logo {
@@ -135,10 +155,10 @@ a:active {text-decoration: none;}
   height: 25px;
   background: url(http://ec2-54-235-78-67.compute-1.amazonaws.com/wp-content/uploads/2015/12/logo12012015v1.0.svg);
   background-size: 240px 25px;
-  margin-top: 8px;
   margin-left: 15px;
   float: left;
 }
+
 
 #title { 
 	float: left;
@@ -148,10 +168,7 @@ a:active {text-decoration: none;}
 	margin-top: -5px;
 }
 
-.nav {
-	font-size: 15px;
-	margin-left: 10px;
-}
+
 
 .intro{
 	width: 100%;
@@ -168,7 +185,7 @@ a:active {text-decoration: none;}
 	border:none;
 	/*margin-bottom: 200px;*/
 	/*height: 30px;*/
-	/*padding-right: 15px;*/
+	padding-right: 15px;
 	top: 0;
 }
 
