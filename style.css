@@ -17,7 +17,12 @@ This simple theme was built using the example Bootstrap theme "Basic marketing s
 
 body{
 	/*padding-top:60px;*/
+	font-family: 'Open Sans', sans-serif;
 	
+}
+
+p {
+
 }
 
 /* Some reset for our links*/
@@ -155,10 +160,8 @@ a:active {text-decoration: none;}
   height: 25px;
   background: url(http://ec2-54-235-78-67.compute-1.amazonaws.com/wp-content/uploads/2015/12/logo12012015v1.0.svg);
   background-size: 240px 25px;
-  margin-left: 15px;
   float: left;
 }
-
 
 #title { 
 	float: left;
@@ -167,8 +170,6 @@ a:active {text-decoration: none;}
 	margin: 0;
 	margin-top: -5px;
 }
-
-
 
 .intro{
 	width: 100%;
