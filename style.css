@@ -21,10 +21,6 @@ body{
 	
 }
 
-p {
-
-}
-
 /* Some reset for our links*/
 a:link {text-decoration: none;} 
 a:visited {text-decoration: none;}  
@@ -319,6 +315,10 @@ a:active {text-decoration: none;}
 	margin-bottom: 10px;
 }
 
+.footer-note > p {
+	font-weight: 300;
+}
+
 #bottom-content{
 	margin-bottom: 0px;
 	position: relative;
@@ -385,11 +385,43 @@ a:active {text-decoration: none;}
 	
 }
 
-/* --------------------Blog Posts ---------------------- */ 
+/* --------------------General Posts ---------------------- */ 
 
 .single-container{
 	margin-top: 80px;
+	margin-left: auto;
+	margin-right: auto;
 }
+
+@media (min-width: 320px){
+  .single-container{
+    width: 320px; 
+  }
+}
+
+@media (min-width: 640px){
+  .single-container{
+    width: 530px;
+  }
+}
+
+@media (min-width: 768px) {
+  .single-container {
+    width: 530px;
+  }
+}
+@media (min-width: 992px) {
+  .single-container {
+    width: 790px;
+  }
+}
+@media (min-width: 1200px) {
+  .single-container {
+    width: 900px;
+  }
+}
+
+/* --------------------Blog Posts ---------------------- */ 
 
 .divider{
 
@@ -503,9 +535,6 @@ a:active {text-decoration: none;}
     border-radius: 5px;
     color: white;
 }
-
-
-
 
 
 

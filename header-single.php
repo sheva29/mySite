@@ -53,4 +53,4 @@
     </div>
 
     <!-- This is where the main body starts -->
-  <div class="projects-thumbs container-fluid container single-container">
+  <div class="single-container">
