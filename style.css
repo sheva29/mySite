@@ -15,10 +15,16 @@ This simple theme was built using the example Bootstrap theme "Basic marketing s
 @import url('mauricio_bootstrap/css/bootstrap.css');
 /*@import url('mauricio_bootstrap/css/bootstrap-responsive.css');*/
 
+html, body {padding:0; margin:0; height:100%;}
+
 body{
 	/*padding-top:60px;*/
 	font-family: 'Open Sans', sans-serif;
 	
+}
+/* main wrapper for website */
+.wrapper{
+	position: relative;
 }
 
 /* Some reset for our links*/
@@ -41,34 +47,28 @@ a:active {text-decoration: none;}
 @media (min-width: 320px){
 	.item {
 		float: left;
-		/*margin: 15px;*/
 		margin: 15px auto;
 		width: 290px;
-		/*padding-left: 15px;*/
-/*		max-width: 100%;
-		height: auto;*/
 
 	}
 	.img-thumb{
 		width: 290px;
 		height: 173px;
-/*		max-width: 100%;
-		height: auto;
-		display: inline-block;
-		clear: all;*/
 	}
 	#logo {
 	  margin-top: 16px;
+	  margin-left: 15px;
+	}
+	.intro{
+		min-height: 250px;
+		max-height: 300px;
 	}
 }
 
 @media (min-width: 640px){
 	.item {
 		float: left;
-		/*margin: 15px;*/
 		width: 500px;
-/*		max-width: 100%;
-		height: auto;*/
 		margin-left: auto;
 		margin-right: auto;
 
@@ -76,10 +76,6 @@ a:active {text-decoration: none;}
 	.img-thumb{
 		width: 500px;
 		height: 320px;
-/*		max-width: 100%;
-		height: auto;
-		display: inline-block;
-		clear: all;*/
 	}
 }
 
@@ -88,18 +84,10 @@ a:active {text-decoration: none;}
 		float: left;
 		margin: 15px auto;
 		width: 500px;
-		/*padding-left: 15px;*/
-/*		max-width: 100%;
-		height: auto;*/
-
 	}
 	.img-thumb{
 		width: 500px;
 		height: 320px;
-/*		max-width: 100%;
-		height: auto;
-		display: inline-block;
-		clear: all;*/
 	}
 	#logo {
 	  margin-top: 8px;
@@ -110,7 +98,7 @@ a:active {text-decoration: none;}
 		
 	}
 	.nav > li > a{
-		padding: 15px 10px;
+		padding: 15px 8px;
 	}
 }
 
@@ -126,7 +114,10 @@ a:active {text-decoration: none;}
 		width: 350px;
 		height: 224px;
 	}
-
+	.intro{
+		min-height: 350px;
+		max-height: 400px;
+	}
 
 }
 
@@ -159,23 +150,25 @@ a:active {text-decoration: none;}
   float: left;
 }
 
-#title { 
-	float: left;
-	clear: left;
-	font-size: 10px;
-	margin: 0;
-	margin-top: -5px;
-}
-
 .intro{
 	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 20px;
 	margin-bottom: 0px;
-	min-height: 400px;
-	max-height: 500px;
-	/*background-color: #f5f5f5 !important;*/
+}
+
+.intro-section {
+	margin-top: 40px;
+	padding-left: 30px;
+}
+
+#title { 
+	float: left;
+	clear: left;
+	font-size: 10px;
+	margin: 0;
+	margin-top: -5px;
 }
 
 .header-mauricio{
@@ -189,23 +182,6 @@ a:active {text-decoration: none;}
 .thumb-title {
 	width: 100%;
 }
-
-.intro-section {
-	margin-top: 40px;
-}
-
-/* header work */
-
-#expertise-areas {
-
-
-}
-
-/*.image-container{
-	margin-top: 25px;
-	overflow: hidden;
-	float: left;
-}*/
 
 /*---------------------This is for the body Landing page -----------------------*/ 
 
@@ -280,10 +256,7 @@ a:active {text-decoration: none;}
 /* -------------------- Blog Posts -------------------- */
 
 .blog-posts {
-	margin: 0px auto;
-/*	max-width: 800px;
-	padding: 10px 30px;*/
-
+	margin: 50px auto;
 }
 
 .entry {
@@ -296,9 +269,12 @@ a:active {text-decoration: none;}
 /* --------------------This is for the footer ---------------------- */ 
 
 #footer-mauricio{
-	margin-bottom: 0;
-	margin-top: 50px;
-	position: relative;
+/*	margin-bottom: 0;
+	margin-top: 50px;*/
+	position: absolute;
+	width:100%;
+	height: 200px;
+	bottom:0;
 }
 
 .contact-images{
@@ -343,9 +319,6 @@ a:active {text-decoration: none;}
 	font-size: 16px;
 }
 
-/*#other-content{
-	margin: 60px 0 60px 70px;
-}*/
 
 #github{
 	margin: 0 5px;
@@ -373,60 +346,16 @@ a:active {text-decoration: none;}
 	display: inline-block;
 }
 
-#personal-description{
-	margin: 60px 0 60px 71px;
-}
-
-#personal-title{
-
-}
-
-#personal-paragraph{
-	
-}
-
 /* --------------------General Posts ---------------------- */ 
 
-.single-container{
+.single-content{
 	margin-top: 80px;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-@media (min-width: 320px){
-  .single-container{
-    width: 320px; 
-  }
-}
-
-@media (min-width: 640px){
-  .single-container{
-    width: 530px;
-  }
-}
-
-@media (min-width: 768px) {
-  .single-container {
-    width: 530px;
-  }
-}
-@media (min-width: 992px) {
-  .single-container {
-    width: 790px;
-  }
-}
-@media (min-width: 1200px) {
-  .single-container {
-    width: 900px;
-  }
+	height:100%;
 }
 
 /* --------------------Blog Posts ---------------------- */ 
 
 .divider{
-
-	/*border-style: solid;*/
-	/*border-bottom: black;*/
 	margin: 50px 0px 0px ;
 }
 
@@ -445,8 +374,7 @@ a:active {text-decoration: none;}
 #comment, .comment, #reply-title, #email-notes, .comment-notes, .form-submit{
 	float: left;
 	clear: both;
-	resize: none;
-	
+	resize: none;	
 }
 
 #comment, #author, #email, #url{
@@ -503,7 +431,8 @@ a:active {text-decoration: none;}
 }
 
 .contact-container{
-	margin: 50px 0px;
+	padding-bottom: 240px;/*we add the 200px of the foooter + 30px margin*/
+	margin-top: 40px;
 }
 
 .contact-text-field-input{
@@ -535,7 +464,12 @@ a:active {text-decoration: none;}
     border-radius: 5px;
     color: white;
 }
+/* -------------------- ABOUT ---------------------- */ 
 
+.about-container{
+	/*height:100%;*/
+	margin-top: 40px;
+}
 
 
 

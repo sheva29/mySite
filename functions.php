@@ -79,7 +79,7 @@ function script_on_footer(){
 
 
 add_action( 'wp_enqueue_scripts', 'mauricio_bootstrap_scripts' );
-add_action('wp_footer', 'script_on_footer');
+add_action('wp_head', 'script_on_footer');
 add_action( 'wp_enqueue_scripts', 'isotopeJS');
 
 //Adds WebFont Link in the Head

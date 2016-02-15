@@ -8,7 +8,7 @@
 
 <?php
 
-get_header( 'contact');
+get_header('contact');
 // we want to display only thumbs from the projects category.
 $arg = array( 'category_name'=>'Projects', 'posts_perpage'=>'-1' );
 // we pass the argument to our query.
@@ -17,13 +17,10 @@ $category_posts = new WP_Query( $arg );
 $classes = array('col-md-3 ', 'image-container ');
 $terms = get_terms('category', array('parent' => 9));
 
-?>
+?> 
 
- 
 
-<!-- <h1> People will contact me here</h1> -->
-<div class="contact-container">
-<?php echo do_shortcode( '[contact-form-7 id="157" title="Contact form 1"]' ); ?>
+	<?php echo do_shortcode( '[contact-form-7 id="157" title="Contact form 1"]' ); ?>
 </div>
 <?php
 get_footer();
