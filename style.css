@@ -240,6 +240,7 @@ a:active {text-decoration: none;}
     border-style: none;
     border-width: 2px;    
     padding: 5px 18px;
+    font-weight: 200;
 }	
 
 /* filter menu for small screens */
@@ -250,12 +251,10 @@ a:active {text-decoration: none;}
 		margin: 0px 5px;
 		font-size: 12px;
 	    background: none;
-	    /*color: #428bca;*/
-	    /*border: #428bca;*/
 	    border-style: none;
 	    border-width: 2px;
-	    /*border-radius: 6px;*/
 	    padding: 2px 9px;
+	   	font-weight: 200;
 	}	
 }
 
@@ -263,6 +262,7 @@ a:active {text-decoration: none;}
 .is-checked {
 	background: white !important; 
 	color: #101010;
+	font-weight: 400;
 }
 
 /* Will eventually add a media query*/
