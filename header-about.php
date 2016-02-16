@@ -46,9 +46,7 @@
             </div>
             <!--end of the Navbar-->
           </nav>  
-
   </div>
-
    <div class="jumbotron intro">
       
       <section class="container intro-section">
@@ -59,7 +57,6 @@
 
 
   </div>
-
 <!-- This is where the main body starts -->
 <div class="container about-container">
        

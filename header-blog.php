@@ -1,27 +1,28 @@
-  <head>
-    <meta charset="utf-8">
-    <title> <?php bloginfo( 'name' ); ?><?php wp_title( '|', 1, 'left' ); ?> </title>
+<head>
+  <meta charset="utf-8">
+  <title> <?php bloginfo( 'name' ); ?><?php wp_title( '|', 1, 'left' ); ?> </title>
 
-    <!-- Stylesheet -->
-    <link rel ="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>" >
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
-
-
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <!-- Includes BootStrap.js in the head -->
-    <?php //wp_enqueue_script(); ?>
-    <?php 
-    /*Calls the all the information that goes in the head*/
-    wp_head(); 
-    ?>
+  <!-- Stylesheet -->
+  <link rel ="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>" >
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
 
 
-      </head>
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <!-- Includes BootStrap.js in the head -->
+  <?php //wp_enqueue_script(); ?>
+  <?php 
+  /*Calls the all the information that goes in the head*/
+  wp_head(); 
+  ?>
 
-  <body>
+
+    </head>
+
+<body>
+  <div class="wrapper">
     <!-- Header Blog -->
     <div class="navbar navbar-inverse navbar-fixed-top header-mauricio">
             <!--Logo and Hidden Hambuguer-->
@@ -49,24 +50,21 @@
             </nav>  
 
     </div>
-
-     <div class="jumbotron intro">
-        
+     <div class="jumbotron intro">        
         <section class="container intro-section">
           <!--This is where my intro goes-->
           <h1>Welcome to my Blog!</h1>
-          <p>A space for me to post about work in progress, tech or some interesting process.</p>
-        
-        </section>       
+          <p>A space for me to post about work in progress, tech or some interesting process.</p>        
+        </section> 
 
     </div>
 
-<!-- This is where the main body starts -->
-  <div class="projects-thumbs container-fluid container">
-         
+  <!-- This is where the main body starts -->
+  <div class="blog-container container">
+       
 
-    
-    
+  
+  
 
-    
- 
+  
+

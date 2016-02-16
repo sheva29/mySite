@@ -2,39 +2,44 @@
 <!--blog post -->
 <?php
 
-get_header( 'single' );
+get_header('single');
 
 ?>
-<!-- 	<div id="post-body"> -->
 
-		<?php if ( have_posts() ) : while ( have_posts() ): the_post() ?>
-
-		
+<?php 
+	if ( have_posts() ) : 
+		while ( have_posts() ): the_post() ?>		
 		<!-- <p><?php the_time( '1, F jS, Y' ); ?> </p> -->
+			<div class="single-content">
+				<h1 class="single-title"><?php the_title()?> </h1>
+				<?php the_content(); ?>
+			<!-- we close the content() -->
+			</div>
+	<?php 	if (in_category('Blog')): ?><!--we look for comments only in the Blog Category -->
+				<p class="divider">DISCUSSION:</p>				
+			<?php		
+				// we display comments
+				$comments = get_comments(array(
+											'status' => 'approve',
+										));
+				$args = array(
+							'reverse_top_level' => false
+						);
+				
+				wp_list_comments($args, $comments);
 
-		<div class="single-content">
-			<h1 class="single-title"><?php the_title()?> </h1>
-			<?php the_content(); ?>
-
-		<?php if (in_category('Blog')): ?>// we look for comments only in the Blog Category
-			<p class="divider">DISCUSSION: </p>
-			
-			<?php		// we display comments
-				wp_list_comments(array( 'format' => 'html5'));
-					//we display the comments template
-				comments_template();
-				else:
-
+				//we display the comments template
+				comment_form();				
+				?>
+	 <?php 	 	
 			endif;
-		?>
-		
-		
-		<?php endwhile; else: ?>
-			<p><?php _e( 'Sorry this page does not exist.' ); ?></p>
-		<?php endif; ?>
-		</div>
-		<!-- </div> -->
-<!-- Closes container from header -->
+		endwhile; ?>		
+<?php 
+	else: ?>
+		<p><?php _e( 'Sorry this page does not exist.' ); ?></p>
+<?php 
+	endif; ?>
+<!-- closes single-container -->	
 </div>
 <?php
 get_footer();

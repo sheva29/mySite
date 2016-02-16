@@ -24,33 +24,32 @@
 </head>
 
 <body>
+  <div class="wrapper">
+    <div class="navbar navbar-inverse navbar-fixed-top header-mauricio">
+            <!--Logo and Hidden Hambuguer-->
+            <nav class="container navbar-inverse" role="navigation">              
+              <div class="navbar-header logo-nav">
+                <button id="burguer-menu" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu-collapse-hook">
+                  <span class="sr-only">Toogle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="" id="logo" href=" <?php echo site_url(); ?>" > 
+                </a>
+              </div>
+            
+                <!--Here we start our Navbar-->
+              <div class="collapse navbar-collapse" id="menu-collapse-hook">
+                <ul class="nav navbar-nav">
+                 <!-- Here we include our menu buttons, it includes each menu button on a <li> tag-->
+                  <?php wp_list_pages( array( 'title_li' => '', 'exclude' => 12 ) ); ?>
+                </ul>
+              </div>
+              <!--end of the Navbar-->
+            </nav>  
+    </div>
 
-  <div class="navbar navbar-inverse navbar-fixed-top header-mauricio">
-          <!--Logo and Hidden Hambuguer-->
-          <nav class="container navbar-inverse" role="navigation">              
-            <div class="navbar-header logo-nav">
-              <button id="burguer-menu" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu-collapse-hook">
-                <span class="sr-only">Toogle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a class="" id="logo" href=" <?php echo site_url(); ?>" > 
-              </a>
-            </div>
-          
-              <!--Here we start our Navbar-->
-            <div class="collapse navbar-collapse" id="menu-collapse-hook">
-              <ul class="nav navbar-nav">
-               <!-- Here we include our menu buttons, it includes each menu button on a <li> tag-->
-                <?php wp_list_pages( array( 'title_li' => '', 'exclude' => 12 ) ); ?>
-              </ul>
-            </div>
-            <!--end of the Navbar-->
-          </nav>  
-
-  </div>
-
-  <!-- This is where the main body starts -->
-<div class="container">
+    <!-- This is where the main body starts -->
+  <div class="container single-container">
