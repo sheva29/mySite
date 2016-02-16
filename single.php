@@ -19,18 +19,21 @@ get_header('single');
 				<p class="divider">DISCUSSION:</p>				
 			<?php		
 				// we display comments
-				$comments = get_comments(array(
-											'status' => 'approve',
-										));
-				$args = array(
-							'reverse_top_level' => false
-						);
-				
-				wp_list_comments($args, $comments);
+				// $comments = get_comments(array(
+											// 'status' => 'approve',
+												// 'post_id' => the_ID()
+										// ));
+				// $args = array(
+							// 'reverse_top_level' => false
+						// );
+				// wp_list_comments($args, $comments);
 
 				//we display the comments template
-				comment_form();				
+				// comment_form(); we use this as opposed to comments_template();			
+				comments_template();
+
 				?>
+				</div>
 	 <?php 	 	
 			endif;
 		endwhile; ?>		

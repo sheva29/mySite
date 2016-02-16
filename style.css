@@ -25,6 +25,7 @@ body{
 /* main wrapper for website */
 .wrapper{
 	position: relative;
+	min-height: 100%;
 }
 
 /* Some reset for our links*/
@@ -186,7 +187,7 @@ a:active {text-decoration: none;}
 /*---------------------This is for the body Landing page -----------------------*/ 
 
 .projects-thumbs{
-	padding-bottom: 240px;
+	
 }
 
 .custom-row{
@@ -194,6 +195,7 @@ a:active {text-decoration: none;}
 	/*we need this for mobile*/
 	margin-left: auto;
 	margin-right: auto;
+	padding-bottom: 240px;
 }
 
 #sidebar{
@@ -257,6 +259,7 @@ a:active {text-decoration: none;}
 
 .blog-container{
 	padding-bottom: 240px;
+	padding-left: 30px;
 }
 
 .blog-posts {
@@ -276,6 +279,7 @@ a:active {text-decoration: none;}
 	position: absolute;
 	width:100%;	
 	bottom:0;
+	max-height: 300px;
 }
 
 .contact-images{
@@ -437,6 +441,7 @@ a:active {text-decoration: none;}
 .contact-container{
 	padding-bottom: 240px;/*we add the 200px of the foooter + 30px margin*/
 	margin-top: 40px;
+	padding-left: 30px;
 }
 
 .contact-text-field-input{
@@ -473,6 +478,7 @@ a:active {text-decoration: none;}
 .about-container{
 	/*height:100%;*/
 	margin-top: 40px;
+	padding-bottom: 240px;
 }
 
 
