@@ -21,6 +21,10 @@ $category_posts = new WP_Query( $arg );
 				while ( $category_posts->have_posts() ): ?>
 				<div class="blog-posts">
 				<?php $category_posts->the_post() ?>
+				<?php 	if (has_post_thumbnail() ):
+						the_post_thumbnail('thumbnail', array( 'class' => 'blog-thumb' ));
+						endif;
+				?>
 					<h2><a href="<?php the_permalink(); ?>"> <?php the_title()?> </a></h2>
 					<p> <?php the_time('F jS, Y' );?> </p>
 					<p class='entry'> <?php the_excerpt('Read the rest of this entry &raquo;'); ?></p>

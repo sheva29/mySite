@@ -15,7 +15,6 @@ $arg = array( 'category_name'=>'Projects', 'posts_perpage'=>'-1' );
 $category_posts = new WP_Query( $arg );
 // we want to pass some classes to our image containers.
 // $classes = array('col-md-3 ', 'image-container ');
-
 ?>
 	<div class="row custom-row" id="content" class="isotope">
 		<?php if ( $category_posts->have_posts() ) : ?>

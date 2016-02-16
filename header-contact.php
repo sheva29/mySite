@@ -57,7 +57,7 @@
           <!--This is where my intro goes-->
           <h1>I'm always open to collaborate or hear new opportunities</h1>
           <p>Shoot me a message at: </p>
-          <p id="email">design[at]sanchezmauricio[dot]com</p>
+          <p id="jumbotron-email">design[at]sanchezmauricio[dot]com</p>
           <p> or feel free to leave a message below, I will get back to you as soon as possible!</p>
         
         </section>       
