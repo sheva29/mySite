@@ -33,7 +33,9 @@ $category_posts = new WP_Query( $arg );
 				endwhile; 
 			else: ?>
 				<p><?php _e( 'Sorry this page does not exist.' ); ?></p>			
-			<?php endif; ?>
+	<?php 	endif; 
+		wp_reset_postdata();
+			?>
 	<!-- we close container -->
 	</div>
 <?php
