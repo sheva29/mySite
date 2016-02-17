@@ -9,31 +9,24 @@ get_header('single');
 <?php 
 	if ( have_posts() ) : 
 		while ( have_posts() ): the_post() ?>		
-		<!-- <p><?php the_time( '1, F jS, Y' ); ?> </p> -->
+
 			<div class="single-content">
 				<h1 class="single-title"><?php the_title()?> </h1>
 				<?php the_content(); ?>
 			<!-- we close the content() -->
 			</div>
 	<?php 	if (in_category('Blog')): ?><!--we look for comments only in the Blog Category -->
-				<p class="divider">DISCUSSION:</p>				
-			<?php		
+					
+				<p class="divider">DISCUSSION:</p>
+
+			<?php
 				// we display comments
-				// $comments = get_comments(array(
-											// 'status' => 'approve',
-												// 'post_id' => the_ID()
-										// ));
-				// $args = array(
-							// 'reverse_top_level' => false
-						// );
-				// wp_list_comments($args, $comments);
-
+				$comments = get_comments( array( 'post_id' => get_the_ID() ) );
+				$args = array( 'reverse_top_level' => false );
+				wp_list_comments($args, $comments);
 				//we display the comments template
-				// comment_form(); we use this as opposed to comments_template();			
-				comments_template();
-
-				?>
-				</div>
+				comment_form(); //we use this as opposed to comments_template();?>
+				
 	 <?php 	 	
 			endif;
 		endwhile; ?>		
