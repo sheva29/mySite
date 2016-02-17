@@ -117,21 +117,6 @@ remove_filter( 'the_content', 'wpautop' );
 remove_filter( 'the_excerpt', 'wpautop' );
 
 /**
- * Enables the Excerpt meta box in Page edit screen.
- */
-// function wpcodex_add_excerpt_support_for_pages() {
-// 	add_post_type_support( 'page', 'excerpt' );
-// }
-// add_action( 'init', 'wpcodex_add_excerpt_support_for_pages' );
-
-// add_action( 'init', 'my_add_excerpts_to_pages' );
-
-// function my_add_excerpts_to_pages() {
-
-//      add_post_type_support( 'page', 'excerpt' );
-
-// }
-/**
  * Enables SVG files to be uploaded
  */
 function cc_mime_types($mimes) {
@@ -140,10 +125,25 @@ function cc_mime_types($mimes) {
 }
 add_filter('upload_mimes', 'cc_mime_types');
 
-function new_excerpt_more( $more ) {
-	return '[.....]';
+/* Modify the read more link on the_excerpt() */
+
+
+function wpdocs_custom_excerpt_length( $length ) {
+    return 50;
 }
-add_filter('excerpt_more', 'new_excerpt_more');
+add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+
+function rw_trim_excerpt( $text='' )
+{
+	global $post;
+    $text = strip_shortcodes( $text );//this removes shortcodes coming in the text
+    $text = apply_filters('the_content', $text);// this passes any text as the content
+    $text = str_replace(']]>', ']]&gt;', $text);
+    $excerpt_length = apply_filters('excerpt_length', 55);
+    $excerpt_more = apply_filters('excerpt_more', ' ' . '<a href="'. get_permalink($post->ID) . '">Read All ...</a>');
+    return wp_trim_words( $text, $excerpt_length, $excerpt_more );
+}
+add_filter('wp_trim_excerpt', 'rw_trim_excerpt');
 
 
 ?>

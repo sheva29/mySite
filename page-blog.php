@@ -11,7 +11,7 @@
 get_header( 'blog');
 
 // we only retrieve the post for our blog
-$arg = 'category_name=Blog';
+$arg = array('category_name' => 'Blog');
 $category_posts = new WP_Query( $arg );
 
 ?>
@@ -27,7 +27,8 @@ $category_posts = new WP_Query( $arg );
 				?>
 					<h2><a href="<?php the_permalink(); ?>"> <?php the_title()?> </a></h2>
 					<p> <?php the_time('F jS, Y' );?> </p>
-					<p class='entry'> <?php the_excerpt('Read the rest of this entry &raquo;'); ?></p>
+					<p class='entry'> <?php the_excerpt(); ?></p>
+					
 				</div>
 				<?php
 				endwhile; 
