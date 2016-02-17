@@ -129,7 +129,7 @@ add_filter('upload_mimes', 'cc_mime_types');
 
 
 function wpdocs_custom_excerpt_length( $length ) {
-    return 50;
+    return 10;
 }
 add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 
