@@ -86,7 +86,7 @@ add_action( 'wp_enqueue_scripts', 'isotopeJS');
 
 function open_sans_font() {
 
-	echo "<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>";
+	echo "<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300,600,300italic,400italic,600italic,700italic,800,800italic' rel='stylesheet' type='text/css'>";
 }
 
 add_action( 'genesis_meta', 'open_sans_font', 5 );
@@ -135,12 +135,13 @@ add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 
 function rw_trim_excerpt( $text='' )
 {
-	global $post;
+	// global $post;
     $text = strip_shortcodes( $text );//this removes shortcodes coming in the text
     $text = apply_filters('the_content', $text);// this passes any text as the content
     $text = str_replace(']]>', ']]&gt;', $text);
     $excerpt_length = apply_filters('excerpt_length', 55);
-    $excerpt_more = apply_filters('excerpt_more', ' ' . '<a href="'. get_permalink($post->ID) . '">Read All ...</a>');
+    // $excerpt_more = apply_filters('excerpt_more', ' ' . '<a href="'. get_permalink($post->ID) . '">Read All ...</a>');
+    $excerpt_more = apply_filters('excerpt_more', '...');
     return wp_trim_words( $text, $excerpt_length, $excerpt_more );
 }
 add_filter('wp_trim_excerpt', 'rw_trim_excerpt');

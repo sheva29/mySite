@@ -26,7 +26,8 @@ jQuery(document).ready(function($){
 	var tempObject = [];
 	var $menuContainer = $('#sidebar');
 
-		if ($menuContainer.lenght){
+		if ($menuContainer.lenght){// we need to make sure the element exists within the page we are loading
+
 		var length = $menuContainer[0].childElementCount;	
 		// pass elements from container to an object
 		for (var i= 0; i < length ; i++){
@@ -81,6 +82,17 @@ jQuery(document).ready(function($){
 			easing: 'linear',
 			queue: false,
 		},
+	});
+
+	var $blogContainer= $('.blog-container');
+	$blogContainer.isotope({
+		itemSelector: '.blog-posts',
+		layoutMode: 'fitRows',
+		animationOptions: {
+			duration: 750,
+			easing: 'linear',
+			queue: false,
+		}
 	});
 
 	//we assign the elements to pass to our filters

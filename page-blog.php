@@ -19,16 +19,17 @@ $category_posts = new WP_Query( $arg );
 
 	  <?php if ( $category_posts->have_posts() ) :
 				while ( $category_posts->have_posts() ): ?>
-				<div class="blog-posts">
-				<?php $category_posts->the_post() ?>
-				<?php 	if (has_post_thumbnail() ):
-						the_post_thumbnail('thumbnail', array( 'class' => 'blog-thumb' ));
-						endif;
-				?>
-					<h2><a href="<?php the_permalink(); ?>"> <?php the_title()?> </a></h2>
-					<p> <?php the_time('F jS, Y' );?> </p>
-					<p class='entry'> <?php the_excerpt(); ?></p>
-					
+				<div class="blog-posts isotope-item">
+					<a class="blog-posts-a" href="<?php the_permalink(); ?>">
+					<?php $category_posts->the_post() ?>
+					<?php 	if (has_post_thumbnail() ):
+							the_post_thumbnail('custom_thumb', array( 'class' => 'blog-thumb' ));
+							endif;
+					?>
+						<h2 class="blog-title"> <?php the_title()?> </h2>
+						<p class="blog-date"> <?php the_time('F jS, Y' );?> </p>
+						<p class='blog-entry'> <?php the_excerpt(); ?></p>
+					</a>
 				</div>
 				<?php
 				endwhile; 
