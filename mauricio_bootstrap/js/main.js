@@ -71,7 +71,7 @@ jQuery(document).ready(function($){
 
 	//*** Isotope ***//
 
-	//we initiate our isotope grid
+	//we initiate our isotope grid for the project thumbs
 	var $grid = $(".row");
 	$grid.isotope({
 		itemSelector: '.projects',
@@ -83,7 +83,7 @@ jQuery(document).ready(function($){
 			queue: false,
 		},
 	});
-
+	//Isotope grid for blog posts
 	var $blogContainer= $('.blog-container');
 	$blogContainer.isotope({
 		itemSelector: '.blog-posts',
@@ -191,6 +191,12 @@ jQuery(document).ready(function($){
 		that.addClass("comment-form-class");// we add a general class to our <p> elements
 
 	});
+
+	/* Add class to <a> inside nav bar elements */
+
+	var $navBarMenuelement = $('.page_item').find('a').each( function (element, i){
+		$(this).addClass('page-item-a');
+	})
 
 
 

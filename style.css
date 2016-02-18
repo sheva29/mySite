@@ -120,7 +120,8 @@ a:active {text-decoration: none;}
 		
 	}
 	.nav > li > a{
-		padding: 15px 8px;
+		padding: 0;
+		margin: 15px 8px;
 	}
 }
 
@@ -225,6 +226,34 @@ a:active {text-decoration: none;}
 
 .thumb-title {
 	width: 100%;
+}
+
+/* Nav Bar Menu */
+a {
+transition-property: border color;
+-webkit-transition-duration: 0.3s;
+-moz-transition-duration: 0.3s;
+-o-transition-duration: 0.3s;
+transition-duration: 0.3s;
+color: #4999c1;
+text-decoration: none;
+}
+
+.page-item-a  {
+    
+    border-bottom: 2px solid rgba(255, 255, 255, 0);
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, .25);
+}
+
+.page-item-a:hover {
+    border-bottom: 2px solid rgba(255, 255, 255, 1);
+    color: white;
+}
+
+.current_page_item > a{
+	border-bottom: 2px solid rgba(255, 255, 255, 1);
+	border-color: #b6d450;
+    color: #b6d450 !important;
 }
 
 /*---------------------This is for the body Landing page -----------------------*/ 
