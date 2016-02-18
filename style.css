@@ -282,13 +282,14 @@ color: #4999c1;
 .project-sidebar-elements{
 	list-style-type: none;
 	display: inline-block;
-	margin: 0px 10px;
+	/*margin: 0px 10px;*/
 	font-size: 16px;
     background: none;    
     border-style: none;
     border-width: 2px;    
     padding: 5px 18px;
     font-weight: 200;
+    width: 120px;
 }	
 
 /* filter menu for small screens */
@@ -310,7 +311,8 @@ color: #4999c1;
 .is-checked {
 	background: white !important; 
 	color: #101010;
-	font-weight: 400;
+	font-weight: 700;
+	/*margin: 0px 7px;*/
 }
 
 /* Will eventually add a media query*/
