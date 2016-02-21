@@ -52,9 +52,10 @@
     </div>
 
      <div class="jumbotron intro">      
-      <section class="container intro-section">
+      <section class="container intro-section work-intro-section">
         <!--This is where my intro goes-->
-        <h1>The breadth of my work encompasses <span id="expertise-areas"></span></h1>                 
+        <h1 id="expertise-title" >The breadth of my work encompasses</h1>
+        <span id="expertise-areas" ></span>               
       </section>
     </div>
      <!-- Include this when a nav bar with categories for all different posts is available -->
@@ -66,7 +67,7 @@
     </nav>
 
     <!-- This is where the main body starts -->
-    <div class="projects-thumbs container-wor container">
+    <div class="projects-thumbs container-work container">
          
 
     

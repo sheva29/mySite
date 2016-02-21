@@ -135,7 +135,10 @@ jQuery(document).ready(function($){
 
 		if (cnt>= fieldsOfExpertise.length) cnt=0;// we reset our counter
 		var $expertiseTextField = $("#expertise-areas");// we pass the id of the element we want to change
-		$expertiseTextField.css("color", fieldColor[cnt]);
+		$expertiseTextField.css({
+			"color": fieldColor[cnt],
+			"height": "120px"
+		});
 		$expertiseTextField.html(fieldsOfExpertise[cnt++]);//we switch the text
 		$expertiseTextField.fadeIn('slow').animate({opacity: 1.0}, 1000).fadeOut('slow', function () {
 			return slideExpertiseText();// we call the function repeteadly
@@ -196,7 +199,7 @@ jQuery(document).ready(function($){
 
 	var $navBarMenuelement = $('.page_item').find('a').each( function (element, i){
 		$(this).addClass('page-item-a');
-	})
+	});
 
 
 

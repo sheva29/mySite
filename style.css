@@ -61,6 +61,7 @@ a:active {text-decoration: none;}
 	  margin-top: 16px;
 	  margin-left: 15px;
 	}
+
 	/* Blog Post */
 	.blog-posts {
 		width: 290px;
@@ -70,11 +71,21 @@ a:active {text-decoration: none;}
 		width: 290px;
 		height: 173px;
 	}
+
 	/* Tab filters */
 	.project-sidebar-elements{
 		font-size: 12px;
-		width: 100px;
+		width: 70px;
 	}
+
+	/* Work Expertise Area Field */
+	.work-intro-section{
+		height: 250px;
+	}
+	#expertise-areas{
+		font-size: 36px;
+	}
+
 }
 
 @media (min-width: 640px){
@@ -90,23 +101,26 @@ a:active {text-decoration: none;}
 		width: 500px;
 		height: 320px;
 	}
+
 	/* Blog Post */
 	.blog-posts {
 		width: 500px;
 		height: 450px;
 	}
-
 	.blog-thumb{
 		width: 500px;
 		height: 320px;
 	}
-	.project-sidebar-elements{
-		
-	}
+
 	/* Tab filters */
 	.project-sidebar-elements{
 		font-size: 16px;
 		width: 120px;
+	}
+
+	/* Jumbotron Intro */
+	.work-intro-section{
+		height: 400px;
 	}
 }
 
@@ -136,6 +150,9 @@ a:active {text-decoration: none;}
 	/* Tab filters */
 	.project-sidebar-elements{
 		width: 120px;
+	}
+	#expertise-areas{
+		font-size: 62px;
 	}
 }
 
@@ -173,11 +190,9 @@ a:active {text-decoration: none;}
 @media (min-width: 1200px){
 	/* Project Thumnails */
 	.item {
-		position: relative;
 		float: left;
 		margin: 15px;
 		width: 250px;
-		/*padding-left: 15px;*/
 	}
 	.img-thumb{
 		width: 250px;
