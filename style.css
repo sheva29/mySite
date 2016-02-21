@@ -56,13 +56,11 @@ a:active {text-decoration: none;}
 		width: 290px;
 		height: 173px;
 	}
-
 	/* Top Nav Bar */
 	#logo {
 	  margin-top: 16px;
 	  margin-left: 15px;
 	}
-
 	/* Blog Post */
 	.blog-posts {
 		width: 290px;
@@ -72,6 +70,7 @@ a:active {text-decoration: none;}
 		width: 290px;
 		height: 173px;
 	}
+	/* Tab filters */
 	.project-sidebar-elements{
 		font-size: 12px;
 		width: 100px;
@@ -128,8 +127,7 @@ a:active {text-decoration: none;}
 	}
 	.nav {
 		font-size: 15px;
-		margin-left: 5px;
-		
+		margin-left: 5px;		
 	}
 	.nav > li > a{
 		padding: 0;
@@ -162,7 +160,6 @@ a:active {text-decoration: none;}
 		width: 350px;
 		height: 400px;
 	}
-
 	.blog-thumb{
 		width: 350px;
 		height: 224px;
@@ -171,7 +168,6 @@ a:active {text-decoration: none;}
 	.project-sidebar-elements{
 		width: 120px;
 	}
-
 }
 
 @media (min-width: 1200px){
@@ -182,7 +178,6 @@ a:active {text-decoration: none;}
 		margin: 15px;
 		width: 250px;
 		/*padding-left: 15px;*/
-
 	}
 	.img-thumb{
 		width: 250px;
@@ -275,10 +270,6 @@ color: #4999c1;
 }
 
 /*---------------------This is for the body Landing page -----------------------*/ 
-
-.projects-thumbs{
-
-}
 
 .custom-row{
 	float: left;
