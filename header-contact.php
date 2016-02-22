@@ -51,7 +51,7 @@
 
     </div>
 
-     <div class="jumbotron intro">
+     <div class="jumbotron intro contact-intro">
         
         <section class="container intro-section">
           <!--This is where my intro goes-->
