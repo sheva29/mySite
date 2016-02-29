@@ -51,7 +51,7 @@
 
     </div>
      <div class="jumbotron intro">        
-        <section class="container work-intro-section">
+        <section class="container blog-intro-section">
           <!--This is where my intro goes-->
           <h1 class="contact-title">A space for me to post about work in progress, research and my process.</h1>
           

@@ -272,8 +272,12 @@ a:active {text-decoration: none;}
 	margin-bottom: 0px;
 }
 
-.intro-section {
-	/*margin-top: 40px;*/
+.home-intro-section {
+	margin-top: 40px;
+	padding-left: 30px;
+}
+
+.intro-section{
 	padding-left: 30px;
 }
 
@@ -518,6 +522,10 @@ color: #4999c1;
 }
 
 /* --------------------Blog Posts ---------------------- */ 
+
+.blog-intro-section{
+	margin-top: 60px;
+}
 
 .divider{
 	margin: 50px 0px 0px ;
