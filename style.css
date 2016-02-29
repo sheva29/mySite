@@ -91,6 +91,13 @@ a:active {text-decoration: none;}
 		font-size: 16px;
 		font-weight: 700;
 	}
+	/*About*/
+	.about-title{
+		font-size: 24px;
+	}
+	.contact-title{
+		font-size: 24px;
+	}
 
 
 }
@@ -168,6 +175,13 @@ a:active {text-decoration: none;}
 	/* Tab filters */
 	.project-sidebar-elements{
 		width: 120px;
+	}
+	/*About*/
+	.about-title{
+		font-size: 42px;
+	}
+	.contact-title{
+		font-size: 42px;
 	}
 
 }
@@ -618,6 +632,8 @@ color: #4999c1;
     color: white;
 }
 /* -------------------- ABOUT ---------------------- */ 
+
+
 
 .about-container{
 	/*height:100%;*/

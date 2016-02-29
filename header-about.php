@@ -51,8 +51,8 @@
       
       <section class="container intro-section">
         <!--This is where my intro goes-->
-        <h1>I'm a Product Designer</h1>                 
-        <p>I was trained in the ways of the Industrial Designer, and the means of the Creative Technologist</p>
+        <h2 class="about-title">I’m a kid from Colombia. Trained as an industrial designer, I spend most of my time fabricating, prototyping, coding and connecting things together.</h2>                 
+        
       </section>
 
 
