@@ -77,10 +77,17 @@ function script_on_footer(){
 
 }
 
+function fitVidsjs(){
+		//we pass the link from the server. This way we keep it updated.
+	wp_register_script('video-script', get_template_directory_uri(). '/mauricio_bootstrap/js/jquery.fitvids.js', array('jquery'), 'version', true);
+	wp_enqueue_script('video-script');
+}
+
 
 add_action( 'wp_enqueue_scripts', 'mauricio_bootstrap_scripts' );
-add_action('wp_head', 'script_on_footer');
+add_action( 'wp_head', 'script_on_footer');
 add_action( 'wp_enqueue_scripts', 'isotopeJS');
+add_action( 'wp_head', 'fitVidsjs');
 
 //Adds WebFont Link in the Head
 
