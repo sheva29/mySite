@@ -60,6 +60,9 @@ a:active {text-decoration: none;}
 	#logo {
 	  margin-top: 16px;
 	  margin-left: 15px;
+	  width: 180px;
+	  height: 22px;
+      background-size: 180px 22px !important;
 	}
 
 	/* Blog Post */
@@ -162,7 +165,7 @@ a:active {text-decoration: none;}
 	}
 	/* Top Nav Bar */
 	#logo {
-	  margin-top: 8px;
+	  margin-top: 10px;
 	}
 	.nav > li > a{
 		padding: 0;
@@ -193,11 +196,7 @@ a:active {text-decoration: none;}
 		width: 350px;
 		height: 224px;
 	}	
-	#logo{
-		width: 240px;
-		height: 25px;
-  		background-size: 240px 25px;
-	}	
+	
 	/* Top Nav Bar */
 	.intro{
 		min-height: 350px;
@@ -241,7 +240,7 @@ a:active {text-decoration: none;}
 	#logo{
 		width: 240px;
 		height: 25px;
-  		background-size: 240px 25px;
+  		background-size: 240px 25px !important;
 	}
 	/* Top Nav Bar */
 	.nav{
@@ -545,7 +544,7 @@ color: #4999c1;
 /* --------------------Blog Posts ---------------------- */ 
 
 .blog-intro-section{
-	margin-top: 60px;
+	margin-top: 20px;
 }
 
 .divider{
