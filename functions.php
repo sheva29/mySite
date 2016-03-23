@@ -123,7 +123,7 @@ add_image_size("custom_thumb", 250, 160);// Use custom image when setting the_po
 remove_filter( 'the_content', 'wpautop' );
 remove_filter( 'the_excerpt', 'wpautop' );
 
-/**
+/*
  * Enables SVG files to be uploaded
  */
 function cc_mime_types($mimes) {
@@ -152,6 +152,31 @@ function rw_trim_excerpt( $text='' )
     return wp_trim_words( $text, $excerpt_length, $excerpt_more );
 }
 add_filter('wp_trim_excerpt', 'rw_trim_excerpt');
+
+/*
+ * Adding Custom Fields to user
+ */
+
+function modify_contact_methods($profile_fields) {
+
+	// Add new fields
+	$profile_fields['twitter'] = 'Twitter Username';
+	$profile_fields['facebook'] = 'Facebook URL';
+	$profile_fields['gplus'] = 'Google+ URL';
+	$profile_fields['linkedin'] = "LinkedIn";
+	$profile_fields['github'] ="GitHub";
+
+	// Remove old fields
+	unset($profile_fields['aim']);
+	unset($profile_fields['jabber']);
+    unset($profile_fields['yim']);
+
+
+	return $profile_fields;
+}
+add_filter('user_contactmethods', 'modify_contact_methods');
+
+
 
 
 ?>
