@@ -610,6 +610,10 @@ color: #4999c1;
     margin-top: 10px;
 }
 
+.code-snippet > p {
+	margin: 0;
+}
+
 /* -------------------- Contact Form Elements ---------------------- */ 
 
 
