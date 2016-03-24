@@ -5,7 +5,8 @@ $args = array(
     'include' => array(12, 6, 8, 7)
 );
 $terms = get_terms('category', $args);
-
+// For JSON_LD
+include('json-ld.php'); 
 ?>
 <head>
 <meta charset="utf-8">
@@ -26,6 +27,7 @@ $terms = get_terms('category', $args);
 /*Calls the all the information that goes in the head*/
 wp_head(); 
 ?>
+<script type="application/ld+json"><?php echo json_encode($payload); ?></script>
 </head>
 
 <body>
