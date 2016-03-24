@@ -1,4 +1,17 @@
-  <?php $terms = get_terms('category', array('parent' => 9)); ?>
+<?php 
+
+$terms = get_terms('category', array('parent' => 9)); 
+// For JSON_LD
+include('json-ld.php'); 
+// if (is_page("Work")){
+
+//   // print_r(get_post_custom());
+//   $custom_field = get_post_custom();
+//   print_r($custom_field["page_description"][0]);
+// }
+print_r(get_permalink());
+
+?>
 
 <head>
   <meta charset="utf-8">
@@ -19,8 +32,8 @@
   /*Calls the all the information that goes in the head*/
   wp_head(); 
   ?>
-
-    </head>
+  <script type="application/ld+json"><?php echo json_encode($payload); ?></script>
+</head>
 
 <body>
   <div class="wrapper">

@@ -1,4 +1,8 @@
-<?php $terms = get_terms('category', array('parent' => 9)); ?>
+<?php 
+$terms = get_terms('category', array('parent' => 9)); 
+//JSON-LD
+include("json-ld.php");
+?>
 
 <head>
   <meta charset="utf-8">
@@ -19,8 +23,7 @@
   /*Calls the all the information that goes in the head*/
   wp_head(); 
   ?>
-
-
+<script type="application/ld+json"><?php echo json_encode($payload); ?></script>
 </head>
 
 <body>

@@ -1,3 +1,8 @@
+<?php
+//JSON-LD file
+include("json-ld.php");
+
+?>
 <head>
   <meta charset="utf-8">
   <title> <?php bloginfo( 'name' ); ?><?php wp_title( '|', 1, 'left' ); ?> </title>
@@ -17,8 +22,8 @@
   /*Calls the all the information that goes in the head*/
   wp_head(); 
   ?>
-
-    </head>
+  <script type="application/ld+json"><?php echo json_encode($payload); ?></script>
+</head>
 
 <body>
 <div class="wrapper">
