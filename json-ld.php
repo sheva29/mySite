@@ -26,7 +26,7 @@ if (is_front_page()) {
     "https://twitter.com/maurifique",
     "https://www.facebook.com/maurifique",
     "https://www.linkedin.com/in/maurifique",
-    "https://plus.google.com/u/1/108080318529088788630/posts",
+    "https://plus.google.com/u/1/108080318529088788630",
     "https://github.com/sheva29",
   );
   $payload["author"] = array(
@@ -48,7 +48,7 @@ if (is_front_page()) {
       "https://twitter.com/maurifique",
       "https://www.facebook.com/maurifique",
       "https://www.linkedin.com/in/maurifique",
-      "https://plus.google.com/u/1/108080318529088788630/posts",
+      "https://plus.google.com/u/1/108080318529088788630",
       "https://github.com/sheva29"),
     "url" => "http:www.sanchezmauricio.com"
   );
@@ -72,7 +72,7 @@ if (is_page()){
     "https://twitter.com/maurifique",
     "https://www.facebook.com/maurifique",
     "https://www.linkedin.com/in/maurifique",
-    "https://plus.google.com/u/1/108080318529088788630/posts",
+    "https://plus.google.com/u/1/108080318529088788630",
     "https://github.com/sheva29",
   );
   $payload["author"] = array(
@@ -94,7 +94,7 @@ if (is_page()){
       "https://twitter.com/maurifique",
       "https://www.facebook.com/maurifique",
       "https://www.linkedin.com/in/maurifique",
-      "https://plus.google.com/u/1/108080318529088788630/posts",
+      "https://plus.google.com/u/1/108080318529088788630",
       "https://github.com/sheva29"),
     "url" => "http:www.sanchezmauricio.com"
   );
@@ -115,7 +115,7 @@ if (is_single()) {
   $facebookHandle = $author_data->facebook; 
   $gplusHandle = $author_data->gplus; 
   $linkedinHandle = $author_data->linkedin; 
-  $githubHandler = $author_data->github;
+  $githubHandle = $author_data->github;
  
   $payload["@type"] = "CreativeWork";
   $payload["url"] = $post_url;
@@ -150,7 +150,7 @@ if (is_author()) {
   $facebookHandle = $author_data->facebook; 
   $gplusHandle = $author_data->gplus; 
   $linkedinHandle = $author_data->linkedin; 
-  $githubHandler = $author_data->github;
+  $githubHandle = $author_data->github;
   $payload["@type"] = "Person";
   $payload["name"] = $author_data->display_name;
   $payload["email"] = $author_data->user_email;
