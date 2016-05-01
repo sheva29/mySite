@@ -16,9 +16,10 @@ $category_posts = new WP_Query( $arg );
 
 ?>
 
-	<div class="blog-posts isotope-item">
+	
 		<?php if ( $category_posts->have_posts() ) :
-			while ( $category_posts->have_posts() ): $category_posts->the_post()  ?>				
+			while ( $category_posts->have_posts() ): $category_posts->the_post()  ?>
+		<div class="blog-posts isotope-item">				
 			<a class="blog-posts-a" href="<?php the_permalink(); ?>">
 			<?php 	if (has_post_thumbnail() ):
 					the_post_thumbnail('custom_thumb', array( 'class' => 'blog-thumb' ));
@@ -29,7 +30,8 @@ $category_posts = new WP_Query( $arg );
 				<p class="blog-date"> <?php the_time('F jS, Y' );?> </p>
 				<p class='blog-entry'> <?php the_excerpt(); ?></p>
 			</a>
-	</div>
+		<!-- we close isotope item -->		
+		</div>
 			<?php
 			endwhile; 
 		else: ?>
