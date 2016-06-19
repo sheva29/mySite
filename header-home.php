@@ -59,7 +59,7 @@ wp_head();
      <div class="jumbotron intro">        
         <section class="container home-intro-section">
           <!--This is where my intro goes-->
-          <h1>Hi there! I am <a href="http://ec2-54-235-78-67.compute-1.amazonaws.com/about/">Mauricio!</a></h1>
+          <h1>Hi there! I am <a href="http://www.sanchezmauricio.com/about/">Mauricio!</a></h1>
           <p>I am a Product Designer and Creative Technologist. I build algorithms, research technologies, fabricate prototypes to connect the physical with the digital.</p>        
         </section>
     </div>
