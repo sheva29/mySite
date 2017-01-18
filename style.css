@@ -106,6 +106,10 @@ a:active {text-decoration: none;}
 		font-size: 24px;
 	}
 
+	.navbar.navbar-fixed-top {
+		background-color: white;
+	}
+
 
 }
 
@@ -169,7 +173,11 @@ a:active {text-decoration: none;}
 	}
 	/* Top Nav Bar */
 	#logo {
-	  margin-top: 10px;
+	      width: 110px;
+		  display: inherit;
+		  margin: 0 auto;
+		  height: 100%;
+		  text-align: center;
 	}
 	.nav > li > a{
 		padding: 0;
@@ -242,9 +250,9 @@ a:active {text-decoration: none;}
 		height: 160px;
 	}
 	#logo{
-		width: 240px;
+/*		width: 240px;
 		height: 25px;
-  		background-size: 240px 25px !important;
+  		background-size: 240px 25px !important;*/
 	}
 	/* Top Nav Bar */
 	.nav{
@@ -269,10 +277,10 @@ a:active {text-decoration: none;}
 
 #logo span {
   /*background: url(http://www.sanchezmauricio.com/wp-content/uploads/2015/12/logo12012015v1.0.svg);  */
-  float: left;
+  
   font-family: 'CamberLight', 'sans-serif';
   line-height: 50px;
-  color: 
+  color: #1f1f1f;
   font-size: 16px;
 }
 
