@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <?php
 // we get the header for our home
-get_header( 'home' );
+get_header( 'home2' );
 // we want to display only thumbs from the projects category.
 $arg = array( 'category_name'=>'Projects', 'posts_perpage'=>'-1' );
 // we pass the argument to our query.

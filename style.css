@@ -14,6 +14,10 @@ This simple theme was built using the example Bootstrap theme "Basic marketing s
 
 @import url('mauricio_bootstrap/css/bootstrap.css');
 /*@import url('mauricio_bootstrap/css/bootstrap-responsive.css');*/
+@font-face {font-family: 'CamberLight';
+	src: url('fonts/CamberLight/CamberLight.eot');
+	src: url('fonts/CamberLight/CamberLight.eot?#iefix') format('embedded-opentype'),url('fonts/CamberLight/CamberLight.woff2') format('woff2'),url('fonts/CamberLight/CamberLight.woff') format('woff'),url('fonts/CamberLight/CamberLight.ttf') format('truetype');
+}
 
 html, body {padding:0; margin:0; height:100%;}
 
@@ -263,9 +267,13 @@ a:active {text-decoration: none;}
 	}
 }
 
-#logo {
-  background: url(http://www.sanchezmauricio.com/wp-content/uploads/2015/12/logo12012015v1.0.svg);  
+#logo span {
+  /*background: url(http://www.sanchezmauricio.com/wp-content/uploads/2015/12/logo12012015v1.0.svg);  */
   float: left;
+  font-family: 'CamberLight', 'sans-serif';
+  line-height: 50px;
+  color: 
+  font-size: 16px;
 }
 
 .intro{
@@ -299,6 +307,7 @@ a:active {text-decoration: none;}
 	/*height: 30px;*/
 	padding-right: 15px;
 	top: 0;
+	background: white;
 }
 
 .thumb-title {
