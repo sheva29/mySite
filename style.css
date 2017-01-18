@@ -61,12 +61,16 @@ a:active {text-decoration: none;}
 		height: 173px;
 	}
 	/* Top Nav Bar */
-	#logo {
+	#logo-container {
 	  margin-top: 16px;
 	  margin-left: 15px;
 	  width: 180px;
 	  height: 22px;
       background-size: 180px 22px !important;
+	}
+
+	.navbar div.navbar-header{
+		text-align: center;
 	}
 
 	/* Blog Post */
@@ -172,9 +176,9 @@ a:active {text-decoration: none;}
 		height: 320px;
 	}
 	/* Top Nav Bar */
-	#logo {
+	#logo-container {
 	      width: 110px;
-		  display: inherit;
+		  /*display: inherit;*/
 		  margin: 0 auto;
 		  height: 100%;
 		  text-align: center;
@@ -249,7 +253,7 @@ a:active {text-decoration: none;}
 		width: 250px;
 		height: 160px;
 	}
-	#logo{
+	#logo-container{
 /*		width: 240px;
 		height: 25px;
   		background-size: 240px 25px !important;*/
@@ -275,13 +279,21 @@ a:active {text-decoration: none;}
 	}
 }
 
-#logo span {
-  /*background: url(http://www.sanchezmauricio.com/wp-content/uploads/2015/12/logo12012015v1.0.svg);  */
+#logo-container span {
+  /*background: url(http://www.sanchezmauricio.com/wp-content/uploads/2015/12/logo-container12012015v1.0.svg);  */
   
   font-family: 'CamberLight', 'sans-serif';
   line-height: 50px;
   color: #1f1f1f;
   font-size: 16px;
+  display:inline-block;
+}
+#logo-container div.logo{
+	background: url(http://www.sanchezmauricio.com/wp-content/uploads/2017/01/logo-mauriciov2.png);
+	background-size: cover;
+	width: 18px;
+	height: 14px;
+	display:inline-block;
 }
 
 .intro{
@@ -309,14 +321,16 @@ a:active {text-decoration: none;}
 	margin-top: -5px;
 }
 
+/*
 .header-mauricio{
 	border:none;
-	/*margin-bottom: 200px;*/
-	/*height: 30px;*/
+	margin-bottom: 200px;
+	height: 30px;
 	padding-right: 15px;
 	top: 0;
 	background: white;
 }
+*/
 
 .thumb-title {
 	width: 100%;
@@ -342,6 +356,32 @@ color: #4999c1;
 	border-bottom: 2px solid rgba(255, 255, 255, 1);
 	border-color: #b6d450;
     color: #b6d450 !important;
+}
+
+/*
+/
+Hambuerguer Menu
+/ 
+*/
+.navbar-toggle {
+  display: block;
+  float: left;
+  position: absolute;
+  left: 5px;
+  border-color: transparent;
+  color: #1f1f1f;
+}
+.navbar-collapse.collapse {
+  display: none!important;
+}
+.navbar-nav {
+  float: none!important;
+}
+.navbar-nav>li {
+  float: none;
+}
+.navbar-collapse.collapse.in{
+  display:block !important;
 }
 
 /*---------------------This is for the body Landing page -----------------------*/ 

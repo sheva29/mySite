@@ -36,16 +36,15 @@ wp_head();
             <!--Logo and Hidden Hambuguer-->
             <nav class="navbar navbar-default navbar-fixed-top" role="navigation">              
               <div class="container navbar-header logo-nav">
-                <button id="burguer-menu" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu-collapse-hook">
-                  <span class="sr-only">Toogle navigation</span>
-                  <span class="icon-bar"></span>
+                <button id="button" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu-collapse-hook">
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                 </button>
-                <a class="" id="logo" href=" <?php echo site_url(); ?>" > 
-                  <span> mauriciosanchez<span>
-                </a>
+                  <a class="" id="logo-container" href=" <?php echo site_url(); ?>" > 
+                    <div class="logo"></div>
+                    <span> mauriciosanchez<span>
+                  </a>
               </div>            
                 <!--Here we start our Navbar-->
               <!-- <div class="collapse navbar-collapse" id="menu-collapse-hook"> -->
