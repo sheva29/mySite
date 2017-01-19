@@ -206,7 +206,7 @@ jQuery(document).ready(function($){
 	if (location.pathname == '/tire-gauge/'){
 		console.log(" we are here");
 	}
-
+	/* Left Menu*/
 	var $leftSlide = $('[data-toggle=slide-left]');
 	var slideLeftAtt = $leftSlide.attr('data-target');
 	$leftSlide.on('click', function (event){
