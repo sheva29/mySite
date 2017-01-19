@@ -207,6 +207,12 @@ jQuery(document).ready(function($){
 		console.log(" we are here");
 	}
 
+	var $leftSlide = $('[data-toggle=slide-left]');
+	var slideLeftAtt = $leftSlide.attr('data-target');
+	$leftSlide.on('click', function (event){
+		$(slideLeftAtt).toggleClass('left');
+	});
+
 
 
 });

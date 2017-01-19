@@ -112,6 +112,7 @@ a:active {text-decoration: none;}
 
 	.navbar.navbar-fixed-top {
 		background-color: white;
+		height: 50px;
 	}
 
 
@@ -371,8 +372,10 @@ Hambuerguer Menu
   border-color: transparent;
   color: #1f1f1f;
 }
+
 .navbar-collapse.collapse {
   display: none!important;
+  width: 0;
 }
 .navbar-nav {
   float: none!important;
@@ -381,7 +384,33 @@ Hambuerguer Menu
   float: none;
 }
 .navbar-collapse.collapse.in{
-  display:block !important;
+/*  top: 50px;
+  bottom: 0;
+  left: 0;
+  width: 200px;
+  position: fixed;
+  overflow: hidden;
+  transition: width .4s;*/
+
+}
+
+
+
+.left-slide{
+	width: 0;
+	top:50px;
+	bottom:0;
+	left:0;
+	
+	position:fixed;
+	overflow:hidden;
+	transition:width .4s;
+	background: black;
+
+}
+
+.left-slide.left{
+	width:200px;
 }
 
 /*---------------------This is for the body Landing page -----------------------*/ 
