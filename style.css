@@ -301,18 +301,34 @@ a:active {text-decoration: none;}
 	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 20px;
 	margin-bottom: 0px;
 	background-color: white;
 }
 
 .home-intro-section {
-	margin-top: 40px;
-	padding-left: 30px;
+	height: 500px;
+	line-height: 500px;
+	text-align: center;
+}
+
+.home-intro-section p {
+	display: inline-block;
+	line-height: normal;
+	vertical-align: middle;
+	width: 600px;
+	font-size: 20px;
+	text-align: -webkit-auto;
+	color: #1f1f1f;
+}
+
+.home-intro-section p a {
+	text-decoration: underline;
+    color: black;
+    font-weight: 500;
 }
 
 .intro-section{
-	padding-left: 30px;
+	/*padding-left: 30px;*/
 }
 
 #title { 
