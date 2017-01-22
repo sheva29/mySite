@@ -216,8 +216,8 @@ a:active {text-decoration: none;}
 	
 	/* Top Nav Bar */
 	.intro{
-		min-height: 350px;
-		max-height: 400px;
+		min-height: 500px;
+		/*max-height: 400px;*/
 	}
 	.contact-intro{
 		min-height: 350px;
@@ -303,6 +303,7 @@ a:active {text-decoration: none;}
 	margin-right: auto;
 	margin-top: 20px;
 	margin-bottom: 0px;
+	background-color: white;
 }
 
 .home-intro-section {
@@ -398,7 +399,7 @@ Hamburguer Menu
 	position:fixed;
 	overflow:hidden;
 	transition:width .4s;
-	background: #4b4e53;
+	background: #1f1f1f;
 	border-top: 1px solid transparent;
     border-color: #e7e7e7;
 
