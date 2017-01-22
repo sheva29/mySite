@@ -16,7 +16,6 @@ include('json-ld.php');
 <link rel ="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>" >
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
 
-
 <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
   <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -63,7 +62,7 @@ wp_head();
         <section class="container home-intro-section">
           <!--This is where my intro goes-->
 <!--           <h1>Hi there! I am <a href="http://www.sanchezmauricio.com/about/">Mauricio!</a></h1> -->
-          <p>Welcome to my Website! I am <a href="http://www.sanchezmauricio.com/about/">Mauricio!</a> I am a Product Designer and Creative Technologist. I build algorithms, research technologies, fabricate prototypes to connect the physical with the digital.</p>        
+          <p>Welcome to my Website! I am <a href="http://www.sanchezmauricio.com/about/">Mauricio</a>. I am a Product Designer and Creative Technologist. I build algorithms, research technologies, fabricate prototypes to connect the physical with the digital.</p>        
         </section>
     </div>
     <!-- Include this when a nav bar with categories for all different posts is available -->
