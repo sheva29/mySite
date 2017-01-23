@@ -20,6 +20,10 @@ jQuery(document).ready(function($){
 	    return this; // for testing purposes
 	};
 
+	//
+	// Side Bar
+	//
+
 	//*** We Chance The Order of Our FILTERS ***//
 
 	// get elements from container and pass them to a temporary one
@@ -36,7 +40,7 @@ jQuery(document).ready(function($){
 		// change order to the one needed in new object
 		tempObject.forEach( function (element, i) {
 
-			if(element.innerHTML === 'Systems') tempObject.move(i, 1);		
+			if(element.innerHTML === 'systems') tempObject.move(i, 1);		
 
 		});
 		// erase children from old object
@@ -64,7 +68,7 @@ jQuery(document).ready(function($){
 	var all = $('.project-sidebar-elements');
 	all.each( function () {
 
-		if ($(this).text() == "All") $(this).toggleClass("is-checked");
+		if ($(this).text() == "all") $(this).toggleClass("is-checked");
 		// console.log($(this).text());
 	});
 
@@ -206,7 +210,7 @@ jQuery(document).ready(function($){
 	if (location.pathname == '/tire-gauge/'){
 		console.log(" we are here");
 	}
-	/* Left Menu*/
+	/* Hamburguer Menu - Left Menu*/
 	var $leftSlide = $('[data-toggle=slide-left]');
 	var slideLeftAtt = $leftSlide.attr('data-target');
 	$leftSlide.on('click', function (event){

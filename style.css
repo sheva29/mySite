@@ -328,6 +328,7 @@ a:active {text-decoration: none;}
 	margin-right: auto;
 	margin-bottom: 0px;
 	background-color: white;
+	padding-bottom: 0px;
 }
 
 #title { 
@@ -426,8 +427,6 @@ Hamburguer Menu
 }
 
 .home-intro-section {
-	/*height: 500px;*/
-	/*line-height: 500px;*/
 	text-align: center;
 }
 
@@ -435,10 +434,9 @@ Hamburguer Menu
 	display: inline-block;
 	line-height: normal;
 	vertical-align: middle;
-	/*width: 600px;*/
-	/*font-size: 20px;*/
 	text-align: -webkit-auto;
 	color: #1f1f1f;
+	letter-spacing: 1.5px;
 }
 
 .home-intro-section p a {
@@ -447,9 +445,6 @@ Hamburguer Menu
     font-weight: 500;
 }
 
-.intro-section{
-	/*padding-left: 30px;*/
-}
 
 /*---------------------This is for the body Landing page -----------------------*/ 
 
