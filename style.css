@@ -38,6 +38,8 @@ a:visited {text-decoration: none;}
 a:hover {text-decoration: none;}  
 a:active {text-decoration: none;}
 
+button:focus {outline:0;}
+
 
 /*My CSS Starts here*/
 
@@ -93,9 +95,13 @@ a:active {text-decoration: none;}
 	}
 
 	/* Tab filters */
-	.project-sidebar-elements{
-		font-size: 12px;
+	.filter-container{
+		font-size: 10px;
 		width: 70px;
+	}
+	.filter-container .filter-logo{
+		width: 12px;
+		height: 9px;
 	}
 
 	/* Work Expertise Area Field */
@@ -153,9 +159,13 @@ a:active {text-decoration: none;}
 	}
 
 	/* Tab filters */
-	.project-sidebar-elements{
+	.filter-container{
 		font-size: 16px;
 		width: 120px;
+	}
+	.filter-container .filter-logo{
+		width: 18px;
+		height: 14px;
 	}
 
 	/* Jumbotron Intro */
@@ -198,9 +208,9 @@ a:active {text-decoration: none;}
 		margin: 15px 8px 0px;
 	}
 	/* Tab filters */
-	.project-sidebar-elements{
+/*	.project-sidebar-elements{
 		width: 120px;
-	}
+	}*/
 	/*About*/
 	.about-title{
 		font-size: 42px;
@@ -258,9 +268,9 @@ a:active {text-decoration: none;}
 		height: 224px;
 	}
 	/* Tab filters */
-	.project-sidebar-elements{
+/*	.project-sidebar-elements{
 		width: 120px;
-	}
+	}*/
 }
 
 @media screen and (min-width: 1200px){
@@ -300,9 +310,9 @@ a:active {text-decoration: none;}
 		height: 160px;
 	}
 	/* Tab filters */
-	.project-sidebar-elements{
+/*	.filter-container{
 		width: 120px;
-	}
+	}*/
 }
 
 #logo-container span {
@@ -331,13 +341,13 @@ a:active {text-decoration: none;}
 	padding-bottom: 0px;
 }
 
-#title { 
+/*#title { 
 	float: left;
 	clear: left;
 	font-size: 10px;
 	margin: 0;
 	margin-top: -5px;
-}
+}*/
 
 /*
 .header-mauricio{
@@ -462,17 +472,20 @@ Hamburguer Menu
 	margin-bottom: 50px;
 }
 
+.project-sidebar{
+    padding-right: 30px;
+}
+
 .filter-container{
 	display: inline-block;
-
 }
 
 .filter-container .filter-logo{
 	background: url(http://www.sanchezmauricio.com/wp-content/uploads/2017/01/filter_icon.png);
 	background-size: cover;
-	width: 18px;
-	height: 14px;
-	display:inline-block;
+	opacity: 0;
+	transition: opacity 0.3s linear;
+	display: inline-block;
 }
 
 #container{
@@ -486,12 +499,19 @@ Hamburguer Menu
 /* this is for the filter buttons */
 .project-sidebar-elements{
 	list-style-type: none;
-	/*display: inline-block;	*/
     background: none;    
     border-style: none;
     border-width: 2px;    
     padding: 5px 0px;
     font-weight: 200;    
+}
+
+/* when selected we change the look of the button */
+.filter-container.is-checked .filter-logo{
+	/*background: white !important; */
+	opacity: 1;
+	/*color: #101010;*/
+	/*font-weight: 700;*/
 }
 
 .project-sidebar-elements:visited{
@@ -507,13 +527,6 @@ Hamburguer Menu
 	    padding: 2px 0px;
 	   	font-weight: 200;
 	}	
-}
-
-/* when selected we change the look of the button */
-.is-checked {
-	background: white !important; 
-	color: #101010;
-	font-weight: 700;
 }
 
 /* Will eventually add a media query*/

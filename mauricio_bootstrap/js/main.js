@@ -71,13 +71,9 @@ jQuery(document).ready(function($){
 		var children = $(this).children('button');
 		children.each(function ( ) {
 			if( $(this).text() == "all"){
-				console.log(that);
 				that.toggleClass("is-checked");
 			}
 		})
-		// $(this).children.is('button')){
-		// if ($(this).text() == "all") $(this).toggleClass("is-checked");
-		// console.log($(this).text());
 	});
 
 
