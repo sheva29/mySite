@@ -65,15 +65,25 @@ jQuery(document).ready(function($){
 	addIDsToSidebarElements();
 	
 	//we set all as default for the filter
-	var all = $('.project-sidebar-elements');
+	var all = $('.filter-container');
 	all.each( function () {
-
-		if ($(this).text() == "all") $(this).toggleClass("is-checked");
+		var that = $(this);
+		var children = $(this).children('button');
+		children.each(function ( ) {
+			if( $(this).text() == "all"){
+				console.log(that);
+				that.toggleClass("is-checked");
+			}
+		})
+		// $(this).children.is('button')){
+		// if ($(this).text() == "all") $(this).toggleClass("is-checked");
 		// console.log($(this).text());
 	});
 
 
-	//*** Isotope ***//
+	//*** 
+	//Isotope 
+	//***
 
 	//we initiate our isotope grid for the project thumbs
 	var $grid = $(".row");
@@ -116,10 +126,12 @@ jQuery(document).ready(function($){
 
 	});
 
-	//*** Project Thumbs ***//
+	//*** 
+	// Project Thumbs 
+	//***
 
 	//adding a toggle class for the buttons in the project thumbs
-	var $sidebarElements = $('.project-sidebar-elements');
+	var $sidebarElements = $('.filter-container');
 	$sidebarElements.on('click', function () {
 		
 		$sidebarElements.each( function (i) {// we check other elements with smae class to remove the class previously
@@ -152,7 +164,9 @@ jQuery(document).ready(function($){
 
 	slideExpertiseText();// we evoke our function
 
-	//*** Contact Form - Adding Classes ***//
+	//*** 
+	// Contact Form - Adding Classes 
+	//***
 
 	var $nameField = $("#contact-name").find('span').find('input');// we look for input fields
 	$nameField.addClass("contact-name-input");// pass a class we are familiar with

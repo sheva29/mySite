@@ -458,8 +458,21 @@ Hamburguer Menu
 
 #sidebar{
 	text-align: center;
-	background-color: #eeeeee;
+	background-color: white;
 	margin-bottom: 50px;
+}
+
+.filter-container{
+	display: inline-block;
+
+}
+
+.filter-container .filter-logo{
+	background: url(http://www.sanchezmauricio.com/wp-content/uploads/2017/01/filter_icon.png);
+	background-size: cover;
+	width: 18px;
+	height: 14px;
+	display:inline-block;
 }
 
 #container{
@@ -473,14 +486,12 @@ Hamburguer Menu
 /* this is for the filter buttons */
 .project-sidebar-elements{
 	list-style-type: none;
-	display: inline-block;
-	
+	/*display: inline-block;	*/
     background: none;    
     border-style: none;
     border-width: 2px;    
     padding: 5px 0px;
-    font-weight: 200;
-    
+    font-weight: 200;    
 }
 
 .project-sidebar-elements:visited{

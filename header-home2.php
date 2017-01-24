@@ -60,14 +60,21 @@ wp_head();
      <div class="jumbotron intro">        
           <!--This is where my intro goes-->
         <section class="container home-intro-section">
-          <p>Welcome to my Website! I am <a href="http://www.sanchezmauricio.com/about/">Mauricio</a>. I am a Product Designer and Creative Technologist. I build algorithms, research technologies, fabricate prototypes to connect the physical with the digital.</p>        
+          <p>Welcome to my Website! I am <a href="http://www.sanchezmauricio.com/about/">Mauricio</a>, a Product Designer and Creative Technologist. I build algorithms, research technologies, fabricate prototypes to connect the physical with the digital.</p>        
         </section>
     </div>
     <!-- Include this when a nav bar with categories for all different posts is available -->
     <nav id="sidebar" class="project-sidebar">
       <?php 
       foreach($terms as $term){
-        echo "<button class='project-sidebar-elements'data-filter='.".$term->slug."'>" . strtolower($term->name) . "</button>\n";
+        ?>
+          <div class="filter-container">
+            <div class="filter-logo"></div>
+          <?php
+          echo "<button class='project-sidebar-elements'data-filter='.".$term->slug."'>" . strtolower($term->name) . "</button>\n"; 
+          ?>
+        </div>
+      <?php
       }  
       ?>
     </nav>
