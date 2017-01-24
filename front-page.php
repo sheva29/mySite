@@ -30,7 +30,7 @@ $terms = get_terms('category', array('parent' => 9));
 			  	<div  <?php //post_class( $classes);  ?>  class="<?php echo $termsString; ?>item isotope-item" > <!-- we pass the terms as a class to our thumbnail -->
 					<a href="<?php the_permalink(); ?>" class="test"> <?php the_post_thumbnail('custom_thumb', array( 'class' => 'img-thumb' ) ); echo '</a>'?> </a>
 						<a class="thumb-title" href="<?php the_permalink(); ?>"> <?php the_title()?> <!-- / --> </a>
-						<!-- <a class="project-year" href="<?php the_permalink(); ?>"> <?php the_time( 'Y' );?> </a> -->
+						<span class="project-year"> <?php the_time( 'Y' );?> </span> 
 				</div>
 
 			<?php endwhile;?>
