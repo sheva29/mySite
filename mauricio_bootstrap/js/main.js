@@ -86,12 +86,15 @@ jQuery(document).ready(function($){
 	$grid.isotope({
 		itemSelector: '.projects',
 		// animationEngine: 'best-available',
-		layoutMode: 'fitRows',
+		layoutMode: 'masonry',
 		animationOptions: {
 			duration: 750,
 			easing: 'linear',
 			queue: false,
 		},
+		masonry: {
+			columnWidth: 0
+		}
 	});
 	//Isotope grid for blog posts
 	var $blogContainer= $('.blog-container');

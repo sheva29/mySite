@@ -570,7 +570,7 @@ span.project-year{
 /* --------------------This is for the footer ---------------------- */ 
 
 #footer-mauricio{
-	position: absolute;
+	/*position: absolute;*/
 	width:100%;	
 	bottom:0;
 	max-height: 300px;
