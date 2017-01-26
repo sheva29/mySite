@@ -72,7 +72,7 @@ wp_head();
           <div class="filter-container">
             <div class="filter-logo"></div>
           <?php
-          echo "<button class='project-sidebar-elements'data-filter='.".$term->slug."'>" . strtolower($term->name) . "</button>\n"; 
+          echo "<button class='project-sidebar-elements' data-filter='.".$term->slug."'>" . strtolower($term->name) . "</button>\n"; 
           ?>
         </div>
       <?php

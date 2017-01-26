@@ -426,12 +426,8 @@ Hamburguer Menu
 
 /*---------------------This is for the body Landing page -----------------------*/ 
 
-.custom-row{
-	float: left;
-	/*we need this for mobile*/
-	margin-left: auto;
-	margin-right: auto;
-	padding-bottom: 240px;
+.grid{
+	/*height: 711px;*/
 }
 
 #sidebar{
@@ -570,7 +566,7 @@ span.project-year{
 /* --------------------This is for the footer ---------------------- */ 
 
 #footer-mauricio{
-	/*position: absolute;*/
+	position: absolute;
 	width:100%;	
 	bottom:0;
 	max-height: 300px;
@@ -578,7 +574,7 @@ span.project-year{
 
 .contact-images{
 	text-align: center;
-	margin: 60px auto;
+	/*margin: 60px auto;*/
 }
 
 .footer-contact{
@@ -632,6 +628,11 @@ span.project-year{
 #twitter{
 	margin: 0 5px;
 	display: inline-block;
+}
+
+footer .contact-p{
+	text-align: left;
+    padding-top: 100px;
 }
 
 /* --------------------General Posts ---------------------- */ 

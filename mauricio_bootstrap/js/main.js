@@ -81,21 +81,29 @@ jQuery(document).ready(function($){
 	//Isotope 
 	//***
 
+	// set the height of the container to its max before turning of resizeContainer to false
+	var $thumbsContainer = $('.grid');
+	var thumbsContainerHeight = $('.grid').height();
+	var footerHeight =  $('#footer-mauricio').height();
+	var margin = 50;
+	var containerHeight = thumbsContainerHeight + footerHeight + margin;
+	$thumbsContainer.css({
+		'height' : containerHeight
+	});
+
 	//we initiate our isotope grid for the project thumbs
-	var $grid = $(".row");
+	var $grid = $(".grid");
 	$grid.isotope({
-		itemSelector: '.projects',
-		// animationEngine: 'best-available',
+		itemSelector:'.projects',
 		layoutMode: 'masonry',
 		animationOptions: {
 			duration: 750,
 			easing: 'linear',
 			queue: false,
 		},
-		masonry: {
-			columnWidth: 0
-		}
+		resizeContainer: false // turn off so that it doesn't resize
 	});
+
 	//Isotope grid for blog posts
 	var $blogContainer= $('.blog-container');
 	$blogContainer.isotope({
@@ -110,7 +118,9 @@ jQuery(document).ready(function($){
 
 	//we assign the elements to pass to our filters
 	$('.project-sidebar button').click(function(){
+
 		var selector = $(this).attr('data-filter');
+		// var selector = "." + $(this).attr('class').split(' ').pop();
 		$grid.isotope({
 			filter: selector,
 			animationOptions: {
@@ -119,10 +129,6 @@ jQuery(document).ready(function($){
 			queue: false,
 		}
 		});
-		// return false;
-		var iso = $grid.data('isotope');
-		// console.log('filtered ' + iso.filteredItems.length + ' items');
-
 	});
 
 	//*** 
@@ -211,7 +217,9 @@ jQuery(document).ready(function($){
 
 	});
 
-	/* Add class to <a> inside nav bar elements */
+	///* 
+	// Add class to <a> inside nav bar elements 
+	//*/
 
 	var $navBarMenuelement = $('.page_item').find('a').each( function (element, i){
 		$(this).addClass('page-item-a');
@@ -221,7 +229,7 @@ jQuery(document).ready(function($){
 	$(".container").fitVids();
 
 	if (location.pathname == '/tire-gauge/'){
-		console.log(" we are here");
+		// console.log(" we are here");
 	}
 	/* Hamburguer Menu - Left Menu*/
 	var $leftSlide = $('[data-toggle=slide-left]');
@@ -229,6 +237,15 @@ jQuery(document).ready(function($){
 	$leftSlide.on('click', function (event){
 		$(slideLeftAtt).toggleClass('left');
 	});
+
+	//
+	// Find container height
+	//
+
+
+
+
+
 
 
 

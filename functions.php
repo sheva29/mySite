@@ -65,7 +65,7 @@ function mauricio_bootstrap_scripts() {
 
 function isotopeJS(){
 
-	wp_register_script('grid-script', 'http://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.0/isotope.pkgd.js', array('jquery'), 'version', false);
+	wp_register_script('grid-script', get_template_directory_uri().'/mauricio_bootstrap/js/isotope.js', array('jquery'), 'version', true);
 	wp_enqueue_script('grid-script');
 }
 

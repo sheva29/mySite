@@ -13,7 +13,7 @@ $terms = get_terms('category', array('parent' => 9));
 
 ?>
 
-	<div class="row custom-row" id="content" class="isotope">
+	<div class="row custom-row grid" id="content" class="isotope">
 
 		<?php if ( $category_posts->have_posts() ) : ?>
 
