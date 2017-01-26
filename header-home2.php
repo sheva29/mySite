@@ -14,7 +14,7 @@ include('json-ld.php');
 
 <!-- Stylesheet -->
 <link rel ="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>" >
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
 <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700" rel="stylesheet">
 
 <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
