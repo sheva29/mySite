@@ -66,6 +66,15 @@ button:focus {outline:0;}
 		text-align: center;
 	}
 
+	.nav li a {
+		padding-left: 0;
+	}
+
+	.left-slide .navbar-collapse{
+		padding-left: 0;
+		padding-right: 0;
+	}
+
 	.home-intro-section{
 		height: 400px;
     	line-height: 400px;
@@ -73,6 +82,10 @@ button:focus {outline:0;}
 
 	.home-intro-section p {
 		font-size: 18px;
+	}
+
+	.nav{
+		margin-left: 15px;
 	}
 
 	/* Blog Post */
@@ -196,7 +209,7 @@ button:focus {outline:0;}
 	}
 	.nav > li > a{
 		padding: 0;
-		margin: 15px 8px 0px;
+		margin-top: 15px;
 	}
 	/* Tab filters */
 /*	.project-sidebar-elements{
@@ -245,8 +258,8 @@ button:focus {outline:0;}
 		max-height: 450px;
 	}
 	.nav {
-		font-size: 13px;
-		margin-left: 5px;		
+		/*font-size: 13px;*/
+		/*margin-left: 5px;		*/
 	}
 	/* Blog Post */
 	.blog-posts {
@@ -278,7 +291,7 @@ button:focus {outline:0;}
 	/* Top Nav Bar */
 	.nav{
 		font-size: 15px;
-		margin-left: 10px;
+		/*margin-left: 15px;*/
 	}
 
 	.home-intro-section{
@@ -350,7 +363,7 @@ color: #4999c1;
 
 .navbar-default .navbar-nav  li  a {
     color: white;
-    margin-left: 20px
+    /*margin-left: 20px*/
 }
 
 .current_page_item > a{
@@ -496,7 +509,7 @@ Hamburguer Menu
 }
 
 .work-intro-section{
-	margin-top 50px;
+	margin-top: 50px;
 }
 
 .thumb-title {
