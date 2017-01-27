@@ -10,6 +10,7 @@
               </div>
 
               <div class="col-xs-4 col-lg-4"> 
+                <p class="contact-p other-title"> SOCIAL MEDIA </p>
                 <a href="https://twitter.com/maurifique" target="_blank">
                   <img id="twitter" src="http://www.sanchezmauricio.com/wp-content/uploads/2015/03/twitter_logo.png" heigh="50" width="50">
                 </a>
@@ -18,7 +19,8 @@
                 </a>
               </div>
 
-              <div class="col-xs-4 col-lg-4"> 
+              <div class="col-xs-4 col-lg-4">
+                <p class="contact-p others-title"> CODE + THINKING </p> 
                 <a href="https://github.com/sheva29" target="_blank">
                   <img id="github" src="http://www.sanchezmauricio.com/wp-content/uploads/2015/03/github_logo.png" height="50" width="50">
                 </a>
