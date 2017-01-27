@@ -82,14 +82,14 @@ jQuery(document).ready(function($){
 	//***
 
 	// set the height of the container to its max before turning of resizeContainer to false
-	var $thumbsContainer = $('.grid');
-	var thumbsContainerHeight = $('.grid').height();
-	var footerHeight =  $('#footer-mauricio').height();
-	var margin = 50;
-	var containerHeight = thumbsContainerHeight + footerHeight + margin;
-	$thumbsContainer.css({
-		'height' : containerHeight
-	});
+	// var $thumbsContainer = $('.grid');
+	// var thumbsContainerHeight = $('.grid').height();
+	// var footerHeight =  $('#footer-mauricio').height();
+	// var margin = 50;
+	// var containerHeight = thumbsContainerHeight + footerHeight + margin;
+	// $thumbsContainer.css({
+	// 	'height' : containerHeight
+	// });
 
 	//we initiate our isotope grid for the project thumbs
 	var $grid = $(".grid");
@@ -101,7 +101,7 @@ jQuery(document).ready(function($){
 			easing: 'linear',
 			queue: false,
 		},
-		resizeContainer: false // turn off so that it doesn't resize
+		// resizeContainer: false // turn off so that it doesn't resize
 	});
 
 	//Isotope grid for blog posts
@@ -117,9 +117,9 @@ jQuery(document).ready(function($){
 	});
 
 	//we assign the elements to pass to our filters
-	$('.project-sidebar button').click(function(){
-
-		var selector = $(this).attr('data-filter');
+	$('.project-sidebar .filter-container').click(function(){
+	
+		var selector = $(this).children('button').attr('data-filter');
 		// var selector = "." + $(this).attr('class').split(' ').pop();
 		$grid.isotope({
 			filter: selector,
