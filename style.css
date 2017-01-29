@@ -347,13 +347,13 @@ button:focus {outline:0;}
 
 /* Nav Bar Menu */
 a {
-text-decoration: none;
+/*text-decoration: none;
 transition-property: border color;
 -webkit-transition-duration: 0.3s;
 -moz-transition-duration: 0.3s;
 -o-transition-duration: 0.3s;
 transition-duration: 0.3s;
-color: #4999c1;
+color: #4999c1;*/
 }
 
 /*.page-item-a:hover {
@@ -367,9 +367,9 @@ color: #4999c1;
 }
 
 .current_page_item > a{
-	border-bottom: 2px solid rgba(255, 255, 255, 1);
+/*	border-bottom: 2px solid rgba(255, 255, 255, 1);
 	border-color: #b6d450;
-    color: #b6d450 !important;
+    color: #b6d450 !important;*/
 }
 
 /*
@@ -440,7 +440,6 @@ Hamburguer Menu
 /*---------------------This is for the body Landing page -----------------------*/ 
 
 .grid{
-	/*height: 711px;*/
 	padding-bottom: 350px;
 }
 
@@ -509,13 +508,13 @@ Hamburguer Menu
 }
 
 .work-intro-section{
-	margin-top: 50px;
+	/*margin-top: 50px;*/
 }
 
 .thumb-title {
 	font-family: 'Open Sans Condensed', sans-serif;
 	width: 100%;
-    text-transform: uppercase;
+    text-transform: capitalize;
     font-weight: 700;
     color: #1f1f1f;
     float: left;
@@ -587,23 +586,23 @@ span.project-year{
 	background-color: #1f1f1f;
 }
 
-.contact-images{
-	text-align: center;
+/*.contact-images{
+	text-align: center;*/
 	/*margin: 60px auto;*/
-}
+/*}*/
 
 .footer-contact{
 	min-height: 10px;
 	overflow: hidden;
 	float: left;
 }
-.footer-note{
+/*.footer-note{
 	margin-bottom: 10px;
-}
+}*/
 
-.footer-note > p {
+/*.footer-note > p {
 	font-weight: 300;
-}
+}*/
 
 footer p {
 	text-align: left;
@@ -643,10 +642,10 @@ footer .others-title{
 	height: auto;
 }
 
-.project {
+/*.project {
 	margin-top: 10px;
 	margin-bottom: 15px;	
-}
+}*/
 
 /*#github{
 	margin: 0 5px;
@@ -770,7 +769,7 @@ footer .others-title{
 /* -------------------- Contact Form Elements ---------------------- */ 
 
 
-#mauricio-email{
+/*#mauricio-email{
     font-weight: bold;
     font-style: italic;
     color: #333333;
@@ -782,7 +781,7 @@ footer .others-title{
 }
 
 .contact-container{
-	padding-bottom: 240px;/*we add the 200px of the foooter + 30px margin*/
+	padding-bottom: 240px;
 	margin-top: 40px;
 	padding-left: 30px;
 }
@@ -815,7 +814,7 @@ footer .others-title{
     border-style: none !important;
     border-radius: 5px;
     color: white;
-}
+}*/
 /* -------------------- ABOUT ---------------------- */ 
 
 
