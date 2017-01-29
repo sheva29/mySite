@@ -65,19 +65,8 @@ wp_head();
         </section>
     </div>
     <!-- Include this when a nav bar with categories for all different posts is available -->
-    <nav id="sidebar" class="project-sidebar">
-      <?php 
-      foreach($terms as $term){
-        ?>
-          <div class="filter-container">
-            <div class="filter-logo"></div>
-          <?php
-          echo "<button class='project-sidebar-elements' data-filter='.".$term->slug."'>" . strtolower($term->name) . "</button>\n"; 
-          ?>
-        </div>
-      <?php
-      }  
-      ?>
-    </nav>
+    <?php 
+      get_sidebar("projects-filter");
+    ?>
     <!-- This is where the main body starts -->
     <div class="projects-thumbs container">
