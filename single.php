@@ -12,8 +12,14 @@ $parent = $post->ID;
 
 			<div class="single-content">
 				<h1 class="single-title"><?php the_title()?> </h1>
-				<h4 class="single-description">Description: <?php if(!in_array("project_description", get_post_custom_keys('1'))){ $meta = get_post_meta( $parent, 'project_description', true); print $meta; }?> </h4>
-				<h4 class="single-roles"> Role: <?php if(!in_array("role", get_post_custom_keys('1'))){ $meta = get_post_meta( $parent, 'role', true); print $meta; }?> </h4>
+				<?php 
+				$description_key = get_post_meta($parent, 'project_description', true);
+				$role_key = get_post_meta($parent, 'role', true);
+				if (!empty($description_key) || !empty($role)){
+					echo '<h4 class="single-description">Description:'; $description = get_post_meta( $parent, 'project_description', true); print $description; echo'</h4>'; 
+					echo '<h4 class="single-role"> Role:'; $role = get_post_meta( $parent, 'role', true); print $role; echo '</h4>'; 
+				}
+				?>
 				<?php the_content(); ?>
 			<!-- we close the content() -->
 			</div>
