@@ -418,7 +418,11 @@ Hamburguer Menu
 }
 
 .home-intro-section {
-	text-align: center;
+	text-align: center !important;
+}
+
+.home-intro-section > *{
+	vertical-align: center;
 }
 
 .home-intro-section p {
@@ -439,7 +443,7 @@ Hamburguer Menu
 
 /*---------------------This is for the body Landing page -----------------------*/ 
 
-.grid{
+.grid, .single-content{
 	padding-bottom: 350px;
 }
 
