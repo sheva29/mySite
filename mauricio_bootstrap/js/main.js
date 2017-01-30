@@ -118,7 +118,7 @@ jQuery(document).ready(function($){
 
 	//we assign the elements to pass to our filters
 	$('.project-sidebar .filter-container').click(function(){
-	
+
 		var selector = $(this).children('button').attr('data-filter');
 		// var selector = "." + $(this).attr('class').split(' ').pop();
 		$grid.isotope({
@@ -239,8 +239,17 @@ jQuery(document).ready(function($){
 	});
 
 	//
-	// Find container height
+	// Add margin to nav menu when wpadminbar in place
 	//
+	var $wpAdminBar = $('div#wpadminbar');
+	if ($wpAdminBar.height() == 32){
+		console.log($wpAdminBar);
+		console.log("it exists");
+		var $navBar = $('.navbar-fixed-top');
+		$navBar.css({
+			'margin-top': '32'
+		});
+	}
 
 
 

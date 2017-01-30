@@ -549,8 +549,9 @@ span.project-year{
 
 .jumbotron.single-jumbotron{
 	background-size: cover !important;
-	min-height: 100%;
-	width: auto;
+	min-height: 90%;
+	margin-top: 50px;
+
 }
 
 /* 
