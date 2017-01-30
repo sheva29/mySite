@@ -243,8 +243,10 @@ jQuery(document).ready(function($){
 	//
 	var $wpAdminBar = $('div#wpadminbar');
 	if ($wpAdminBar.height() == 32){
-		console.log($wpAdminBar);
-		console.log("it exists");
+		var $leftMenu = $('.left-slide');
+		$leftMenu.css({
+			'margin-top': '33'
+		});
 		var $navBar = $('.navbar-fixed-top');
 		$navBar.css({
 			'margin-top': '32'
