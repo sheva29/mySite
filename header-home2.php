@@ -56,7 +56,7 @@ wp_head();
           <p>Welcome to my Website! I am <a href="http://www.sanchezmauricio.com/about/">Mauricio Sanchez</a>I'm a full stack engineer and product designer focusing on solutions to help companies and individuals improve their products, processes and platforms.
           </br>
           </br>
-          I build platforms, algorithms, research technologies, fabricate prototypes and enjoy to connect the physical with the digital.          
+          I build platforms, algorithms, research technologies, fabricate prototypes and enjoy connecting the physical with the digital.          
         </section>
     </div>
     <!-- Include this when a nav bar with categories for all different posts is available -->
