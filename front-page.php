@@ -2,13 +2,13 @@
 <!DOCTYPE html>
 <?php
 // we get the header for our home
-get_header( 'home2' );
+get_header( 'home' );
 // we want to display only thumbs from the projects category.
 $arg = array( 'category_name'=>'Projects', 'posts_perpage'=>'-1' );
 // we pass the argument to our query.
 $category_posts = new WP_Query( $arg );
 // we want to pass some classes to our image containers.
-$classes = array('col-md-3 ', 'image-container ');
+// $classes = array('col-md-3 ', 'image-container ');
 $terms = get_terms('category', array('parent' => 9));
 
 ?>

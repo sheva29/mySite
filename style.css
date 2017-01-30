@@ -364,6 +364,8 @@ button:focus {outline:0;}
 	margin-bottom: 0px;
 	background-color: white;
 	padding-bottom: 0px;
+	margin-top: 50px;
+	padding-top: 0;
 }
 
 /* Nav Bar Menu */
@@ -580,6 +582,29 @@ span.project-year{
 // Blog Posts 
 //
 */
+
+.blog-intro-section {
+	text-align: center !important;
+}
+
+.blog-intro-section > *{
+	vertical-align: middle;
+}
+
+.blog-intro-section p {
+	display: inline-block;
+	line-height: normal;
+	vertical-align: middle;
+	text-align: -webkit-auto;
+	color: #1f1f1f;
+	letter-spacing: 1.5px;
+}
+
+.blog-intro-section p a {
+	text-decoration: underline;
+    color: black;
+    font-weight: 500;
+}
 
 .blog-container{
 	padding-top: 40px;
