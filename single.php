@@ -2,7 +2,7 @@
 <!--blog post -->
 <?php
 
-get_header('home2');
+get_header('single');
 $parent = $post->ID;
 ?>
 
@@ -15,10 +15,10 @@ $parent = $post->ID;
 				<?php 
 				$description_key = get_post_meta($parent, 'project_description', true);
 				$role_key = get_post_meta($parent, 'role', true);
-				if (!empty($description_key) || !empty($role)){
-					echo '<h4 class="single-description">Description:'; $description = get_post_meta( $parent, 'project_description', true); print $description; echo'</h4>'; 
-					echo '<h4 class="single-role"> Role:'; $role = get_post_meta( $parent, 'role', true); print $role; echo '</h4>'; 
-				}
+				if (!empty($description_key) || !empty($role)):
+					echo '<h4 class="single-description">Description: '; $description = get_post_meta( $parent, 'project_description', true); print $description; echo'</h4>'; 
+					echo '<h4 class="single-role"> Role: '; $role = get_post_meta( $parent, 'role', true); print $role; echo '</h4>'; 
+				endif;
 				?>
 				<?php the_content(); ?>
 			<!-- we close the content() -->

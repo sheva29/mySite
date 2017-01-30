@@ -541,7 +541,23 @@ span.project-year{
     font-size: 13px;
 }
 
-/* -------------------- Blog Posts -------------------- */
+/* 
+//
+// Project Posts
+//
+*/
+
+.jumbotron.single-jumbotron{
+	background-size: cover !important;
+	min-height: 100%;
+	width: auto;
+}
+
+/* 
+//
+// Blog Posts 
+//
+*/
 
 .blog-container{
 	padding-top: 40px;
