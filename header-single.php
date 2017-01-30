@@ -1,4 +1,4 @@
-<!-- SINGLE POST HEADER -->
+
 <?php 
   // For JSON_LD
   include('json-ld.php'); 
@@ -26,6 +26,7 @@ wp_head();
 </head>
 
 <body>
+   <!-- SINGLE POST HEADER -->
   <div class="wrapper">
       <!--Logo and Hidden Hambuguer-->
       <nav class="navbar navbar-default navbar-fixed-top" role="navigation">              

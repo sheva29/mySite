@@ -241,30 +241,27 @@ jQuery(document).ready(function($){
 	//
 	// Add margin to nav menu when wpadminbar in place
 	//
-	var $wpAdminBar = $('#wpadminbar');
-	console.log($wpAdminBar);
-	// setInterval( function() {
-	if ($wpAdminBar.height() == 32){
-		console.log($wpAdminBar.height());
-		console.log("height is 32 for: " + JSON.stringify($wpAdminBar));
-		// var $leftMenu = $('.left-slide');
-		// $leftMenu.css({
-		// 	'margin-top': '33'
-		// });
-		var $navBar = $('.navbar-fixed-top');
-		$navBar.css({
-			'margin-top': '32'
-		});
-	}else{
-		console.log("height isn't : " + JSON.stringify($wpAdminBar));
-	}
+	// var $wpAdminBar = $('#wpadminbar');
+	// console.log($wpAdminBar);
+	// // setInterval( function() {
+	// if ($wpAdminBar.height() == 32){
+	// 	console.log($wpAdminBar.height());
+	// 	console.log("height is 32 for: " + JSON.stringify($wpAdminBar));
+	// 	// var $leftMenu = $('.left-slide');
+	// 	// $leftMenu.css({
+	// 	// 	'margin-top': '33'
+	// 	// });
+	// 	var $navBar = $('.navbar-fixed-top');
+	// 	$navBar.css({
+	// 		'margin-top': '32'
+	// 	});
+	// }else{
+	// 	console.log("height isn't : " + JSON.stringify($wpAdminBar));
+	// }
 
 	// }, 1000);
 
-			var $navBar = $('.navbar-fixed-top');
-		$navBar.css({
-			'margin-top': '32'
-		});
+
 
 
 
