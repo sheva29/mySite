@@ -58,7 +58,7 @@ wp_head();
          if (has_post_thumbnail($page_id)):
             $image_array = wp_get_attachment_image_src(get_post_thumbnail_id( $page_id), 'optional-size');
             $image = $image_array[0];
-            echo '<div class="jumbotron single-jumbotron" style="background: url('; print $image; echo');"> </div>';  
+            echo '<div class="jumbotron about-jumbotron" style="background: url('; print $image; echo');"> </div>';  
          endif;
       endif;
       ?>
