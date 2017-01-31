@@ -239,27 +239,32 @@ jQuery(document).ready(function($){
 	});
 
 	//
-	// Add margin to nav menu when wpadminbar in place
+	//Adding logos
 	//
-	// var $wpAdminBar = $('#wpadminbar');
-	// console.log($wpAdminBar);
-	// // setInterval( function() {
-	// if ($wpAdminBar.height() == 32){
-	// 	console.log($wpAdminBar.height());
-	// 	console.log("height is 32 for: " + JSON.stringify($wpAdminBar));
-	// 	// var $leftMenu = $('.left-slide');
-	// 	// $leftMenu.css({
-	// 	// 	'margin-top': '33'
-	// 	// });
-	// 	var $navBar = $('.navbar-fixed-top');
-	// 	$navBar.css({
-	// 		'margin-top': '32'
-	// 	});
-	// }else{
-	// 	console.log("height isn't : " + JSON.stringify($wpAdminBar));
-	// }
 
-	// }, 1000);
+	var divForWorkLogo = [
+							"<div class='work-logo'>",
+							"</div>"
+						 ].join('\n'),
+		divForAboutLogo = [
+							"<div class='about-logo'>",
+							"</div>"
+						 ].join('\n'),
+		divForBlogLogo = [
+							"<div class='blog-logo'>",
+							"</div>"
+						 ].join('\n');
+
+	var logos = [divForWorkLogo, divForAboutLogo, divForBlogLogo];
+
+	var $navBar = $('.left-slide-nav');
+	// console.log($navBar);
+	$navBar.find('li').each(function (key, value) {
+		$(this).prepend(logos[key]);
+		console.log($(this), logos);
+	});
+	// console.log($navBar.find().children());
+
 
 
 

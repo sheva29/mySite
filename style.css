@@ -33,7 +33,7 @@ body{
 /* Some reset for our links*/
 a:link {text-decoration: none;} 
 a:visited {text-decoration: none;}  
-a:hover {text-decoration: none !important; outline: 0;}  
+a:hover,li {text-decoration: none !important; outline: 0;}  
 a:active {text-decoration: none;}
 
 button:focus {outline:0;}
@@ -218,7 +218,7 @@ button:focus {outline:0;}
 	}
 	.nav > li > a{
 		padding: 0;
-		margin-top: 15px;
+		/*margin-top: 15px;*/
 	}
 	/* Tab filters */
 /*	.project-sidebar-elements{
@@ -343,7 +343,7 @@ button:focus {outline:0;}
 #logo-container span {
   /*background: url(http://www.sanchezmauricio.com/wp-content/uploads/2015/12/logo-container12012015v1.0.svg);  */
   
-  font-family: 'CamberLight', 'sans-serif';
+  font-family: 'CamberLight', sans-serif;
   line-height: 50px;
   color: #1f1f1f;
   font-size: 16px;
@@ -389,11 +389,6 @@ color: #4999c1;*/
     /*margin-left: 20px*/
 }
 
-.current_page_item > a{
-/*	border-bottom: 2px solid rgba(255, 255, 255, 1);
-	border-color: #b6d450;
-    color: #b6d450 !important;*/
-}
 
 /*
 /
@@ -418,10 +413,6 @@ Hamburguer Menu
   color: #1f1f1f;
 }
 
-.navbar-nav>li {
-  float: none;
-}
-
 .left-slide{
 	width: 0;
 	top:48px;
@@ -433,7 +424,6 @@ Hamburguer Menu
 	background: #1f1f1f;
 	border-top: 1px solid transparent;
     border-color: #e7e7e7;
-
 }
 
 .left-slide.left{
@@ -463,6 +453,56 @@ Hamburguer Menu
     font-weight: 500;
 }
 
+.page_item{
+	font-family: "CamberLight", sans-serif;
+    text-transform: lowercase;
+    margin-top: 15px;
+    display: block !important;
+    float: left;
+    clear: both;
+    width: 70px;
+}
+
+.page_item a {
+	float: left;
+}
+
+.navbar-nav li.page_item a:hover{
+	color: white;
+	outline: 0px;
+}
+
+.work-logo{
+	background: url(http://www.sanchezmauricio.com/wp-content/uploads/2017/01/work_icon.png);
+	background-size: cover;
+    width: 18px;
+    height: 12px;
+    margin-top: 3px;
+    margin-right: 4px;
+    float: left;
+}
+
+.about-logo{
+	background: url(http://www.sanchezmauricio.com/wp-content/uploads/2017/01/about-logo.png);
+	background-size: cover;
+    width: 12px;
+    height: 14px;
+    margin-top: 0px;
+    margin-left: 4px;
+    margin-right: 7px;
+    float: left;
+}
+
+.blog-logo{
+	background: url(http://www.sanchezmauricio.com/wp-content/uploads/2017/01/blog_logo.png);
+	background-size: cover;
+    width: 15px;
+    height: 12px;
+    margin-top: 3px;
+    margin-left: 2px;
+    margin-right: 6px;
+    float: left;
+}
 
 /*---------------------This is for the body Landing page -----------------------*/ 
 

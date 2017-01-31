@@ -42,9 +42,9 @@ wp_head();
           <!--Here we start our Navbar-->
         <div class="left-slide">
           <nav role="navigation" class="navbar-collapse">
-          <ul class="nav navbar-nav">
+          <ul class="nav navbar-nav left-slide-nav">
            <!-- Here we include our menu buttons, it includes each menu button on a <li> tag-->
-            <li class="page-item-home">
+            <li class="page_item">
                <a href="http://www.sanchezmauricio.com"> work </a>
             </li>
             <?php wp_list_pages( array( 'title_li' => '', 'exclude' => "12,4" ) ); ?>
