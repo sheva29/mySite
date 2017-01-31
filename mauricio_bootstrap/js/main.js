@@ -105,10 +105,10 @@ jQuery(document).ready(function($){
 	});
 
 	//Isotope grid for blog posts
-	var $blogContainer= $('.blog-container');
+	var $blogContainer= $('.grid-blog');
 	$blogContainer.isotope({
 		itemSelector: '.blog-posts',
-		layoutMode: 'fitRows',
+		layoutMode: 'masonry',
 		animationOptions: {
 			duration: 750,
 			easing: 'linear',

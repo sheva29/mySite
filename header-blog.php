@@ -56,17 +56,17 @@ wp_head();
      <div class="jumbotron intro">        
           <!--This is where my intro goes-->
         <section class="container home-intro-section">
-          <p>Welcome to my Website! I am <a href="http://www.sanchezmauricio.com/about/">Mauricio Sanchez</a>, a full stack engineer and product designer focusing on solutions to help companies and individuals improve their products, processes and platforms.
+          <p>Welcome to my Blog, a space dedicated to tutorials, work in progress and research.
           </br>
           </br>
-          I build platforms, algorithms, research technologies, fabricate prototypes and enjoy connecting the physical with the digital.
+          Feel free to contribute!
           </p>          
         </section>
     </div>
     <!-- Include this when a nav bar with categories for all different posts is available -->
 
   <!-- This is where the main body starts -->
-  <div class="blog-container project-thumbs container">
+  <div class="project-thumbs container blog-container">
        
 
   
