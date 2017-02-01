@@ -42,7 +42,7 @@ wp_head();
             </a>
         </div>            
           <!--Here we start our Navbar-->
-        <div class="left-slide">
+        <div class="left-slide in">
           <nav role="navigation" class="navbar-collapse">
           <ul class="nav navbar-nav">
            <!-- Here we include our menu buttons, it includes each menu button on a <li> tag-->
