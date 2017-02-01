@@ -235,7 +235,8 @@ jQuery(document).ready(function($){
 	var $leftSlide = $('[data-toggle=slide-left]');
 	var slideLeftAtt = $leftSlide.attr('data-target');
 	$leftSlide.on('click', function (event){
-		$(slideLeftAtt).toggleClass('left');
+		$(slideLeftAtt).toggleClass('in');
+		$(".wrapper").toggleClass('out');
 	});
 
 	//

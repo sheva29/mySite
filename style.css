@@ -22,13 +22,20 @@ This simple theme was built using the example Bootstrap theme "Basic marketing s
 html, body {padding:0; margin:0; height:100%;}
 
 body{
+	position: relative;
 	font-family: 'Open Sans', sans-serif;	
 }
-/* main wrapper for website */
+/* in case we want to displace body when opening burguer menu */
 .wrapper{
+	/*width: 100%;*/
 	position: relative;
-	min-height: 100%;
+	/*left: 0;*/
+	/*transition:left .4s;*/
 }
+
+/*.wrapper.out{*/
+	/*left: 200px;*/
+/*}*/
 
 /* Some reset for our links*/
 a:link {text-decoration: none;} 
@@ -73,6 +80,7 @@ button:focus {outline:0;}
 	.left-slide .navbar-collapse{
 		padding-left: 0;
 		padding-right: 0;
+		border-top: 0;
 	}
 
 	.home-intro-section{
@@ -86,6 +94,7 @@ button:focus {outline:0;}
 
 	.nav{
 		margin-left: 15px;
+		margin-top: 0px;
 	}
 
 	/* Blog Post */
@@ -414,7 +423,7 @@ Hamburguer Menu
 }
 
 .left-slide{
-	width: 0;
+
 	top:48px;
 	bottom:0;
 	left:0;	
@@ -424,11 +433,12 @@ Hamburguer Menu
 	background: #1f1f1f;
 	border-top: 1px solid transparent;
     border-color: #e7e7e7;
-}
-
-.left-slide.left{
 	width:200px;
 }
+.left-slide.in{
+	width: 0;
+}
+
 
 .home-intro-section {
 	text-align: center !important;
@@ -465,6 +475,7 @@ Hamburguer Menu
 
 .page_item a {
 	float: left;
+	padding: 0 !important;
 }
 
 .navbar-nav li.page_item a:hover{
