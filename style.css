@@ -146,7 +146,12 @@ button:focus {outline:0;}
 	.about-paragraph {
 		padding: 0 10px;
 	}
-
+	/*
+		footer
+	*/
+	.col-xs-3{
+		/*width: 100%;*/
+	}
 
 }
 
@@ -204,6 +209,16 @@ button:focus {outline:0;}
 	.about-paragraph {
 		padding: 0 20px;
 	}
+	/*
+		footer
+	*/
+	.social-elements{
+		float: left;
+		padding-top: 20px;
+	}
+	.social-elements-container{
+		width: 100%;
+	}
 }
 
 @media screen and (min-width: 768px){
@@ -254,7 +269,16 @@ button:focus {outline:0;}
 		font-size: 18px;
 
 	}
-
+	/*
+		footer
+	*/
+	.social-elements{
+		float: right;
+		padding-top: 100px;
+	}
+	.social-elements-container{
+		width: 75%;
+	}
 }
 
 @media screen and (min-width: 992px){
@@ -378,26 +402,11 @@ button:focus {outline:0;}
 }
 
 /* Nav Bar Menu */
-a {
-/*text-decoration: none;
-transition-property: border color;
--webkit-transition-duration: 0.3s;
--moz-transition-duration: 0.3s;
--o-transition-duration: 0.3s;
-transition-duration: 0.3s;
-color: #4999c1;*/
-}
-
-/*.page-item-a:hover {
-    border-bottom: 2px solid rgba(255, 255, 255, 1);
-    color: white;
-}*/
 
 .navbar-default .navbar-nav  li  a {
     color: white;
     /*margin-left: 20px*/
 }
-
 
 /*
 /
@@ -731,6 +740,13 @@ footer .others-title{
     padding-top: 100px;
     margin-bottom: 0;
     font-weight: 300;
+}
+
+.copy-right{
+	float: left;
+    position: relative;
+    width: 100%;
+    padding-left: 15px;
 }
 
 .footer-email{
