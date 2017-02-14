@@ -228,15 +228,18 @@ jQuery(document).ready(function($){
 	/* Responsive Videos */
 	$(".container").fitVids();
 
-	if (location.pathname == '/tire-gauge/'){
-		// console.log(" we are here");
-	}
+	// if (location.pathname == '/tire-gauge/'){
+	// 	// console.log(" we are here");
+	// }
 	/* Hamburguer Menu - Left Menu*/
 	var $leftSlide = $('[data-toggle=slide-left]');
 	var slideLeftAtt = $leftSlide.attr('data-target');
 	$leftSlide.on('click', function (event){
-		$(slideLeftAtt).toggleClass('in');
-		$(".wrapper").toggleClass('out');
+		// if ($(slideLeftAtt).hasClass('in') || $('.wrapper').hasClass('out')){
+			$(slideLeftAtt).toggleClass('in');
+			$(".wrapper").toggleClass('out');
+		// }
+		console.log("it was clicked");
 	});
 
 	//
@@ -262,7 +265,7 @@ jQuery(document).ready(function($){
 	// console.log($navBar);
 	$navBar.find('li').each(function (key, value) {
 		$(this).prepend(logos[key]);
-		console.log($(this), logos);
+		// console.log($(this), logos);
 	});
 	// console.log($navBar.find().children());
 
