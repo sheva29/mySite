@@ -3,7 +3,7 @@
 <?php
 
 get_header('single');
-
+$parent = $post->ID;
 ?>
 
 <?php 
@@ -12,6 +12,14 @@ get_header('single');
 
 			<div class="single-content">
 				<h1 class="single-title"><?php the_title()?> </h1>
+				<?php 
+				$description_key = get_post_meta($parent, 'project_description', true);
+				$role_key = get_post_meta($parent, 'role', true);
+				if (!empty($description_key) || !empty($role)):
+					echo '<h4 class="single-description">'; $description = get_post_meta( $parent, 'project_description', true); print $description; echo'</h4>'; 
+					echo '<h4 class="single-role"> Role: '; $role = get_post_meta( $parent, 'role', true); print $role; echo '</h4>'; 
+				endif;
+				?>
 				<?php the_content(); ?>
 			<!-- we close the content() -->
 			</div>

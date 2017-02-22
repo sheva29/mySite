@@ -20,6 +20,10 @@ jQuery(document).ready(function($){
 	    return this; // for testing purposes
 	};
 
+	//
+	// Side Bar
+	//
+
 	//*** We Chance The Order of Our FILTERS ***//
 
 	// get elements from container and pass them to a temporary one
@@ -36,7 +40,7 @@ jQuery(document).ready(function($){
 		// change order to the one needed in new object
 		tempObject.forEach( function (element, i) {
 
-			if(element.innerHTML === 'Systems') tempObject.move(i, 1);		
+			if(element.innerHTML === 'systems') tempObject.move(i, 1);		
 
 		});
 		// erase children from old object
@@ -61,33 +65,50 @@ jQuery(document).ready(function($){
 	addIDsToSidebarElements();
 	
 	//we set all as default for the filter
-	var all = $('.project-sidebar-elements');
+	var all = $('.filter-container');
 	all.each( function () {
-
-		if ($(this).text() == "All") $(this).toggleClass("is-checked");
-		// console.log($(this).text());
+		var that = $(this);
+		var children = $(this).children('button');
+		children.each(function ( ) {
+			if( $(this).text() == "all"){
+				that.toggleClass("is-checked");
+			}
+		})
 	});
 
 
-	//*** Isotope ***//
+	//*** 
+	//Isotope 
+	//***
+
+	// set the height of the container to its max before turning of resizeContainer to false
+	// var $thumbsContainer = $('.grid');
+	// var thumbsContainerHeight = $('.grid').height();
+	// var footerHeight =  $('#footer-mauricio').height();
+	// var margin = 50;
+	// var containerHeight = thumbsContainerHeight + footerHeight + margin;
+	// $thumbsContainer.css({
+	// 	'height' : containerHeight
+	// });
 
 	//we initiate our isotope grid for the project thumbs
-	var $grid = $(".row");
+	var $grid = $(".grid");
 	$grid.isotope({
-		itemSelector: '.projects',
-		// animationEngine: 'best-available',
-		layoutMode: 'fitRows',
+		itemSelector:'.projects',
+		layoutMode: 'masonry',
 		animationOptions: {
 			duration: 750,
 			easing: 'linear',
 			queue: false,
 		},
+		// resizeContainer: false // turn off so that it doesn't resize
 	});
+
 	//Isotope grid for blog posts
-	var $blogContainer= $('.blog-container');
+	var $blogContainer= $('.grid-blog');
 	$blogContainer.isotope({
 		itemSelector: '.blog-posts',
-		layoutMode: 'fitRows',
+		layoutMode: 'masonry',
 		animationOptions: {
 			duration: 750,
 			easing: 'linear',
@@ -96,8 +117,10 @@ jQuery(document).ready(function($){
 	});
 
 	//we assign the elements to pass to our filters
-	$('.project-sidebar button').click(function(){
-		var selector = $(this).attr('data-filter');
+	$('.project-sidebar .filter-container').click(function(){
+
+		var selector = $(this).children('button').attr('data-filter');
+		// var selector = "." + $(this).attr('class').split(' ').pop();
 		$grid.isotope({
 			filter: selector,
 			animationOptions: {
@@ -106,16 +129,14 @@ jQuery(document).ready(function($){
 			queue: false,
 		}
 		});
-		// return false;
-		var iso = $grid.data('isotope');
-		// console.log('filtered ' + iso.filteredItems.length + ' items');
-
 	});
 
-	//*** Project Thumbs ***//
+	//*** 
+	// Project Thumbs 
+	//***
 
 	//adding a toggle class for the buttons in the project thumbs
-	var $sidebarElements = $('.project-sidebar-elements');
+	var $sidebarElements = $('.filter-container');
 	$sidebarElements.on('click', function () {
 		
 		$sidebarElements.each( function (i) {// we check other elements with smae class to remove the class previously
@@ -148,7 +169,9 @@ jQuery(document).ready(function($){
 
 	slideExpertiseText();// we evoke our function
 
-	//*** Contact Form - Adding Classes ***//
+	//*** 
+	// Contact Form - Adding Classes 
+	//***
 
 	var $nameField = $("#contact-name").find('span').find('input');// we look for input fields
 	$nameField.addClass("contact-name-input");// pass a class we are familiar with
@@ -194,7 +217,9 @@ jQuery(document).ready(function($){
 
 	});
 
-	/* Add class to <a> inside nav bar elements */
+	///* 
+	// Add class to <a> inside nav bar elements 
+	//*/
 
 	var $navBarMenuelement = $('.page_item').find('a').each( function (element, i){
 		$(this).addClass('page-item-a');
@@ -203,9 +228,49 @@ jQuery(document).ready(function($){
 	/* Responsive Videos */
 	$(".container").fitVids();
 
-	if (location.pathname == '/tire-gauge/'){
-		console.log(" we are here");
-	}
+	// if (location.pathname == '/tire-gauge/'){
+	// 	// console.log(" we are here");
+	// }
+	/* Hamburguer Menu - Left Menu*/
+	var $leftSlide = $('[data-toggle=slide-left]');
+	var slideLeftAtt = $leftSlide.attr('data-target');
+	$leftSlide.on('click', function (event){
+		// if ($(slideLeftAtt).hasClass('in') || $('.wrapper').hasClass('out')){
+			$(slideLeftAtt).toggleClass('in');
+			$(".wrapper").toggleClass('out');
+		// }
+		console.log("it was clicked");
+	});
+
+	//
+	//Adding logos
+	//
+
+	var divForWorkLogo = [
+							"<div class='work-logo'>",
+							"</div>"
+						 ].join('\n'),
+		divForAboutLogo = [
+							"<div class='about-logo'>",
+							"</div>"
+						 ].join('\n'),
+		divForBlogLogo = [
+							"<div class='blog-logo'>",
+							"</div>"
+						 ].join('\n');
+
+	var logos = [divForWorkLogo, divForAboutLogo, divForBlogLogo];
+
+	var $navBar = $('.left-slide-nav');
+	// console.log($navBar);
+	$navBar.find('li').each(function (key, value) {
+		$(this).prepend(logos[key]);
+		// console.log($(this), logos);
+	});
+	// console.log($navBar.find().children());
+
+
+
 
 
 

@@ -14,38 +14,42 @@ This simple theme was built using the example Bootstrap theme "Basic marketing s
 
 @import url('mauricio_bootstrap/css/bootstrap.css');
 /*@import url('mauricio_bootstrap/css/bootstrap-responsive.css');*/
+@font-face {font-family: 'CamberLight';
+	src: url('fonts/CamberLight/CamberLight.eot');
+	src: url('fonts/CamberLight/CamberLight.eot?#iefix') format('embedded-opentype'),url('fonts/CamberLight/CamberLight.woff2') format('woff2'),url('fonts/CamberLight/CamberLight.woff') format('woff'),url('fonts/CamberLight/CamberLight.ttf') format('truetype');
+}
 
 html, body {padding:0; margin:0; height:100%;}
 
 body{
-	/*padding-top:60px;*/
-	font-family: 'Open Sans', sans-serif;
-	
-}
-/* main wrapper for website */
-.wrapper{
 	position: relative;
-	min-height: 100%;
+	font-family: 'Open Sans', sans-serif;	
 }
+/* in case we want to displace body when opening burguer menu */
+.wrapper{
+	/*width: 100%;*/
+	position: relative;
+	/*left: 0;*/
+	/*transition:left .4s;*/
+}
+
+/*.wrapper.out{*/
+	/*left: 200px;*/
+/*}*/
 
 /* Some reset for our links*/
 a:link {text-decoration: none;} 
 a:visited {text-decoration: none;}  
-a:hover {text-decoration: none;}  
+a:hover,li {text-decoration: none !important; outline: 0;}  
 a:active {text-decoration: none;}
 
+button:focus {outline:0;}
 
 /*My CSS Starts here*/
 
-/*footer{
-
-	padding-bottom: 50px;
-
-}*/
-
 /* ------------------ media query for our containers based on boostrap ------------------ */
 
-@media (min-width: 320px){
+@media screen and (min-width: 320px){
 	/* Project Thumnails */	
 	.item {
 		float: left;
@@ -57,18 +61,46 @@ a:active {text-decoration: none;}
 		height: 173px;
 	}
 	/* Top Nav Bar */
-	#logo {
+/*	#logo-container {
 	  margin-top: 16px;
 	  margin-left: 15px;
 	  width: 180px;
 	  height: 22px;
       background-size: 180px 22px !important;
+	}*/
+
+	.navbar div.navbar-header{
+		text-align: center;
+	}
+
+	.nav li a {
+		padding-left: 0;
+	}
+
+	.left-slide .navbar-collapse{
+		padding-left: 0;
+		padding-right: 0;
+		border-top: 0;
+	}
+
+	.home-intro-section{
+		height: 400px;
+    	line-height: 400px;
+	}
+
+	.home-intro-section p {
+		font-size: 18px;
+	}
+
+	.nav{
+		margin-left: 15px;
+		margin-top: 0px;
 	}
 
 	/* Blog Post */
 	.blog-posts {
-		width: 290px;
-		height: 380px;
+		/*width: 290px;*/
+		/*height: 380px;*/
 	}
 	.blog-thumb{
 		width: 290px;
@@ -76,9 +108,13 @@ a:active {text-decoration: none;}
 	}
 
 	/* Tab filters */
-	.project-sidebar-elements{
-		font-size: 12px;
+	.filter-container{
+		font-size: 10px;
 		width: 70px;
+	}
+	.filter-container .filter-logo{
+		width: 12px;
+		height: 9px;
 	}
 
 	/* Work Expertise Area Field */
@@ -102,10 +138,27 @@ a:active {text-decoration: none;}
 		font-size: 24px;
 	}
 
+	.navbar.navbar-fixed-top {
+		background-color: white;
+		height: 50px;
+	}
+
+	.about-paragraph {
+		padding: 0 10px;
+	}
+	/*
+		footer
+	*/
+	.col-xs-3{
+		/*width: 100%;*/
+	}
+	.social-elements-container{
+		width: 100%;
+	}
 
 }
 
-@media (min-width: 640px){
+@media screen and (min-width: 640px){
 	/* Project Thumnails */	
 	.item {
 		float: left;
@@ -121,9 +174,9 @@ a:active {text-decoration: none;}
 
 	/* Blog Post */
 	.blog-posts {
-		width: 500px;
-		height: 450px;
-		margin: 30px 0px;
+		/*width: 500px;*/
+		/*height: 450px;*/
+		/*margin: 30px 0px;*/
 	}
 	.blog-thumb{
 		width: 500px;
@@ -131,9 +184,13 @@ a:active {text-decoration: none;}
 	}
 
 	/* Tab filters */
-	.project-sidebar-elements{
+	.filter-container{
 		font-size: 16px;
 		width: 120px;
+	}
+	.filter-container .filter-logo{
+		width: 18px;
+		height: 14px;
 	}
 
 	/* Jumbotron Intro */
@@ -150,9 +207,22 @@ a:active {text-decoration: none;}
 		font-size: 21px;
 		font-weight: 700;
 	}
+
+	/* about */
+	.about-paragraph {
+		padding: 0 20px;
+	}
+	/*
+		footer
+	*/
+	.social-elements{
+		float: left;
+		padding-top: 20px;
+	}
+
 }
 
-@media (min-width: 768px){
+@media screen and (min-width: 768px){
 	/* Project Thumnails */	
 	.item {
 		float: left;
@@ -164,28 +234,55 @@ a:active {text-decoration: none;}
 		height: 320px;
 	}
 	/* Top Nav Bar */
-	#logo {
-	  margin-top: 10px;
+	#logo-container {
+	      width: 110px;
+		  /*display: inherit;*/
+		  margin: 0 auto;
+		  height: 100%;
+		  text-align: center;
 	}
 	.nav > li > a{
 		padding: 0;
-		margin: 15px 8px 0px;
+		/*margin-top: 15px;*/
 	}
 	/* Tab filters */
-	.project-sidebar-elements{
+/*	.project-sidebar-elements{
 		width: 120px;
-	}
+	}*/
 	/*About*/
 	.about-title{
 		font-size: 42px;
+	}
+	.about-paragraph {
+		padding: 0 30px;
 	}
 	.contact-title{
 		font-size: 42px;
 	}
 
+	.home-intro-section{
+		height: 400px;
+    	line-height: 400px;
+	}
+
+	.home-intro-section p {
+		width: 500px;
+		font-size: 18px;
+
+	}
+	/*
+		footer
+	*/
+	.social-elements{
+		float: right;
+		padding-top: 100px;
+	}
+	.social-elements-container{
+		width: 75%;
+	}
 }
 
-@media (min-width: 992px){
+@media screen and (min-width: 992px){
 	/* Project Thumnails */	
 	.item {
 		float: left;
@@ -199,34 +296,39 @@ a:active {text-decoration: none;}
 	
 	/* Top Nav Bar */
 	.intro{
-		min-height: 350px;
-		max-height: 400px;
+		min-height: 500px;
+		/*max-height: 400px;*/
 	}
 	.contact-intro{
 		min-height: 350px;
 		max-height: 450px;
 	}
 	.nav {
-		font-size: 13px;
-		margin-left: 5px;		
+		/*font-size: 13px;*/
+		/*margin-left: 5px;		*/
 	}
 	/* Blog Post */
 	.blog-posts {
-		width: 350px;
-		height: 400px;
-		margin: 30px 15px;
+		/*width: 350px;*/
+		/*height: 400px;*/
+		/*margin: 30px 15px;*/
 	}
 	.blog-thumb{
 		width: 350px;
 		height: 224px;
 	}
 	/* Tab filters */
-	.project-sidebar-elements{
+/*	.project-sidebar-elements{
 		width: 120px;
+	}*/
+
+	/*about*/
+	.about-paragraph {
+		padding: 0 60px;
 	}
 }
 
-@media (min-width: 1200px){
+@media screen and (min-width: 1200px){
 	/* Project Thumnails */
 	.item {
 		float: left;
@@ -237,20 +339,25 @@ a:active {text-decoration: none;}
 		width: 250px;
 		height: 160px;
 	}
-	#logo{
-		width: 240px;
-		height: 25px;
-  		background-size: 240px 25px !important;
-	}
 	/* Top Nav Bar */
 	.nav{
 		font-size: 15px;
-		margin-left: 10px;
+		/*margin-left: 15px;*/
+	}
+
+	.home-intro-section{
+		height: 500px;
+		line-height: 500px;
+	}
+
+	.home-intro-section{
+		width: 600px;
+		font-size: 18px;
 	}
 	/* Blog Post */
 	.blog-posts {
-		width: 250px;
-		height: 380px;
+		/*width: 250px;*/
+		/*height: 380px;*/
 	}
 
 	.blog-thumb{
@@ -258,89 +365,192 @@ a:active {text-decoration: none;}
 		height: 160px;
 	}
 	/* Tab filters */
-	.project-sidebar-elements{
+/*	.filter-container{
 		width: 120px;
+	}*/
+
+	.about-paragraph {
+		padding: 0 100px;
 	}
 }
 
-#logo {
-  background: url(http://www.sanchezmauricio.com/wp-content/uploads/2015/12/logo12012015v1.0.svg);  
-  float: left;
+#logo-container span {
+  /*background: url(http://www.sanchezmauricio.com/wp-content/uploads/2015/12/logo-container12012015v1.0.svg);  */
+  
+  font-family: 'CamberLight', sans-serif;
+  line-height: 50px;
+  color: #1f1f1f;
+  font-size: 16px;
+  display:inline-block;
+}
+#logo-container div.logo{
+	background: url(http://www.sanchezmauricio.com/wp-content/uploads/2017/01/logo-mauriciov2.png);
+	background-size: cover;
+	width: 18px;
+	height: 14px;
+	display:inline-block;
 }
 
 .intro{
 	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 20px;
 	margin-bottom: 0px;
-}
-
-.home-intro-section {
-	margin-top: 40px;
-	padding-left: 30px;
-}
-
-.intro-section{
-	padding-left: 30px;
-}
-
-#title { 
-	float: left;
-	clear: left;
-	font-size: 10px;
-	margin: 0;
-	margin-top: -5px;
-}
-
-.header-mauricio{
-	border:none;
-	/*margin-bottom: 200px;*/
-	/*height: 30px;*/
-	padding-right: 15px;
-	top: 0;
-}
-
-.thumb-title {
-	width: 100%;
+	background-color: white;
+	padding-bottom: 0px;
+	margin-top: 50px;
+	padding-top: 0;
 }
 
 /* Nav Bar Menu */
-a {
-text-decoration: none;
-transition-property: border color;
--webkit-transition-duration: 0.3s;
--moz-transition-duration: 0.3s;
--o-transition-duration: 0.3s;
-transition-duration: 0.3s;
-color: #4999c1;
-}
 
-.page-item-a:hover {
-    border-bottom: 2px solid rgba(255, 255, 255, 1);
+.navbar-default .navbar-nav  li  a {
     color: white;
+    /*margin-left: 20px*/
 }
 
-.current_page_item > a{
-	border-bottom: 2px solid rgba(255, 255, 255, 1);
-	border-color: #b6d450;
-    color: #b6d450 !important;
+/*
+/
+Hamburguer Menu
+/ 
+*/
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #1f1f1f;
+}
+
+.navbar-default .navbar-toggle, .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus  {
+    border-color: transparent;
+    background: transparent;
+}
+.navbar-toggle {
+  display: block;
+  float: left;
+  position: absolute;
+  left: 5px;
+  border-color: transparent;
+  color: #1f1f1f;
+}
+
+.left-slide{
+
+    top: 49px;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    overflow: hidden;
+    transition: width .4s;
+    background: #1f1f1f;
+    border-top: 1px solid transparent;
+    border-color: #e7e7e7;
+    width: 200px;
+}
+.left-slide.in{
+	width: 0;
+}
+
+
+.home-intro-section {
+	text-align: center !important;
+}
+
+.home-intro-section > *{
+	vertical-align: center;
+}
+
+.home-intro-section p {
+	display: inline-block;
+	line-height: normal;
+	vertical-align: middle;
+	text-align: -webkit-auto;
+	color: #1f1f1f;
+	letter-spacing: 1.5px;
+}
+
+.home-intro-section p a {
+	text-decoration: underline;
+    color: black;
+    font-weight: 500;
+}
+
+.page_item{
+	font-family: "CamberLight", sans-serif;
+    text-transform: lowercase;
+    margin-top: 15px;
+    display: block !important;
+    float: left;
+    clear: both;
+    width: 70px;
+}
+
+.page_item a {
+	float: left;
+	padding: 0 !important;
+}
+
+.navbar-nav li.page_item a:hover{
+	color: white;
+	outline: 0px;
+}
+
+.work-logo{
+	background: url(http://www.sanchezmauricio.com/wp-content/uploads/2017/01/work_icon.png);
+	background-size: cover;
+    width: 18px;
+    height: 12px;
+    margin-top: 3px;
+    margin-right: 5px;
+    float: left;
+}
+
+.about-logo{
+	background: url(http://www.sanchezmauricio.com/wp-content/uploads/2017/01/about-logo.png);
+	background-size: cover;
+    width: 12px;
+    height: 14px;
+    margin-top: 0px;
+    margin-left: 4px;
+    margin-right: 7px;
+    float: left;
+}
+
+.blog-logo{
+	background: url(http://www.sanchezmauricio.com/wp-content/uploads/2017/01/blog_logo.png);
+	background-size: cover;
+    width: 15px;
+    height: 12px;
+    margin-top: 3px;
+    margin-left: 2px;
+    margin-right: 6px;
+    float: left;
 }
 
 /*---------------------This is for the body Landing page -----------------------*/ 
 
-.custom-row{
-	float: left;
-	/*we need this for mobile*/
-	margin-left: auto;
-	margin-right: auto;
-	padding-bottom: 240px;
+.grid, .single-content, .grid-blog{
+	margin-bottom: 350px;
 }
 
 #sidebar{
 	text-align: center;
-	background-color: #eeeeee;
+	background-color: white;
 	margin-bottom: 50px;
+}
+
+.project-sidebar{
+    padding-right: 30px;
+}
+
+.filter-container{
+	display: inline-block;
+}
+
+.filter-container .filter-logo{
+	background: url(http://www.sanchezmauricio.com/wp-content/uploads/2017/01/filter_icon.png);
+	background-size: cover;
+	opacity: 0;
+	transition: opacity 0.3s linear;
+	display: inline-block;
 }
 
 #container{
@@ -354,19 +564,18 @@ color: #4999c1;
 /* this is for the filter buttons */
 .project-sidebar-elements{
 	list-style-type: none;
-	display: inline-block;
-	
     background: none;    
     border-style: none;
     border-width: 2px;    
     padding: 5px 0px;
-    font-weight: 200;
-    
+    font-weight: 200;    
 }
 
-.project-sidebar-elements:visited{
-	
-}	
+/* when selected we change the look of the button */
+.filter-container.is-checked .filter-logo{
+	opacity: 1;
+}
+
 
 /* filter menu for small screens */
 @media (max-width: 480px){
@@ -379,13 +588,6 @@ color: #4999c1;
 	}	
 }
 
-/* when selected we change the look of the button */
-.is-checked {
-	background: white !important; 
-	color: #101010;
-	font-weight: 700;
-}
-
 /* Will eventually add a media query*/
 /* this is hte container for our thumbs */
 
@@ -394,14 +596,93 @@ color: #4999c1;
 }
 
 .work-intro-section{
-	margin-top 50px;
+	/*margin-top: 50px;*/
 }
 
-/* -------------------- Blog Posts -------------------- */
+.thumb-title {
+	font-family: 'Open Sans Condensed', sans-serif;
+	width: 100%;
+    text-transform: capitalize;
+    font-weight: 700;
+    color: #1f1f1f;
+    float: left;
+    font-size: 18px;
+    margin-top: 5px;
+
+}
+.thumb-title:hover{
+	color: #1f1f1f;
+}
+
+.img-thumb{
+	float: left;
+}
+
+span.project-year{
+	float: left;
+	font-style: italic;
+    font-weight: 100;
+    font-size: 13px;
+}
+
+/* 
+//
+// Project Posts
+//
+*/
+
+.jumbotron.single-jumbotron{
+	background-size: cover !important;
+	min-height: 90%;
+	margin-top: 50px;
+
+}
+
+.single-description{
+	font-family: 'Open Sans Condensed';
+    font-weight: 800;
+    font-size: 22px;
+}
+
+.single-role{
+	font-style: italic;
+    font-weight: 100;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+/* 
+//
+// Blog Posts 
+//
+*/
+
+.blog-intro-section {
+	text-align: center !important;
+}
+
+.blog-intro-section > *{
+	vertical-align: middle;
+}
+
+.blog-intro-section p {
+	display: inline-block;
+	line-height: normal;
+	vertical-align: middle;
+	text-align: -webkit-auto;
+	color: #1f1f1f;
+	letter-spacing: 1.5px;
+}
+
+.blog-intro-section p a {
+	text-decoration: underline;
+    color: black;
+    font-weight: 500;
+}
 
 .blog-container{
-	padding-top: 40px;
-	padding-bottom: 240px;
+	/*padding-top: 40px;*/
+	/*margin-bottom: 350px;*/
 }
 
 .blog-posts{
@@ -435,11 +716,6 @@ color: #4999c1;
 	text-transform: uppercase;
 }
 
-.blog-posts:hover {
-	/*background-color: white;*/
-}
-
-
 
 /* --------------------This is for the footer ---------------------- */ 
 
@@ -448,63 +724,87 @@ color: #4999c1;
 	width:100%;	
 	bottom:0;
 	max-height: 300px;
+	background-color: #1f1f1f;
 }
 
-.contact-images{
-	text-align: center;
-	margin: 60px auto;
-}
+/*.contact-images{
+	text-align: center;*/
+	/*margin: 60px auto;*/
+/*}*/
 
 .footer-contact{
 	min-height: 10px;
 	overflow: hidden;
 	float: left;
 }
-.footer-note{
+/*.footer-note{
 	margin-bottom: 10px;
+}*/
+
+/*.footer-note > p {
+	font-weight: 300;
+}*/
+
+footer p {
+	text-align: left;
+	color: white;
+	color: #f5f5f5;
+}
+footer .others-title{	
+    padding-top: 100px;
+    margin-bottom: 0;
+    font-weight: 300;
 }
 
-.footer-note > p {
-	font-weight: 300;
+.copy-right{
+	float: left;
+    position: relative;
+    width: 100%;
+    padding-left: 15px;
+}
+
+.footer-email{
+	font-weight: 700;
 }
 
 #bottom-content{
-	margin-bottom: 0px;
+	text-transform: uppercase;
+	margin-top: 30px;
+	margin-bottom: 10px;
 	position: relative;
-	text-align: center;
-	clear: both;
-	color: #f5f5f5;
+	/*clear: both;*/	
 	padding-bottom: 5px;
+	font-weight: 300;
+	font-size: 10px;
 }
 
-.project {
+#footer-mauricio .footer-column-container a{
+	float: left;
+}
+
+#footer-mauricio .footer-column-container a img{
+	margin: 0;
+	display: inline-block;
+	margin-right: 10px;
+	width: 35px;
+	height: auto;
+}
+
+/*.project {
 	margin-top: 10px;
 	margin-bottom: 15px;	
-}
+}*/
 
-.thumb-title {
-	/*color: #333333;*/
-	font-size: 16px;
-}
-
-.project-year {
-	/*color: #333333;*/
-	font-size: 16px;
-}
-
-
-#github{
+/*#github{
 	margin: 0 5px;
-	display: inline-block;
-	
+	display: inline-block;	
 }
 
 #github:hover, #linkedin:hover, #blog:hover, #twitter:hover{
-
 	-webkit-filter: brightness(0.5);
-}
+}*/
 
-#linkedin{
+/*#linkedin{
 	margin: 0 5px;
 	display: inline-block;
 }
@@ -517,11 +817,12 @@ color: #4999c1;
 #twitter{
 	margin: 0 5px;
 	display: inline-block;
-}
+}*/
 
 /* --------------------General Posts ---------------------- */ 
 
 .single-container{
+	max-width: 900px;
 	padding-bottom: 240px;
 }
 
@@ -617,7 +918,7 @@ color: #4999c1;
 /* -------------------- Contact Form Elements ---------------------- */ 
 
 
-#mauricio-email{
+/*#mauricio-email{
     font-weight: bold;
     font-style: italic;
     color: #333333;
@@ -629,7 +930,7 @@ color: #4999c1;
 }
 
 .contact-container{
-	padding-bottom: 240px;/*we add the 200px of the foooter + 30px margin*/
+	padding-bottom: 240px;
 	margin-top: 40px;
 	padding-left: 30px;
 }
@@ -662,7 +963,7 @@ color: #4999c1;
     border-style: none !important;
     border-radius: 5px;
     color: white;
-}
+}*/
 /* -------------------- ABOUT ---------------------- */ 
 
 
@@ -672,11 +973,12 @@ color: #4999c1;
 	margin-top: 40px;
 	padding-bottom: 240px;
 }
-#about-image{
-	max-width: 100%;
-    max-height: 100%;
-    margin-bottom: 40px;
-    margin-top: 40px;
+.about-jumbotron{
+	min-height: 90%;
+	margin-top: 50px;
+    background-size: contain !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
 }
 
 .about-paragraph{

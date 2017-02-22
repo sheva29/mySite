@@ -8,12 +8,12 @@ $arg = array( 'category_name'=>'Projects', 'posts_perpage'=>'-1' );
 // we pass the argument to our query.
 $category_posts = new WP_Query( $arg );
 // we want to pass some classes to our image containers.
-$classes = array('col-md-3 ', 'image-container ');
+// $classes = array('col-md-3 ', 'image-container ');
 $terms = get_terms('category', array('parent' => 9));
 
 ?>
 
-	<div class="row custom-row" id="content" class="isotope">
+	<div class="row custom-row grid" id="content" class="isotope">
 
 		<?php if ( $category_posts->have_posts() ) : ?>
 
@@ -29,8 +29,8 @@ $terms = get_terms('category', array('parent' => 9));
 		  	?>
 			  	<div  <?php //post_class( $classes);  ?>  class="<?php echo $termsString; ?>item isotope-item" > <!-- we pass the terms as a class to our thumbnail -->
 					<a href="<?php the_permalink(); ?>" class="test"> <?php the_post_thumbnail('custom_thumb', array( 'class' => 'img-thumb' ) ); echo '</a>'?> </a>
-						<a class="thumb-title" href="<?php the_permalink(); ?>"> <?php the_title()?> <!-- / --> </a>
-						<!-- <a class="project-year" href="<?php the_permalink(); ?>"> <?php the_time( 'Y' );?> </a> -->
+						<a class="thumb-title" href="<?php the_permalink(); ?>"> <?php the_title() ?> <!-- / --> </a>
+						<span class="project-year"> <?php the_time( 'Y' );?> </span> 
 				</div>
 
 			<?php endwhile;?>
