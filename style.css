@@ -638,6 +638,19 @@ span.project-year{
 
 }
 
+.single-description{
+	font-family: 'Open Sans Condensed';
+    font-weight: 800;
+    font-size: 22px;
+}
+
+.single-role{
+	font-style: italic;
+    font-weight: 100;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
 /* 
 //
 // Blog Posts 
@@ -809,6 +822,7 @@ footer .others-title{
 /* --------------------General Posts ---------------------- */ 
 
 .single-container{
+	max-width: 900px;
 	padding-bottom: 240px;
 }
 
