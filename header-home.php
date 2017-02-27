@@ -56,7 +56,7 @@ wp_head();
      <div class="jumbotron intro">        
           <!--This is where my intro goes-->
         <section class="container home-intro-section">
-          <p>Welcome to my Website! I am <a href="http://www.sanchezmauricio.com/about/">Mauricio Sanchez</a>, a full stack engineer and product designer focusing on solutions to help companies and individuals improve their products, processes and platforms.
+          <p>Welcome to my Website! I am <a href="http://www.sanchezmauricio.com/about/">Mauricio Sanchez</a>, a full stack engineer and product designer focusing on solutions to help companies and individuals improve their products, processes.
           </br>
           </br>
           I build experiences, platforms, algorithms, research technologies, fabricate prototypes and enjoy connecting the physical with the digital.
