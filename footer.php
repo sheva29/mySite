@@ -11,7 +11,7 @@
               <div class="col-xs-9 col-lg-9 footer-column-container social-elements-container"> 
                 <!-- <p class="others-title"> SOCIMEDIAAL  </p> -->
                 <div class="social-elements">
-                    <a class=href="https://twitter.com/maurifique" target="_blank">
+                    <a href="https://twitter.com/maurifique" target="_blank">
                       <img id="twitter" src="http://www.sanchezmauricio.com/wp-content/uploads/2017/01/twitter_logov2.0.png" >
                     </a>
                     <a href="https://www.linkedin.com/profile/view?id=51325490&trk=nav_responsive_tab_profile" target="_blank">

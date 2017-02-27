@@ -632,6 +632,7 @@ span.project-year{
 */
 
 .jumbotron.single-jumbotron{
+    background-position: center center !important;
 	background-size: cover !important;
 	min-height: 90%;
 	margin-top: 50px;
