@@ -527,8 +527,12 @@ Hamburguer Menu
 
 /*---------------------This is for the body Landing page -----------------------*/ 
 
-.grid, .single-content, .grid-blog{
+.grid{
 	margin-bottom: 350px;
+}
+
+.single-content, .grid-blog{
+	margin-bottom: 0;
 }
 
 #sidebar{
@@ -634,7 +638,7 @@ span.project-year{
 .jumbotron.single-jumbotron{
     background-position: center center !important;
 	background-size: cover !important;
-	min-height: 90%;
+	min-height: 100%;
 	margin-top: 50px;
 
 }
@@ -840,6 +844,13 @@ footer .others-title{
 .single-image{
 	margin: 40px 0px;
 	width: 100%;
+	height: auto;
+}
+/* BMW 7series */
+.single-image.bmw{
+	margin-top: 20px;
+	margin-bottom: 0px;
+	max-width: 567px;
 	height: auto;
 }
 
