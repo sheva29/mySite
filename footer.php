@@ -1,4 +1,11 @@
      <!-- This is the end of the main body -->
+    <?php 
+    if(in_category("All")):
+      echo '<div class="container">';
+      get_sidebar("projects-filter");
+      echo '</div>';
+    endif;
+    ?>
       <footer id="footer-mauricio" class="navbar-inverse">
         <div class="container">
             <section class="contact-images row">
