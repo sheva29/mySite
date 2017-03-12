@@ -1,8 +1,5 @@
-<!-- This page is used for WP to show posts only. It does not display particular content like a regular page. Different from page.php -->
-<!DOCTYPE html>
+<!--  Sidebar used to include projects in singles.php -->
 <?php
-// we get the header for our home
-get_header( 'home' );
 // we want to display only thumbs from the projects category.
 $arg = array( 'category_name'=>'Projects', 'posts_perpage'=>'-1' );
 // we pass the argument to our query.
@@ -10,9 +7,9 @@ $category_posts = new WP_Query( $arg );
 // we want to pass some classes to our image containers.
 // $classes = array('col-md-3 ', 'image-container ');
 $terms = get_terms('category', array('parent' => 9));
-
 ?>
 
+<div class="projects-thumbs container">
 	<div class="row custom-row grid" id="content" class="isotope">
 
 		<?php if ( $category_posts->have_posts() ) : ?>
@@ -27,7 +24,7 @@ $terms = get_terms('category', array('parent' => 9));
 						$termsString .= $term->slug." "; //create a string that has all the slugs for the class
 					}
 		  	?>
-			  	<div  <?php //post_class( $classes);  ?>  class="<?php echo $termsString; ?>item isotope-item" > <!-- we pass the terms as a class to our thumbnail -->
+			  	<div  class="<?php echo $termsString; ?>item isotope-item" > <!-- we pass the terms as a class to our thumbnail -->
 					<a href="<?php the_permalink(); ?>" class="test"> <?php the_post_thumbnail('custom_thumb', array( 'class' => 'img-thumb' ) ); echo '</a>'?> </a>
 						<a class="thumb-title" href="<?php the_permalink(); ?>"> <?php the_title() ?> <!-- / --> </a>
 						<span class="project-year"> <?php the_time( 'Y' );?> </span> 
@@ -41,6 +38,4 @@ $terms = get_terms('category', array('parent' => 9));
 	</div>
 <!-- Closes container projects-thumbs & container -->
 </div>
-<?php
-get_footer();
-?>
+
