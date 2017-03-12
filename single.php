@@ -50,7 +50,8 @@ $parent = $post->ID;
 	      echo '<div class="thumbs-project-container">';
 	      get_sidebar("projects-filter");
 	      echo '</div>';
-	      get_sidebar("single-thumbs");
+	      //we include thumbs
+	      include("single-thumbs.php");
 	    endif;
     ?>
 <?php
