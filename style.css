@@ -433,7 +433,6 @@ Hamburguer Menu
 }
 
 .left-slide{
-
     top: 49px;
     bottom: 0;
     left: 0;
@@ -443,7 +442,7 @@ Hamburguer Menu
     background: #1f1f1f;
     border-top: 1px solid transparent;
     border-color: #e7e7e7;
-    width: 200px;
+    width: 150px;
 }
 .left-slide.in{
 	width: 0;
@@ -828,21 +827,21 @@ footer .others-title{
 
 .single-container{
 	max-width: 900px;
-	padding-bottom: 240px;
+	padding-bottom: 80px;
 }
 
 .single-content{
 	margin-top: 80px;
 }
 
-.single-content p{
+.single-content p, .about-paragraph{
     line-height: normal;
     color: #1f1f1f;
     letter-spacing: 1.5px;
     font-weight: 100;
 }
 
-.single-content a{
+.single-content a, .about-paragraph a{
     color: black;
     text-decoration: underline;
 }

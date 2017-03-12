@@ -45,6 +45,15 @@ $parent = $post->ID;
 	endif; ?>
 <!-- closes single-container -->	
 </div>
+	<?php 
+	    if(in_category("All")):
+	      echo '<div class="thumbs-project-container">';
+	      get_sidebar("projects-filter");
+	      echo '</div>';
+	      //we include thumbs
+	      include("single-thumbs.php");
+	    endif;
+    ?>
 <?php
 get_footer();
 ?>
