@@ -433,7 +433,6 @@ Hamburguer Menu
 }
 
 .left-slide{
-
     top: 49px;
     bottom: 0;
     left: 0;
@@ -443,7 +442,7 @@ Hamburguer Menu
     background: #1f1f1f;
     border-top: 1px solid transparent;
     border-color: #e7e7e7;
-    width: 200px;
+    width: 120px;
 }
 .left-slide.in{
 	width: 0;
