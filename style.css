@@ -532,6 +532,7 @@ Hamburguer Menu
 
 .single-content, .grid-blog{
 	margin-bottom: 0;
+	margin-bottom: 350px;
 }
 
 #sidebar{
@@ -705,7 +706,7 @@ p.blog-title-thumb{
 .blog-posts{
 	float: left;
 	/* background-color: #f5f5f5; */
-	margin-bottom: 350px;
+	/* margin-bottom: 350px; */
 	width:100%;
 	min-height: 150px;
 }
