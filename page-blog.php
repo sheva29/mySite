@@ -14,19 +14,18 @@ $category_posts = new WP_Query( $arg );
 
 		  	<?php while ( $category_posts->have_posts() ):  $category_posts->the_post();
 		  	?>
-			  	<div  <?php //post_class( $classes);  ?>  class="projects blog-posts item isotope-item" > <!-- we pass the terms as a class to our thumbnail -->
-					<a href="<?php the_permalink(); ?>" class="test"> <?php 
-
-						echo '<div style="background: url('; 
-						the_post_thumbnail_url('custom_thumb', array( 'class' => 'img-thumb' ) ); 
-						echo ');" class="col-md-8 col-md-offset-2"> </div>'; 
-					// echo '</a>'
-						?> 
+			  	<div  <?php //post_class( $classes);  ?>  class="projects blog-posts isotope-item" > <!-- we pass the terms as a class to our thumbnail -->
+					<!-- <h1><?php //the_post_thumbnail_url();?></h1> -->
+					<a href="<?php the_permalink(); ?>" class="test">
+					<?php
+					if ( has_post_thumbnail() ) {
+						$feat_image_url = wp_get_attachment_url( get_post_thumbnail_id() );
+                		echo '<div class="blog-post-thumb" style="background-image:url('.$feat_image_url.');"></div>';
+           			} ?>
+						<p class="blog-title-thumb"> <?php the_title() ?> </p> 
 					</a>
-						<a class="thumb-title" href="<?php the_permalink(); ?>"> <?php the_title() ?> <!-- / --> </a>
-						<span class="project-year"> <?php the_time( 'Y' );?> </span> 
 				</div>
-
+		
 			<?php endwhile;?>
 		<?php endif; ?>
 	<?php wp_reset_postdata();?>
