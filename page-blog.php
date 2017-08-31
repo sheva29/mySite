@@ -71,12 +71,19 @@ $category_posts = new WP_Query( $arg );
 						// $termsString .= $term->slug." "; //create a string that has all the slugs for the class
 					// }
 		  	?>
-			  	<div  <?php //post_class( $classes);  ?>  class="projects blog-posts item isotope-item" > <!-- we pass the terms as a class to our thumbnail -->
-					<a href="<?php the_permalink(); ?>" class="test"> <?php the_post_thumbnail('custom_thumb', array( 'class' => 'img-thumb' ) ); echo '</a>'?> </a>
-						<a class="thumb-title" href="<?php the_permalink(); ?>"> <?php the_title() ?> <!-- / --> </a>
-						<span class="project-year"> <?php the_time( 'Y' );?> </span> 
-				</div>
+			  	<div  <?php //post_class( $classes);  ?>  class="projects blog-posts isotope-item" > <!-- we pass the terms as a class to our thumbnail -->
+					<!-- <h1><?php //the_post_thumbnail_url();?></h1> -->
+					<a href="<?php the_permalink(); ?>" class="test">
+					<?php
+					if ( has_post_thumbnail() ) {
+						$feat_image_url = wp_get_attachment_url( get_post_thumbnail_id() );
+                		echo '<div class="blog-post-thumb" style="background-image:url('.$feat_image_url.');"></div>';
+           			} ?>
+						<p class="blog-title-thumb"> <?php the_title() ?> </p> 
 
+					</a>
+				</div>
+		
 			<?php endwhile;?>
 		<?php endif; ?>
 	<?php wp_reset_postdata();?>
